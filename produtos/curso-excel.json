@@ -1,0 +1,131 @@
+{
+  "slug": "curso-excel",
+  "ativo": true,
+  "tipo": "curso",
+  "nome": "Curso de Excel",
+  "produtor": "Expert Cursos",
+  "plataforma": "Hotmart",
+
+  "seo": {
+    "title": "Curso de Excel | Do Básico ao Avançado com Certificado",
+    "description": "Curso online de Excel, do básico ao avançado. Aprenda a criar planilhas, gráficos e dashboards profissionais em 10 módulos, com certificado e acesso vitalício.",
+    "googleSiteVerification": ""
+  },
+
+  "tema": {
+    "corDestaque": "#1fbf7a",
+    "corHover": "#17a869"
+  },
+
+  "hero": {
+    "titulo": "Domine o Excel: <em>do básico ao avançado</em>, com certificado.",
+    "lead": "Aprenda a criar planilhas, gráficos, tabelas dinâmicas e dashboards profissionais de forma prática e direta, mesmo que nunca tenha aberto o programa.",
+    "microcopy": "De <b>R$ 97,00</b> ou 12x de <b>R$ 10,03</b> · 7 dias de garantia · acesso imediato",
+    "imagem": "hero-mockup.webp",
+    "imagemAlt": "Curso de Excel do básico ao avançado",
+    "selo": "PLANILHAS • GRÁFICOS • DASHBOARDS"
+  },
+
+  "video": {
+    "youtubeId": "dvWBfzBiwaY"
+  },
+
+  "dor": {
+    "headline": "Organizar dados não devia tomar a sua tarde inteira.",
+    "itens": [
+      { "titulo": "Horas perdidas com planilhas manuais", "descricao": "Você monta tudo na mão, refaz fórmulas quebradas e ainda assim o resultado não fica confiável." },
+      { "titulo": "Dificuldade em organizar dados", "descricao": "Você tem os números, mas não sabe transformá-los em algo claro para decisões e relatórios." },
+      { "titulo": "Relatórios que não se destacam", "descricao": "As planilhas saem, mas não têm a cara de um trabalho analítico e profissional — e isso passa despercebido no trabalho." }
+    ],
+    "ponte": "O problema quase nunca é falta de talento. É não ter um caminho claro pra seguir — e é exatamente isso que este curso resolve."
+  },
+
+  "publico": {
+    "itens": [
+      { "titulo": "Quem nunca abriu o Excel", "descricao": "Nunca usou a ferramenta, mas quer aprender do zero, de forma prática e sem termos técnicos complicados." },
+      { "titulo": "Profissionais e autônomos", "descricao": "Precisa organizar dados, controlar finanças ou montar relatórios e quer ganhar agilidade no dia a dia." },
+      { "titulo": "Quem busca se destacar no mercado", "descricao": "Já trabalha com dados, financeiro ou gestão e quer dominar funções avançadas, Power Query e dashboards." }
+    ]
+  },
+
+  "prova": {
+    "headline": "Uma habilidade prática para você analisar dados com autonomia.",
+    "stats": [
+      { "numero": "10", "legenda": "módulos completos" },
+      { "numero": "30h", "legenda": "de carga horária" },
+      { "numero": "4,8", "legenda": "de avaliação média (763)", "destaque": true },
+      { "numero": "7 dias", "legenda": "de garantia total" }
+    ]
+  },
+
+  "oferta": {
+    "precoAtual": "97",
+    "parcelas": "12x de R$ 10,03",
+    "garantiaDias": "7",
+    "beneficios": [
+      "10 módulos (Básico ao Avançado)",
+      "30 horas de conteúdo original",
+      "10 aulas bônus com modelos editáveis",
+      "Certificado de conclusão incluso",
+      "Acesso vitalício",
+      "Curso 100% online"
+    ]
+  },
+
+  "avaliacao": {
+    "media": "4.8",
+    "quantidade": "763",
+    "linkHotmart": "https://go.hotmart.com/V107340723P?dp=1&redirectionUrl=https%3A%2F%2Fhotmart.com%2Fpt-br%2Fmarketplace%2Fprodutos%2Fcurso-de-excel-15"
+  },
+
+  "checkout": {
+    "urlBase": "https://go.hotmart.com/V107340723P?ap=1384&redirectionUrl=https%3A%2F%2Fpay.hotmart.com%2FI23144995P%3Foff%3D1bi3v677%26checkoutMode%3D10"
+  },
+
+  "tracking": {
+    "googleAdsId": "AW-18397407465",
+    "googleAdsConversionLabel": "TODO_CRIAR_LABEL_PROPRIO_NO_GOOGLE_ADS"
+  },
+
+  "modulos": [
+    { "numero": "01", "titulo": "Introdução", "descricao": "Acesso ao Excel e apresentação do curso e da plataforma." },
+    { "numero": "02", "titulo": "Área de Trabalho", "descricao": "Comandos, formatações, fonte, alinhamento e funções mais usadas." },
+    { "numero": "03", "titulo": "Planilhas e Atalhos", "descricao": "Criação de planilhas, tabelas, atalhos e segmentações." },
+    { "numero": "04", "titulo": "Validações", "descricao": "Imagens, formas, ícones e formatação condicional." },
+    { "numero": "05", "titulo": "Gráficos", "descricao": "Colunas, pizza, dispersão, cascata, funil e mais 10 tipos.", "destaque": true },
+    { "numero": "06", "titulo": "Funções", "descricao": "SOMASE, SE, PROCV, PROCX, ÍNDICE, CORRESP e mais." },
+    { "numero": "07", "titulo": "Macros e Proteção", "descricao": "Menus inteligentes, proteção de arquivos e impressão." },
+    { "numero": "08", "titulo": "Power Query & IA", "descricao": "Power Query, Power Pivot, ChatGPT e Copilot.", "destaque": true },
+    { "numero": "09", "titulo": "Tabelas Dinâmicas", "descricao": "Tabelas e gráficos dinâmicos, do básico ao avançado." },
+    { "numero": "10", "titulo": "Dashboards", "descricao": "Dashboards completos para diferentes áreas de negócio.", "destaque": true }
+  ],
+
+  "bonus": [
+    { "numero": "01", "titulo": "Fluxo de Caixa", "descricao": "Planilha pronta para controle de entradas e saídas." },
+    { "numero": "02", "titulo": "Curva ABC", "descricao": "Modelo editável para priorização de itens e produtos." },
+    { "numero": "03", "titulo": "Curva S", "descricao": "Planilha para acompanhamento de projetos." },
+    { "numero": "04", "titulo": "Gráfico de Gantt", "descricao": "Modelo para planejamento e cronogramas." },
+    { "numero": "05", "titulo": "Planilha Orçamentária", "descricao": "Controle de orçamento pronto para usar." },
+    { "numero": "06", "titulo": "Controle Financeiro", "descricao": "Planilha completa de organização financeira." },
+    { "numero": "07", "titulo": "Dashboard Comercial", "descricao": "Painel pronto para acompanhar vendas e metas.", "destaque": true },
+    { "numero": "08", "titulo": "Dashboard de RH", "descricao": "Painel para gestão de funcionários e indicadores.", "destaque": true },
+    { "numero": "09", "titulo": "Dashboard de Produtos", "descricao": "Painel para análise de desempenho de produtos.", "destaque": true },
+    { "numero": "10", "titulo": "Dashboards com IA", "descricao": "Criação de dashboards com ChatGPT e Google Gemini." }
+  ],
+
+  "depoimentos": [
+    { "nome": "ADRIA", "texto": "Curso muito bom e bem completo, ótima didática e bons materiais." },
+    { "nome": "RAQUEL", "texto": "Curso excelente com uma didática incrível. A explicação é clara e torna a experiência no excel mais fácil e prática." },
+    { "nome": "MARCOS", "texto": "Excelente didática." },
+    { "nome": "GUSTAVO", "texto": "Boa." }
+  ],
+
+  "faq": [
+    { "pergunta": "Qual o formato do curso e como recebo o acesso?", "resposta": "O curso é 100% online em videoaulas gravadas. Após a confirmação do pagamento, os dados de acesso são enviados para o seu e-mail e também ficam disponíveis na sua conta Hotmart, em \"Minhas Compras\"." },
+    { "pergunta": "Preciso ter experiência prévia com Excel?", "resposta": "Não! O curso começa do zero, mesmo que você nunca tenha aberto o programa, e evolui passo a passo até funções avançadas e criação de dashboards profissionais." },
+    { "pergunta": "Por quanto tempo tenho acesso ao curso?", "resposta": "O acesso é vitalício. Você pode assistir às aulas quantas vezes quiser, no seu próprio ritmo, pelo computador, tablet ou celular." },
+    { "pergunta": "O curso oferece certificado de conclusão?", "resposta": "Sim! Ao concluir o curso você recebe um certificado digital em PDF, válido em todo o território nacional como comprovação de capacitação profissional." },
+    { "pergunta": "Quem é a empresa responsável pelo curso?", "resposta": "O treinamento é produzido pela <strong>Expert Cursos</strong>, produtora especializada em cursos online certificados na plataforma Hotmart." },
+    { "pergunta": "E se eu não gostar? Tenho garantia?", "resposta": "Sim, você tem 7 dias de garantia incondicional. Se por qualquer motivo o curso não for para você, basta solicitar o reembolso e 100% do seu dinheiro será devolvido, direto pela Hotmart." }
+  ]
+}
