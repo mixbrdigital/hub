@@ -1068,6 +1068,17 @@ body {
   gap: 12px;
 }
 
+.footer a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+.footer a:hover {
+  color: var(--accent-color);
+}
+
 .affiliate-disclosure {
   max-width: 640px;
   font-size: 12px;
