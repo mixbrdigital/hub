@@ -1,10 +1,19 @@
 #!/usr/bin/env node
 /* =========================================================
    MIXBR DIGITAL - Build estático
-   Lê /produtos/*.json, aplica template.html e gera:
-   - /paginas/<slug>/index.html  (uma LP por produto)
-   - /index.html                 (homepage com vitrine dos produtos)
-   - /sitemap.xml
+   Lê /produtos/*.json, aplica template.html e gera TUDO
+   dentro de /public/ (essa é a pasta que o Cloudflare Pages
+   deve apontar como "Build output directory"):
+
+   /public/index.html            (homepage)
+   /public/<slug>/index.html     (uma LP por produto)
+   /public/sitemap.xml
+   /public/robots.txt            (copiado de /static/)
+   /public/politica-privacidade/ (copiado de /static/)
+   /public/assets/               (copiado de /assets/, compartilhado)
+
+   /public/ é sempre apagada e regenerada do zero a cada build,
+   pra nunca sobrar lixo de produto removido/renomeado.
    =========================================================
    Uso: node build.js
    ========================================================= */
@@ -16,9 +25,11 @@ const ROOT = __dirname;
 const DOMINIO = "https://mixbrdigital.com.br";
 const PRODUTOS_DIR = path.join(ROOT, "produtos");
 const PRODUTOS_ASSETS_DIR = path.join(ROOT, "produtos-assets");
-const PAGINAS_DIR = path.join(ROOT, "paginas");
+const ASSETS_DIR = path.join(ROOT, "assets");
+const STATIC_DIR = path.join(ROOT, "static");
 const TEMPLATE_PATH = path.join(ROOT, "template.html");
 const HOME_TEMPLATE_PATH = path.join(ROOT, "home-template.html");
+const PUBLIC_DIR = path.join(ROOT, "public");
 
 const TIPO_LABELS = { curso: "CURSO ONLINE", ebook: "EBOOK DIGITAL" };
 
@@ -55,29 +66,41 @@ function escapeHtml(str) {
 function render(templateStr, data) {
   let out = templateStr;
 
-  // {{#each array}}...{{/each}}
   out = out.replace(/\{\{#each\s+([\w.]+)\}\}([\s\S]*?)\{\{\/each\}\}/g, (_, keyPath, block) => {
     const arr = getValue(data, keyPath);
     if (!Array.isArray(arr) || arr.length === 0) return "";
     return renderEach(block, arr);
   });
 
-  // {{#if var}}...{{/if}}
   out = out.replace(/\{\{#if\s+([\w.]+)\}\}([\s\S]*?)\{\{\/if\}\}/g, (_, keyPath, inner) => {
     const val = getValue(data, keyPath);
     return val ? inner : "";
   });
 
-  // {{{var}}} raw (sem escape, permite HTML como <em> e <strong>)
   out = out.replace(/\{\{\{([\w.]+)\}\}\}/g, (_, keyPath) => getValue(data, keyPath) ?? "");
 
-  // {{var}} com escape
   out = out.replace(/\{\{([\w.]+)\}\}/g, (_, keyPath) => {
     const val = getValue(data, keyPath);
     return val == null ? "" : escapeHtml(String(val));
   });
 
   return out;
+}
+
+/* ---------- Utilitário: copiar pasta inteira recursivamente ---------- */
+
+function copiarPasta(origem, destino) {
+  if (!fs.existsSync(origem)) return;
+  fs.mkdirSync(destino, { recursive: true });
+  for (const entrada of fs.readdirSync(origem, { withFileTypes: true })) {
+    const from = path.join(origem, entrada.name);
+    const to = path.join(destino, entrada.name);
+    if (entrada.isDirectory()) {
+      copiarPasta(from, to);
+    } else {
+      fs.copyFileSync(from, to);
+    }
+  }
 }
 
 /* ---------- Carrega produtos ---------- */
@@ -101,7 +124,7 @@ function enriquecerProduto(p) {
   return {
     ...p,
     urlCanonica,
-    caminhoAssets: "../../assets",
+    caminhoAssets: "../assets", // de /public/<slug>/ para /public/assets/
     marcaCurta: p.marcaCurta || p.nome.split(" ").slice(0, 2).join(" ").toUpperCase(),
     tipoLabel: TIPO_LABELS[p.tipo] || "PRODUTO ONLINE",
     tema: { ...p.tema, corDestaqueHex: corHex },
@@ -115,21 +138,16 @@ function gerarPaginasProdutos(produtos) {
   const template = fs.readFileSync(TEMPLATE_PATH, "utf8");
 
   produtos.forEach((produto) => {
-    const dirSaida = path.join(PAGINAS_DIR, produto.slug);
+    const dirSaida = path.join(PUBLIC_DIR, produto.slug);
     fs.mkdirSync(dirSaida, { recursive: true });
 
     // Copia os assets locais do produto (ex: hero-mockup.webp) de
     // /produtos-assets/<slug>/ para dentro da pasta gerada.
-    const dirAssetsProduto = path.join(PRODUTOS_ASSETS_DIR, produto.slug);
-    if (fs.existsSync(dirAssetsProduto)) {
-      fs.readdirSync(dirAssetsProduto).forEach((arquivo) => {
-        fs.copyFileSync(path.join(dirAssetsProduto, arquivo), path.join(dirSaida, arquivo));
-      });
-    }
+    copiarPasta(path.join(PRODUTOS_ASSETS_DIR, produto.slug), dirSaida);
 
     const html = render(template, produto);
     fs.writeFileSync(path.join(dirSaida, "index.html"), html, "utf8");
-    console.log(`✔ /paginas/${produto.slug}/index.html`);
+    console.log(`✔ /public/${produto.slug}/index.html`);
   });
 }
 
@@ -142,8 +160,8 @@ function gerarHomepage(produtos) {
   }
   const homeTemplate = fs.readFileSync(HOME_TEMPLATE_PATH, "utf8");
   const html = render(homeTemplate, { produtos, totalProdutos: produtos.length });
-  fs.writeFileSync(path.join(ROOT, "index.html"), html, "utf8");
-  console.log("✔ /index.html (homepage)");
+  fs.writeFileSync(path.join(PUBLIC_DIR, "index.html"), html, "utf8");
+  console.log("✔ /public/index.html (homepage)");
 }
 
 /* ---------- Gera o sitemap.xml ---------- */
@@ -158,13 +176,22 @@ function gerarSitemap(produtos) {
   ].join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
-  fs.writeFileSync(path.join(ROOT, "sitemap.xml"), xml, "utf8");
-  console.log("✔ /sitemap.xml");
+  fs.writeFileSync(path.join(PUBLIC_DIR, "sitemap.xml"), xml, "utf8");
+  console.log("✔ /public/sitemap.xml");
 }
 
 /* ---------- Main ---------- */
 
 function main() {
+  // Limpa /public/ do zero pra nunca sobrar produto removido/renomeado.
+  fs.rmSync(PUBLIC_DIR, { recursive: true, force: true });
+  fs.mkdirSync(PUBLIC_DIR, { recursive: true });
+
+  // Copia arquivos compartilhados e estáticos.
+  copiarPasta(ASSETS_DIR, path.join(PUBLIC_DIR, "assets"));
+  copiarPasta(STATIC_DIR, PUBLIC_DIR);
+  console.log("✔ /public/assets + arquivos estáticos copiados");
+
   const produtos = carregarProdutos();
   if (produtos.length === 0) {
     console.warn("⚠ Nenhum produto ativo encontrado em /produtos.");
