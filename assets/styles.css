@@ -27,6 +27,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Link padrão do site — evita o azul default do navegador em qualquer
+   lugar que não tenha uma classe própria (.button, .text-link etc).
+   Elementos com classe específica sobrescrevem isso normalmente. */
+a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
 /* ==========================================================================
    BARRA SUPERIOR & HEADER
    ========================================================================== */
