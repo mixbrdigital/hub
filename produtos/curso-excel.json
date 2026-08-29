@@ -5,42 +5,56 @@
   "nome": "Curso de Excel",
   "produtor": "Expert Cursos",
   "plataforma": "Hotmart",
+  "marcaCurta": "CURSO<br>EXCEL",
+  "ctaTextoPadrao": "Quero Aprender Excel ↗",
 
   "seo": {
     "title": "Curso de Excel | Do Básico ao Avançado com Certificado",
     "description": "Curso online de Excel, do básico ao avançado. Aprenda a criar planilhas, gráficos e dashboards profissionais em 10 módulos, com certificado e acesso vitalício.",
-    "googleSiteVerification": ""
+    "schemaDescription": "Curso online de Excel do básico ao avançado, com 10 módulos práticos para criar planilhas, gráficos, tabelas dinâmicas e dashboards profissionais.",
+    "googleSiteVerification": "l7FhHSkS3TsJtpWxJYbwcAD0RcwTPVQSoLX-IzMAEj8"
   },
+
+  "cargaHorariaISO": "PT30H",
 
   "tema": {
     "corDestaque": "#1fbf7a",
-    "corHover": "#17a869"
+    "corHover": "#17a869",
+    "corFundo": "#111111"
   },
+
+  "anuncio": {
+    "esquerda": "CURSO DE EXCEL",
+    "direita": "DO BÁSICO AO AVANÇADO"
+  },
+
+  "footer": { "marca": "CURSO DE EXCEL" },
 
   "hero": {
     "titulo": "Domine o Excel: <em>do básico ao avançado</em>, com certificado.",
     "lead": "Aprenda a criar planilhas, gráficos, tabelas dinâmicas e dashboards profissionais de forma prática e direta, mesmo que nunca tenha aberto o programa.",
+    "ctaTexto": "QUERO APRENDER EXCEL",
+    "verMaisTexto": "Ver módulos do curso ↓",
     "microcopy": "De <b>R$ 97,00</b> ou 12x de <b>R$ 10,03</b> · 7 dias de garantia · acesso imediato",
     "imagem": "hero-mockup.webp",
     "imagemAlt": "Curso de Excel do básico ao avançado",
     "selo": "PLANILHAS • GRÁFICOS • DASHBOARDS"
   },
 
-  "video": {
-    "youtubeId": "dvWBfzBiwaY"
-  },
+  "video": { "youtubeId": "dvWBfzBiwaY" },
 
   "dor": {
     "headline": "Organizar dados não devia tomar a sua tarde inteira.",
     "itens": [
-      { "titulo": "Horas perdidas com planilhas manuais", "descricao": "Você monta tudo na mão, refaz fórmulas quebradas e ainda assim o resultado não fica confiável." },
-      { "titulo": "Dificuldade em organizar dados", "descricao": "Você tem os números, mas não sabe transformá-los em algo claro para decisões e relatórios." },
-      { "titulo": "Relatórios que não se destacam", "descricao": "As planilhas saem, mas não têm a cara de um trabalho analítico e profissional — e isso passa despercebido no trabalho." }
+      { "titulo": "Horas perdidas com planilhas manuais", "descricao": "Você monta tudo na mão, refaz fórmulas quebradas e ainda assim o resultado não fica confiável.", "icone": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 3\"/>" },
+      { "titulo": "Dificuldade em organizar dados", "descricao": "Você tem os números, mas não sabe transformá-los em algo claro para decisões e relatórios.", "icone": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 9h18\"/>" },
+      { "titulo": "Relatórios que não se destacam", "descricao": "As planilhas saem, mas não têm a cara de um trabalho analítico e profissional — e isso passa despercebido no trabalho.", "icone": "<polyline points=\"22 17 13.5 8.5 8.5 13.5 2 7\"/><polyline points=\"16 17 22 17 22 11\"/>" }
     ],
     "ponte": "O problema quase nunca é falta de talento. É não ter um caminho claro pra seguir — e é exatamente isso que este curso resolve."
   },
 
   "publico": {
+    "kicker": "É PRA VOCÊ?",
     "itens": [
       { "titulo": "Quem nunca abriu o Excel", "descricao": "Nunca usou a ferramenta, mas quer aprender do zero, de forma prática e sem termos técnicos complicados." },
       { "titulo": "Profissionais e autônomos", "descricao": "Precisa organizar dados, controlar finanças ou montar relatórios e quer ganhar agilidade no dia a dia." },
@@ -58,10 +72,72 @@
     ]
   },
 
+  "conteudo": {
+    "headline": "10 módulos estruturados do básico ao avançado.",
+    "grupos": [
+      {
+        "titulo": "Módulos 01 a 03: Fundamentos e Primeiros Passos",
+        "aberto": true,
+        "modulos": [
+          { "numero": "01", "titulo": "Introdução", "descricao": "Acesso ao Excel e apresentação do curso e da plataforma." },
+          { "numero": "02", "titulo": "Área de Trabalho", "descricao": "Comandos, formatações, fonte, alinhamento e funções mais usadas." },
+          { "numero": "03", "titulo": "Planilhas e Atalhos", "descricao": "Criação de planilhas, tabelas, atalhos e segmentações." }
+        ]
+      },
+      {
+        "titulo": "Módulos 04 a 06: Formatação, Gráficos e Funções",
+        "modulos": [
+          { "numero": "04", "titulo": "Validações", "descricao": "Imagens, formas, ícones e formatação condicional." },
+          { "numero": "05", "titulo": "Gráficos", "descricao": "Colunas, pizza, dispersão, cascata, funil e mais 10 tipos.", "destaque": true },
+          { "numero": "06", "titulo": "Funções", "descricao": "SOMASE, SE, PROCV, PROCX, ÍNDICE, CORRESP e mais." }
+        ]
+      },
+      {
+        "titulo": "Módulos 07 a 08: Automação e Inteligência Artificial",
+        "modulos": [
+          { "numero": "07", "titulo": "Macros e Proteção", "descricao": "Menus inteligentes, proteção de arquivos e impressão." },
+          { "numero": "08", "titulo": "Power Query & IA", "descricao": "Power Query, Power Pivot, ChatGPT e Copilot.", "destaque": true }
+        ]
+      },
+      {
+        "titulo": "Módulos 09 a 10: Análise de Dados e Dashboards",
+        "modulos": [
+          { "numero": "09", "titulo": "Tabelas Dinâmicas", "descricao": "Tabelas e gráficos dinâmicos, do básico ao avançado." },
+          { "numero": "10", "titulo": "Dashboards", "descricao": "Dashboards completos para diferentes áreas de negócio.", "destaque": true }
+        ]
+      }
+    ]
+  },
+
+  "bonus": {
+    "headline": "10 aulas bônus com modelos editáveis inclusos.",
+    "itens": [
+      { "numero": "01", "titulo": "Fluxo de Caixa", "descricao": "Planilha pronta para controle de entradas e saídas." },
+      { "numero": "02", "titulo": "Curva ABC", "descricao": "Modelo editável para priorização de itens e produtos." },
+      { "numero": "03", "titulo": "Curva S", "descricao": "Planilha para acompanhamento de projetos." },
+      { "numero": "04", "titulo": "Gráfico de Gantt", "descricao": "Modelo para planejamento e cronogramas." },
+      { "numero": "05", "titulo": "Planilha Orçamentária", "descricao": "Controle de orçamento pronto para usar." },
+      { "numero": "06", "titulo": "Controle Financeiro", "descricao": "Planilha completa de organização financeira." },
+      { "numero": "07", "titulo": "Dashboard Comercial", "descricao": "Painel pronto para acompanhar vendas e metas.", "destaque": true },
+      { "numero": "08", "titulo": "Dashboard de RH", "descricao": "Painel para gestão de funcionários e indicadores.", "destaque": true },
+      { "numero": "09", "titulo": "Dashboard de Produtos", "descricao": "Painel para análise de desempenho de produtos.", "destaque": true },
+      { "numero": "10", "titulo": "Dashboards com IA", "descricao": "Criação de dashboards com ChatGPT e Google Gemini." }
+    ]
+  },
+
+  "midCta": {
+    "texto": "Você já viu os 10 módulos e os 10 bônus. Agora é decidir: continuar perdendo tempo com planilhas manuais ou aprender de vez.",
+    "botao": "QUERO DOMINAR O EXCEL"
+  },
+
   "oferta": {
     "precoAtual": "97",
-    "parcelas": "12x de R$ 10,03",
+    "parcelas": "R$ 10,03",
     "garantiaDias": "7",
+    "garantiaTexto": "Você tem 7 dias para testar o curso na prática. Se não for pra você, é só pedir o reembolso — 100% do valor de volta, sem burocracia e sem justificativa, direto pela Hotmart.",
+    "microcopy": "Comece a organizar suas planilhas como um profissional ainda hoje.",
+    "ctaTexto": "QUERO COMEÇAR AGORA",
+    "socialProof": "Junte-se a centenas de alunos bem avaliados (4,8/5) que já aprenderam Excel com este método.",
     "beneficios": [
       "10 módulos (Básico ao Avançado)",
       "30 horas de conteúdo original",
@@ -75,11 +151,12 @@
   "avaliacao": {
     "media": "4.8",
     "quantidade": "763",
-    "linkHotmart": "https://go.hotmart.com/V107340723P?dp=1&redirectionUrl=https%3A%2F%2Fhotmart.com%2Fpt-br%2Fmarketplace%2Fprodutos%2Fcurso-de-excel-15"
+    "linkHotmart": "https://go.hotmart.com/V107340723P?dp=1&redirectionUrl=https%3A%2F%2Fhotmart.com%2Fpt-br%2Fmarketplace%2Fprodutos%2Fcurso-de-excel-15%2FI23144995P"
   },
 
   "checkout": {
-    "urlBase": "https://go.hotmart.com/V107340723P?ap=1384&redirectionUrl=https%3A%2F%2Fpay.hotmart.com%2FI23144995P%3Foff%3D1bi3v677%26checkoutMode%3D10"
+    "base": "https://go.hotmart.com/V107340723P?ap=1384",
+    "redirect": "&redirectionUrl=https%3A%2F%2Fpay.hotmart.com%2FI23144995P%3Foff%3D1bi3v677%26checkoutMode%3D10"
   },
 
   "tracking": {
@@ -87,37 +164,13 @@
     "googleAdsConversionLabel": "TODO_CRIAR_LABEL_PROPRIO_NO_GOOGLE_ADS"
   },
 
-  "modulos": [
-    { "numero": "01", "titulo": "Introdução", "descricao": "Acesso ao Excel e apresentação do curso e da plataforma." },
-    { "numero": "02", "titulo": "Área de Trabalho", "descricao": "Comandos, formatações, fonte, alinhamento e funções mais usadas." },
-    { "numero": "03", "titulo": "Planilhas e Atalhos", "descricao": "Criação de planilhas, tabelas, atalhos e segmentações." },
-    { "numero": "04", "titulo": "Validações", "descricao": "Imagens, formas, ícones e formatação condicional." },
-    { "numero": "05", "titulo": "Gráficos", "descricao": "Colunas, pizza, dispersão, cascata, funil e mais 10 tipos.", "destaque": true },
-    { "numero": "06", "titulo": "Funções", "descricao": "SOMASE, SE, PROCV, PROCX, ÍNDICE, CORRESP e mais." },
-    { "numero": "07", "titulo": "Macros e Proteção", "descricao": "Menus inteligentes, proteção de arquivos e impressão." },
-    { "numero": "08", "titulo": "Power Query & IA", "descricao": "Power Query, Power Pivot, ChatGPT e Copilot.", "destaque": true },
-    { "numero": "09", "titulo": "Tabelas Dinâmicas", "descricao": "Tabelas e gráficos dinâmicos, do básico ao avançado." },
-    { "numero": "10", "titulo": "Dashboards", "descricao": "Dashboards completos para diferentes áreas de negócio.", "destaque": true }
-  ],
-
-  "bonus": [
-    { "numero": "01", "titulo": "Fluxo de Caixa", "descricao": "Planilha pronta para controle de entradas e saídas." },
-    { "numero": "02", "titulo": "Curva ABC", "descricao": "Modelo editável para priorização de itens e produtos." },
-    { "numero": "03", "titulo": "Curva S", "descricao": "Planilha para acompanhamento de projetos." },
-    { "numero": "04", "titulo": "Gráfico de Gantt", "descricao": "Modelo para planejamento e cronogramas." },
-    { "numero": "05", "titulo": "Planilha Orçamentária", "descricao": "Controle de orçamento pronto para usar." },
-    { "numero": "06", "titulo": "Controle Financeiro", "descricao": "Planilha completa de organização financeira." },
-    { "numero": "07", "titulo": "Dashboard Comercial", "descricao": "Painel pronto para acompanhar vendas e metas.", "destaque": true },
-    { "numero": "08", "titulo": "Dashboard de RH", "descricao": "Painel para gestão de funcionários e indicadores.", "destaque": true },
-    { "numero": "09", "titulo": "Dashboard de Produtos", "descricao": "Painel para análise de desempenho de produtos.", "destaque": true },
-    { "numero": "10", "titulo": "Dashboards com IA", "descricao": "Criação de dashboards com ChatGPT e Google Gemini." }
-  ],
-
   "depoimentos": [
+    { "nome": "GUSTAVO", "texto": "Boa." },
     { "nome": "ADRIA", "texto": "Curso muito bom e bem completo, ótima didática e bons materiais." },
     { "nome": "RAQUEL", "texto": "Curso excelente com uma didática incrível. A explicação é clara e torna a experiência no excel mais fácil e prática." },
     { "nome": "MARCOS", "texto": "Excelente didática." },
-    { "nome": "GUSTAVO", "texto": "Boa." }
+    { "nome": "YAN", "texto": "Excelente curso, aprendi bastante e o professor é muito bom" },
+    { "nome": "TANIA", "texto": "Curso super pratico e com bastante esclarecimentos, muito bom e com bastante conteúdo importante" }
   ],
 
   "faq": [

@@ -3,46 +3,59 @@
   "ativo": true,
   "tipo": "curso",
   "nome": "Curso Design Canva Profissional",
+  "nomeCurto": "Design Canva Profissional",
   "produtor": "MR Virtus",
   "plataforma": "Hotmart",
+  "marcaCurta": "DESIGN<br>CANVA",
+  "ctaTextoPadrao": "Quero Garantir Minha Vaga ↗",
 
   "seo": {
     "title": "Curso Design Canva Profissional | Do Básico ao Avançado",
     "description": "Aprenda Canva do básico ao avançado com 17 módulos e 157 aulas. Crie posts, logos, vídeos e e-books profissionais com garantia de 7 dias.",
+    "schemaDescription": "Curso online de Canva do básico ao avançado com técnicas práticas para redes sociais, negócios e materiais visuais.",
     "googleSiteVerification": "l7FhHSkS3TsJtpWxJYbwcAD0RcwTPVQSoLX-IzMAEj8"
   },
 
+  "cargaHorariaISO": "PT24H",
+
   "tema": {
     "corDestaque": "#c8f34a",
-    "corHover": "#b8e33a"
+    "corHover": "#b8e33a",
+    "corFundo": "#151515"
   },
 
-  "marcaCurta": "DESIGN CANVA",
+  "anuncio": {
+    "esquerda": "DESIGN CANVA PROFISSIONAL",
+    "direita": "APRENDA DO BÁSICO AO AVANÇADO"
+  },
+
+  "footer": { "marca": "DESIGN CANVA" },
 
   "hero": {
     "titulo": "Aprenda a criar <em>artes profissionais em minutos</em> no Canva.",
     "lead": "Domine a criação de posts, vídeos, e-books e materiais visuais sem complicação, mesmo que esteja começando do zero.",
+    "ctaTexto": "QUERO APRENDER CANVA",
+    "verMaisTexto": "Ver módulos do curso ↓",
     "microcopy": "De <b>R$ 147,00</b> ou 12x de <b>R$ 16,11</b> · 7 dias de garantia · acesso imediato",
     "imagem": "hero-mockup.webp",
     "imagemAlt": "Curso Design Canva Profissional",
     "selo": "CRIATIVIDADE • PRÁTICA • AUTONOMIA"
   },
 
-  "video": {
-    "youtubeId": "wgJBhjrLbpc"
-  },
+  "video": { "youtubeId": "wgJBhjrLbpc" },
 
   "dor": {
     "headline": "Criar um post bonito não deveria tomar a sua tarde inteira.",
     "itens": [
-      { "titulo": "Horas perdidas ajustando fonte e cor", "descricao": "Você mexe, desfaz, mexe de novo — e no fim o resultado ainda não parece profissional." },
-      { "titulo": "Tela em branco e nenhuma ideia", "descricao": "Você abre o Canva, olha os templates e não sabe nem por onde começar." },
-      { "titulo": "Posts que não geram resultado", "descricao": "As artes saem, mas não têm a cara de quem entende do que está fazendo — e isso afasta cliente." }
+      { "titulo": "Horas perdidas ajustando fonte e cor", "descricao": "Você mexe, desfaz, mexe de novo — e no fim o resultado ainda não parece profissional.", "icone": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 3\"/>" },
+      { "titulo": "Tela em branco e nenhuma ideia", "descricao": "Você abre o Canva, olha os templates e não sabe nem por onde começar.", "icone": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 9h18\"/>" },
+      { "titulo": "Posts que não geram resultado", "descricao": "As artes saem, mas não têm a cara de quem entende do que está fazendo — e isso afasta cliente.", "icone": "<polyline points=\"22 17 13.5 8.5 8.5 13.5 2 7\"/><polyline points=\"16 17 22 17 22 11\"/>" }
     ],
     "ponte": "O problema quase nunca é falta de talento. É não ter um caminho claro para seguir — e é exatamente isso que este curso resolve."
   },
 
   "publico": {
+    "kicker": "É PARA VOCÊ?",
     "itens": [
       { "titulo": "Quem está começando no design", "descricao": "Nunca usou uma ferramenta de design, mas quer aprender de forma prática, sem complicação e sem termos técnicos." },
       { "titulo": "Empreendedores e autônomos", "descricao": "Precisa divulgar seu produto ou serviço nas redes sociais e quer criar suas próprias artes sem depender de um designer." },
@@ -60,10 +73,76 @@
     ]
   },
 
+  "conteudo": {
+    "headline": "17 módulos estruturados do básico ao avançado.",
+    "grupos": [
+      {
+        "titulo": "Módulos 01 a 04: Fundamentos do Canva & Identidade Visual",
+        "aberto": true,
+        "modulos": [
+          { "numero": "01", "titulo": "Boas-vindas", "descricao": "Tour e sistema das aulas." },
+          { "numero": "02", "titulo": "Fotos e Imagens", "descricao": "Ajustes, filtros e cortes de precisão." },
+          { "numero": "03", "titulo": "Mockups", "descricao": "Aplicação profissional de mockups." },
+          { "numero": "04", "titulo": "Elementos", "descricao": "Camadas e composição harmônica." }
+        ]
+      },
+      {
+        "titulo": "Módulos 05 a 09: Design para Redes Sociais & Marketing",
+        "modulos": [
+          { "numero": "05", "titulo": "Vídeos e Animações", "descricao": "Vídeos, música e vinhetas atrativas.", "destaque": true },
+          { "numero": "06", "titulo": "Criação de Logo", "descricao": "Logotipos e paleta de cores." },
+          { "numero": "07", "titulo": "E-books", "descricao": "Capas, diagramação interna e divulgação." },
+          { "numero": "08", "titulo": "YouTube", "descricao": "Capas, vinhetas e thumbnails marcantes." },
+          { "numero": "09", "titulo": "Facebook", "descricao": "Capas, banners e posts otimizados." }
+        ]
+      },
+      {
+        "titulo": "Módulos 10 a 13: Materiais Promocionais e E-books",
+        "modulos": [
+          { "numero": "10", "titulo": "Instagram", "descricao": "Posts, Stories e linhas editoriais.", "destaque": true },
+          { "numero": "11", "titulo": "Feed Organizado", "descricao": "Mosaicos, camadas e carrosséis." },
+          { "numero": "12", "titulo": "Design Comercial", "descricao": "Panfletos, cardápios e propostas." },
+          { "numero": "13", "titulo": "Cartão Virtual", "descricao": "Cartão interativo com links clicáveis." }
+        ]
+      },
+      {
+        "titulo": "Módulos 14 a 17: Vídeos, Animações e Recursos Avançados",
+        "modulos": [
+          { "numero": "14", "titulo": "Stickers & WhatsApp", "descricao": "Criação e instalação de figurinhas." },
+          { "numero": "15", "titulo": "Canva no Celular", "descricao": "Criação prática direto do smartphone." },
+          { "numero": "16", "titulo": "Canva Pro", "descricao": "Recursos avançados da versão paga." },
+          { "numero": "17", "titulo": "Monetização no Design", "descricao": "Como aplicar seu conhecimento no mercado.", "destaque": true }
+        ]
+      }
+    ]
+  },
+
+  "bonus": {
+    "headline": "Bônus exclusivos inclusos no treinamento.",
+    "itens": [
+      { "numero": "01", "titulo": "WhatsApp Business", "descricao": "Configuração, catálogo e respostas rápidas." },
+      { "numero": "02", "titulo": "Facebook Ads", "descricao": "Fundamentos para criar campanhas de anúncios." },
+      { "numero": "03", "titulo": "Mercado de Trabalho", "descricao": "Como estruturar seu portfólio e buscar projetos." },
+      { "numero": "04", "titulo": "Pack Fundo Transparente", "descricao": "Pacote com centenas de elementos em PNG." },
+      { "numero": "05", "titulo": "Tabela de Preços", "descricao": "Guia prático sobre como cobrar por seus serviços." },
+      { "numero": "06", "titulo": "Suporte Direto para Dúvidas", "descricao": "Ajuda direta para tirar suas dúvidas e receber orientações práticas.", "destaque": true },
+      { "numero": "07", "titulo": "Pack de Modelos Virais", "descricao": "Templates de posts otimizados para engajamento.", "destaque": true }
+    ]
+  },
+
+  "midCta": {
+    "texto": "Você já viu os 17 módulos e todos os bônus. Agora é decidir: continuar perdendo tempo ou aprender de vez.",
+    "botao": "QUERO DOMINAR O CANVA"
+  },
+
   "oferta": {
     "precoAtual": "147",
-    "parcelas": "12x de R$ 16,11",
+    "parcelas": "R$ 16,11",
     "garantiaDias": "7",
+    "garantiaTexto": "Você tem 7 dias para testar o curso na prática. Se não for para você, é só pedir o reembolso — 100% do valor de volta, sem burocracia e sem justificativa, direto pela Hotmart.",
+    "microcopy": "Comece a criar suas primeiras artes profissionais ainda hoje.",
+    "ctaTexto": "QUERO COMEÇAR AGORA",
+    "socialProof": "Junte-se a mais de 31 mil alunos que já aprenderam Canva com este método.",
     "beneficios": [
       "17 módulos (Básico ao Avançado)",
       "157 videoaulas práticas",
@@ -81,7 +160,8 @@
   },
 
   "checkout": {
-    "urlBase": "https://go.hotmart.com/S107242780G?ap=67bf&redirectionUrl=https%3A%2F%2Fpay.hotmart.com%2FG36746025S%3Foff%3Dky8ytb1b%26checkoutMode%3D10"
+    "base": "https://go.hotmart.com/S107242780G?ap=67bf",
+    "redirect": "&redirectionUrl=https%3A%2F%2Fpay.hotmart.com%2FG36746025S%3Foff%3Dky8ytb1b%26checkoutMode%3D10"
   },
 
   "tracking": {
@@ -89,39 +169,10 @@
     "googleAdsConversionLabel": "ugtMCIWNnOQcEOnRyMRE"
   },
 
-  "modulos": [
-    { "numero": "01", "titulo": "Boas-vindas", "descricao": "Tour e sistema das aulas." },
-    { "numero": "02", "titulo": "Fotos e Imagens", "descricao": "Ajustes, filtros e cortes de precisão." },
-    { "numero": "03", "titulo": "Mockups", "descricao": "Aplicação profissional de mockups." },
-    { "numero": "04", "titulo": "Elementos", "descricao": "Camadas e composição harmônica." },
-    { "numero": "05", "titulo": "Vídeos e Animações", "descricao": "Vídeos, música e vinhetas atrativas.", "destaque": true },
-    { "numero": "06", "titulo": "Criação de Logo", "descricao": "Logotipos e paleta de cores." },
-    { "numero": "07", "titulo": "E-books", "descricao": "Capas, diagramação interna e divulgação." },
-    { "numero": "08", "titulo": "YouTube", "descricao": "Capas, vinhetas e thumbnails marcantes." },
-    { "numero": "09", "titulo": "Facebook", "descricao": "Capas, banners e posts otimizados." },
-    { "numero": "10", "titulo": "Instagram", "descricao": "Posts, Stories e linhas editoriais.", "destaque": true },
-    { "numero": "11", "titulo": "Feed Organizado", "descricao": "Mosaicos, camadas e carrosséis." },
-    { "numero": "12", "titulo": "Design Comercial", "descricao": "Panfletos, cardápios e propostas." },
-    { "numero": "13", "titulo": "Cartão Virtual", "descricao": "Cartão interativo com links clicáveis." },
-    { "numero": "14", "titulo": "Stickers & WhatsApp", "descricao": "Criação e instalação de figurinhas." },
-    { "numero": "15", "titulo": "Canva no Celular", "descricao": "Criação prática direto do smartphone." },
-    { "numero": "16", "titulo": "Canva Pro", "descricao": "Recursos avançados da versão paga." },
-    { "numero": "17", "titulo": "Monetização no Design", "descricao": "Como aplicar seu conhecimento no mercado.", "destaque": true }
-  ],
-
-  "bonus": [
-    { "numero": "01", "titulo": "WhatsApp Business", "descricao": "Configuração, catálogo e respostas rápidas." },
-    { "numero": "02", "titulo": "Facebook Ads", "descricao": "Fundamentos para criar campanhas de anúncios." },
-    { "numero": "03", "titulo": "Mercado de Trabalho", "descricao": "Como estruturar seu portfólio e buscar projetos." },
-    { "numero": "04", "titulo": "Pack Fundo Transparente", "descricao": "Pacote com centenas de elementos em PNG." },
-    { "numero": "05", "titulo": "Tabela de Preços", "descricao": "Guia prático sobre como cobrar por seus serviços." },
-    { "numero": "06", "titulo": "Suporte Direto para Dúvidas", "descricao": "Ajuda direta para tirar suas dúvidas e receber orientações práticas.", "destaque": true },
-    { "numero": "07", "titulo": "Pack de Modelos Virais", "descricao": "Templates de posts otimizados para engajamento.", "destaque": true }
-  ],
-
   "depoimentos": [
     { "nome": "MIRTES", "texto": "Foi além das expectativas. Entregou muito mais do que eu esperava. Parabéns pela didática" },
     { "nome": "TATIANE", "texto": "O curso é excelente. Eu recomendo !" },
+    { "nome": "FRANCISCO", "texto": "O professor Ricardo, explica muito bem. Só tenho pena dele não ter uma área de perguntas, para o caso de termos alguma dúvida, pudermos perguntar.", "estrelas": "★★★★" },
     { "nome": "JELVANIDE", "texto": "Nossa foi um dos meus melhores investimentos, super recomendo gente!!!" },
     { "nome": "SILVONEI", "texto": "Parabéns pelo conteúdo do curso e pela apresentação pois vale a pena cada centavo investido! estou aprendendo muito com o curso e apoveitando as tecnicas que são passadas." },
     { "nome": "SAYMONN", "texto": "Bem explicado gostei demais." }

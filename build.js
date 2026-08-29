@@ -35,27 +35,13 @@ const TIPO_LABELS = { curso: "CURSO ONLINE", ebook: "EBOOK DIGITAL" };
 
 /* ---------- Motor de template minimalista (mustache-like) ---------- */
 /* Suporta: {{var}}, {{var.sub}}, {{{var}}} (raw/HTML),
-   {{#if var}}...{{/if}}, {{#each array}}...{{this.x}}...{{/each}} */
+   {{#if var}}...{{/if}}, {{#each array}}...{{this.x}}...{{/each}},
+   incluindo #each/#if ANINHADOS (ex: grupo de módulos → módulos). */
 
 function getValue(obj, keyPath) {
   if (keyPath === "this") return obj;
+  if (keyPath.startsWith("this.")) keyPath = keyPath.slice(5);
   return keyPath.split(".").reduce((acc, k) => (acc == null ? acc : acc[k]), obj);
-}
-
-function renderEach(block, array) {
-  return array
-    .map((item, i) => {
-      let out = block;
-      out = out.replace(/\{\{#if\s+this\.([\w.]+)\}\}([\s\S]*?)\{\{\/if\}\}/g, (_, key, inner) =>
-        getValue(item, key) ? inner : ""
-      );
-      out = out.replace(/\{\{\{this\.([\w.]+)\}\}\}/g, (_, key) => getValue(item, key) ?? "");
-      out = out.replace(/\{\{this\.([\w.]+)\}\}/g, (_, key) => escapeHtml(getValue(item, key) ?? ""));
-      out = out.replace(/\{\{this\}\}/g, () => escapeHtml(typeof item === "string" ? item : ""));
-      out = out.replace(/\{\{comma\}\}/g, i < array.length - 1 ? "," : "");
-      return out;
-    })
-    .join("");
 }
 
 function escapeHtml(str) {
@@ -63,22 +49,96 @@ function escapeHtml(str) {
   return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
+// Encontra o {{/each}} ou {{/if}} que fecha o bloco aberto em `openIdx`,
+// contando aberturas/fechamentos do MESMO tipo de tag pra lidar com aninhamento.
+function findBlockEnd(str, fromIdx, openTagRe, closeTag) {
+  let depth = 1;
+  let pos = fromIdx;
+  while (pos < str.length) {
+    openTagRe.lastIndex = pos;
+    const openMatch = openTagRe.exec(str);
+    const closeIdx = str.indexOf(closeTag, pos);
+    if (closeIdx === -1) return -1; // malformado
+    if (openMatch && openMatch.index < closeIdx) {
+      depth++;
+      pos = openMatch.index + openMatch[0].length;
+    } else {
+      depth--;
+      if (depth === 0) return closeIdx;
+      pos = closeIdx + closeTag.length;
+    }
+  }
+  return -1;
+}
+
+function processEachBlocks(str, data) {
+  const openRe = /\{\{#each\s+([\w.]+)\}\}/;
+  let result = "";
+  let rest = str;
+  while (true) {
+    const m = rest.match(openRe);
+    if (!m) {
+      result += rest;
+      break;
+    }
+    const keyPath = m[1];
+    const afterOpenIdx = m.index + m[0].length;
+    const scanRe = /\{\{#each\s+[\w.]+\}\}/g;
+    const closeIdx = findBlockEnd(rest, afterOpenIdx, scanRe, "{{/each}}");
+    if (closeIdx === -1) {
+      result += rest; // malformado — não trava o build
+      break;
+    }
+    result += rest.slice(0, m.index);
+    const innerBlock = rest.slice(afterOpenIdx, closeIdx);
+    const arr = getValue(data, keyPath);
+    if (Array.isArray(arr)) {
+      arr.forEach((item, idx) => {
+        const itemBlock = innerBlock.replace(/\{\{comma\}\}/g, idx < arr.length - 1 ? "," : "");
+        result += render(itemBlock, item);
+      });
+    }
+    rest = rest.slice(closeIdx + "{{/each}}".length);
+  }
+  return result;
+}
+
+function processIfBlocks(str, data) {
+  const openRe = /\{\{#if\s+([\w.]+)\}\}/;
+  let result = "";
+  let rest = str;
+  while (true) {
+    const m = rest.match(openRe);
+    if (!m) {
+      result += rest;
+      break;
+    }
+    const keyPath = m[1];
+    const afterOpenIdx = m.index + m[0].length;
+    const scanRe = /\{\{#if\s+[\w.]+\}\}/g;
+    const closeIdx = findBlockEnd(rest, afterOpenIdx, scanRe, "{{/if}}");
+    if (closeIdx === -1) {
+      result += rest;
+      break;
+    }
+    result += rest.slice(0, m.index);
+    const innerBlock = rest.slice(afterOpenIdx, closeIdx);
+    const val = getValue(data, keyPath);
+    if (val) result += render(innerBlock, data);
+    rest = rest.slice(closeIdx + "{{/if}}".length);
+  }
+  return result;
+}
+
 function render(templateStr, data) {
   let out = templateStr;
+  out = processEachBlocks(out, data);
+  out = processIfBlocks(out, data);
 
-  out = out.replace(/\{\{#each\s+([\w.]+)\}\}([\s\S]*?)\{\{\/each\}\}/g, (_, keyPath, block) => {
-    const arr = getValue(data, keyPath);
-    if (!Array.isArray(arr) || arr.length === 0) return "";
-    return renderEach(block, arr);
-  });
-
-  out = out.replace(/\{\{#if\s+([\w.]+)\}\}([\s\S]*?)\{\{\/if\}\}/g, (_, keyPath, inner) => {
-    const val = getValue(data, keyPath);
-    return val ? inner : "";
-  });
-
+  // {{{var}}} raw (sem escape, permite HTML como <em>, <strong>, <br>)
   out = out.replace(/\{\{\{([\w.]+)\}\}\}/g, (_, keyPath) => getValue(data, keyPath) ?? "");
 
+  // {{var}} com escape
   out = out.replace(/\{\{([\w.]+)\}\}/g, (_, keyPath) => {
     const val = getValue(data, keyPath);
     return val == null ? "" : escapeHtml(String(val));
@@ -118,17 +178,63 @@ function enriquecerProduto(p) {
   const corHex = (p.tema?.corDestaque || "#1fbf7a").replace("#", "");
   const depoimentosComInicial = (p.depoimentos || []).map((d) => ({
     ...d,
-    inicial: d.nome ? d.nome.trim().charAt(0).toUpperCase() : "?"
+    inicial: d.nome ? d.nome.trim().charAt(0).toUpperCase() : "?",
+    estrelas: d.estrelas || "★★★★★"
   }));
+
+  if (!p.marcaCurta) {
+    throw new Error(`Produto "${p.slug}" não tem "marcaCurta" definida no JSON — campo obrigatório.`);
+  }
+
+  // Schema.org gerado via JSON.stringify (escapa aspas/HTML corretamente,
+  // ao contrário de templating de texto puro).
+  const schemaCourse = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: p.nome,
+    description: p.seo?.schemaDescription || p.seo?.description,
+    provider: { "@type": "Organization", name: p.produtor },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "online",
+      ...(p.cargaHorariaISO ? { courseWorkload: p.cargaHorariaISO } : {})
+    },
+    offers: {
+      "@type": "Offer",
+      price: `${p.oferta.precoAtual}.00`,
+      priceCurrency: "BRL",
+      availability: "https://schema.org/InStock",
+      url: urlCanonica
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: p.avaliacao.media,
+      reviewCount: p.avaliacao.quantidade,
+      bestRating: "5",
+      worstRating: "1"
+    }
+  };
+
+  const schemaFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: (p.faq || []).map((f) => ({
+      "@type": "Question",
+      name: f.pergunta,
+      acceptedAnswer: { "@type": "Answer", text: f.resposta.replace(/<\/?strong>/g, "") }
+    }))
+  };
 
   return {
     ...p,
     urlCanonica,
     caminhoAssets: "../assets", // de /public/<slug>/ para /public/assets/
-    marcaCurta: p.marcaCurta || p.nome.split(" ").slice(0, 2).join(" ").toUpperCase(),
+    nomeCurto: p.nomeCurto || p.nome,
     tipoLabel: TIPO_LABELS[p.tipo] || "PRODUTO ONLINE",
-    tema: { ...p.tema, corDestaqueHex: corHex },
-    depoimentos: depoimentosComInicial
+    tema: { ...p.tema, corDestaqueHex: corHex, corFundo: p.tema?.corFundo || "#111111" },
+    depoimentos: depoimentosComInicial,
+    schemaCourseJson: `<script type="application/ld+json">\n${JSON.stringify(schemaCourse, null, 2)}\n</script>`,
+    schemaFaqJson: `<script type="application/ld+json">\n${JSON.stringify(schemaFaq, null, 2)}\n</script>`
   };
 }
 
