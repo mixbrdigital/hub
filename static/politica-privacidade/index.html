@@ -19,14 +19,21 @@
     .policy h2{margin-top:32px;font-size:20px}
     .policy p, .policy li{opacity:.85}
 
-    /* Alteração exclusiva do logo do topo para o tom azul */
-    .site-header .brand,
-    .site-header .brand .brand-mark {
-      color: #60a5fa !important;
+    /* Logo Header: Texto branco no estado normal, símbolo azul */
+    .site-header .brand {
+      color: #f3f3f3 !important;
+      transition: color 0.2s ease;
     }
 
-    .site-header .brand:hover {
-      color: #93c5fd !important;
+    .site-header .brand .brand-mark {
+      color: #60a5fa !important;
+      transition: color 0.2s ease;
+    }
+
+    /* Logo Header Hover: Tudo fica azul ao passar o mouse */
+    .site-header .brand:hover,
+    .site-header .brand:hover .brand-mark {
+      color: #60a5fa !important;
     }
 
     /* Estilo do link de retorno */
