@@ -13,25 +13,34 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles.css">
   <style>
-    /* Cor de seleção de texto da página em azul */
+    /* Seleção de texto da página em azul */
     ::selection {
       background-color: #60a5fa;
       color: #111111;
     }
 
-    /* Links gerais da página em azul */
+    /* Força os links e o rodapé desta página específica para o azul */
     a {
-      color: #60a5fa;
+      color: #60a5fa !important;
       text-decoration: underline;
       text-underline-offset: 3px;
       transition: color 0.15s ease;
     }
 
     a:hover {
-      color: #93c5fd;
+      color: #93c5fd !important;
     }
 
-    /* Cor do ícone/marca */
+    .footer a,
+    .footer a:visited {
+      color: #60a5fa !important;
+    }
+
+    .footer a:hover {
+      color: #93c5fd !important;
+    }
+
+    /* Ícone da marca em azul */
     .brand-mark {
       color: #60a5fa !important;
     }
@@ -41,13 +50,12 @@
     .home-hero p{opacity:.8}
     .produtos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1100px;margin:0 auto;padding:0 24px 80px}
     
-    /* Card de produtos com borda de hover azul e mantendo visual limpo */
-    .produto-card{border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit;transition:transform .15s ease,border-color .15s ease}
+    .produto-card{border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit !important;transition:transform .15s ease,border-color .15s ease}
     .produto-card:hover{transform:translateY(-4px);border-color:#60a5fa}
     .produto-card span.kicker{font-size:12px;letter-spacing:.08em;opacity:.6;text-transform:uppercase}
     .produto-card h2{font-size:20px;margin:0}
     .produto-card p{font-size:14px;opacity:.75;margin:0}
-    .produto-card .preco{margin-top:auto;font-weight:700;font-size:18px;color:#60a5fa}
+    .produto-card .preco{margin-top:auto;font-weight:700;font-size:18px;color:#60a5fa !important}
   </style>
 </head>
 <body>
