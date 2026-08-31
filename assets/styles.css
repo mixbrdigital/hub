@@ -198,13 +198,16 @@ a:hover {
   opacity: 0.8;
 }
 
-.button {
+.button,
+.button:visited,
+.button:active,
+.button:focus {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   background-color: var(--accent-color);
-  color: #111;
+  color: #111111; /* Força a cor do texto e do ícone */
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 14px;
@@ -216,6 +219,7 @@ a:hover {
 
 .button:hover {
   background-color: var(--accent-hover);
+  color: #111111; /* Garante que o texto continue visível no hover */
   transform: translateY(-2px);
 }
 
