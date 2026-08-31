@@ -8,20 +8,38 @@
   <link rel="canonical" href="https://mixbrdigital.com.br/politica-privacidade/">
   <link rel="stylesheet" href="../assets/styles.css">
   <style>
+    /* Seleção de texto em azul nesta página */
+    ::selection {
+      background-color: #60a5fa;
+      color: #111111;
+    }
+
     .policy{max-width:760px;margin:0 auto;padding:80px 24px;line-height:1.7}
     .policy h1{margin-bottom:24px}
     .policy h2{margin-top:32px;font-size:20px}
     .policy p, .policy li{opacity:.85}
-	.back-link {
-  color: #60a5fa;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color 0.2s ease;
-}
 
-.back-link:hover {
-  color: #93c5fd; /* Tom levemente mais claro ao passar o mouse */
-}	
+    /* Alteração exclusiva do logo do topo para o tom azul */
+    .site-header .brand,
+    .site-header .brand .brand-mark {
+      color: #60a5fa !important;
+    }
+
+    .site-header .brand:hover {
+      color: #93c5fd !important;
+    }
+
+    /* Estilo do link de retorno */
+    .back-link {
+      color: #60a5fa !important;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: #93c5fd !important;
+    }	
   </style>
 </head>
 <body>
