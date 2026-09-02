@@ -7,7 +7,8 @@
   "produtor": "Expert Cursos",
   "plataforma": "Hotmart",
   "marcaCurta": "EXCEL +<br>POWER BI",
-  "ctaTextoPadrao": "Garantir Minha Vaga ↗",
+  "ctaTextoPadrao": "Garantir Vaga ↗",
+  "ctaTextoMobile": "Garantir Vaga",
 
   "seo": {
     "title": "Cursos de Excel e Power BI | Do Básico ao Avançado",
@@ -132,7 +133,7 @@
 
   "midCta": {
     "texto": "Você já viu os módulos de Excel e Power BI. Agora é decidir: continuar com dados soltos ou aprender as duas ferramentas que o mercado mais pede.",
-    "botao": "INSCREVA-SE AQUI"
+    "botao": "SIM, QUERO OS 22 MÓDULOS"
   },
 
   "oferta": {
@@ -141,7 +142,7 @@
     "garantiaDias": "7",
     "garantiaTexto": "Você tem 7 dias para acessar o conteúdo. Se ainda achar que os cursos não são para você, basta enviar um e-mail solicitando o reembolso — devolvemos todo o seu dinheiro, sem perguntas, mesmo que a compra tenha sido feita via boleto, cartão de crédito ou Pix.",
     "microcopy": "Comece a dominar Excel e Power BI ainda hoje.",
-    "ctaTexto": "INSCREVA-SE AQUI!",
+    "ctaTexto": "GARANTIR MINHA VAGA AGORA",
     "socialProof": "Junte-se a mais de 33 mil alunos que já aprenderam Excel e Power BI com este método.",
     "beneficios": [
       "2 cursos completos (Excel + Power BI)",

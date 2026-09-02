@@ -230,6 +230,7 @@ function enriquecerProduto(p) {
     urlCanonica,
     caminhoAssets: "../assets", // de /public/<slug>/ para /public/assets/
     nomeCurto: p.nomeCurto || p.nome,
+    ctaTextoMobile: p.ctaTextoMobile || p.ctaTextoPadrao,
     tipoLabel: TIPO_LABELS[p.tipo] || "PRODUTO ONLINE",
     tema: { ...p.tema, corDestaqueHex: corHex, corFundo: p.tema?.corFundo || "#111111" },
     depoimentos: depoimentosComInicial,
