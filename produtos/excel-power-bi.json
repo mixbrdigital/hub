@@ -1,0 +1,181 @@
+{
+  "slug": "excel-power-bi",
+  "ativo": true,
+  "tipo": "curso",
+  "nome": "Cursos de Excel e Power BI",
+  "nomeCurto": "Excel e Power BI",
+  "produtor": "Expert Cursos",
+  "plataforma": "Hotmart",
+  "marcaCurta": "EXCEL +<br>POWER BI",
+  "ctaTextoPadrao": "Quero Aprender os Dois ↗",
+
+  "seo": {
+    "title": "Cursos de Excel e Power BI | Do Básico ao Avançado",
+    "description": "Aprenda Excel e Power BI num só treinamento, com 70 aulas e 60 horas de conteúdo. Certificado de conclusão de cada curso e garantia de 7 dias.",
+    "schemaDescription": "Pacote com dois cursos online, Excel e Power BI, do básico ao avançado, com dashboards profissionais e certificado de conclusão de cada curso.",
+    "googleSiteVerification": ""
+  },
+
+  "cargaHorariaISO": "PT60H",
+
+  "tema": {
+    "corDestaque": "#c8f34a",
+    "corHover": "#b8e33a",
+    "corFundo": "#151515"
+  },
+
+  "anuncio": {
+    "esquerda": "CURSOS DE EXCEL E POWER BI",
+    "direita": "DO BÁSICO AO AVANÇADO"
+  },
+
+  "footer": { "marca": "EXCEL + POWER BI" },
+
+  "hero": {
+    "titulo": "Domine <em>Excel e Power BI</em> num só treinamento, do básico ao avançado.",
+    "lead": "Aprenda os 2 softwares mais pedidos do mercado com aulas passo a passo, dashboards profissionais e certificado de conclusão de cada curso.",
+    "ctaTexto": "QUERO APRENDER OS DOIS",
+    "verMaisTexto": "Ver módulos do curso ↓",
+    "microcopy": "De <b>R$ 197,00</b> ou 12x de <b>R$ 20,37</b> · 7 dias de garantia · acesso imediato",
+    "imagem": "https://static-media.hotmart.com/1d9vm3PkxuN_iXNy3vKfS8tPTXc=/filters:quality(100):format(webp)/klickart-prod/uploads/media/file/9841327/group_1000004512.png",
+    "imagemAlt": "Cursos de Excel e Power BI do básico ao avançado",
+    "selo": "EXCEL • POWER BI • DASHBOARDS"
+  },
+
+  "video": { "youtubeId": "" },
+
+  "dor": {
+    "headline": "Trabalhar com dados não devia significar duas ferramentas separadas — e nenhuma dominada de verdade.",
+    "itens": [
+      { "titulo": "Excel que trava no básico", "descricao": "Você sabe usar fórmulas simples, mas trava assim que precisa de algo mais avançado, como dashboards ou automação.", "icone": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 3\"/>" },
+      { "titulo": "Power BI parece complicado demais", "descricao": "Você já tentou aprender sozinho, mas a curva de aprendizado assusta e você desiste antes de ver resultado.", "icone": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 9h18\"/>" },
+      { "titulo": "Relatórios que não impressionam", "descricao": "Os dados até existem, mas a apresentação final não tem a cara de um trabalho profissional — e isso pesa numa entrevista ou promoção.", "icone": "<polyline points=\"22 17 13.5 8.5 8.5 13.5 2 7\"/><polyline points=\"16 17 22 17 22 11\"/>" }
+    ],
+    "ponte": "O problema quase nunca é falta de talento. É não ter um caminho claro pra seguir — e é exatamente isso que este treinamento resolve."
+  },
+
+  "publico": {
+    "kicker": "É PRA VOCÊ?",
+    "itens": [
+      { "titulo": "Quem quer se destacar no mercado", "descricao": "Já domina o básico de Excel, mas sabe que Excel + Power BI juntos abrem portas pra vagas melhores em análise de dados." },
+      { "titulo": "Profissionais de dados e financeiro", "descricao": "Precisa ir além de planilhas soltas e criar dashboards de verdade pra apresentar resultados." },
+      { "titulo": "Quem busca uma nova carreira", "descricao": "Quer migrar pra análise de dados e sabe que Excel + Power BI é a combinação mais pedida do mercado." }
+    ]
+  },
+
+  "prova": {
+    "headline": "Duas ferramentas essenciais, um caminho estruturado.",
+    "stats": [
+      { "numero": "70", "legenda": "aulas em vídeo" },
+      { "numero": "60h", "legenda": "de conteúdo original" },
+      { "numero": "4,5", "legenda": "de avaliação média (162)", "destaque": true },
+      { "numero": "7 dias", "legenda": "de garantia total" }
+    ]
+  },
+
+  "conteudo": {
+    "headline": "2 cursos completos, do básico ao avançado.",
+    "grupos": [
+      {
+        "titulo": "Curso de Excel: Do Básico ao Avançado",
+        "aberto": true,
+        "modulos": [
+          { "numero": "01", "titulo": "Introdução", "descricao": "Usando a plataforma e apresentação dos cursos." },
+          { "numero": "02", "titulo": "Área de Trabalho", "descricao": "Funcionalidades, planilhas, tabelas e atalhos." },
+          { "numero": "03", "titulo": "Imagens e Validações", "descricao": "Imagens, validações e formatação condicional." },
+          { "numero": "04", "titulo": "Gráficos", "descricao": "Criação de gráficos do básico ao avançado.", "destaque": true },
+          { "numero": "05", "titulo": "Funções", "descricao": "Principais funções do Excel na prática." },
+          { "numero": "06", "titulo": "Macros e Impressão", "descricao": "Planilhas inteligentes, proteção, macros e impressão." },
+          { "numero": "07", "titulo": "Power Query & IA", "descricao": "Power Query, Power Pivot e Chat GPT.", "destaque": true },
+          { "numero": "08", "titulo": "Tabelas Dinâmicas", "descricao": "Tabelas e gráficos dinâmicos." },
+          { "numero": "09", "titulo": "Dashboards no Excel", "descricao": "Criação de dashboards completos.", "destaque": true }
+        ]
+      },
+      {
+        "titulo": "Curso de Power BI: Do Básico ao Avançado",
+        "modulos": [
+          { "numero": "01", "titulo": "Download e Metodologia", "descricao": "Instalação e metodologia do curso." },
+          { "numero": "02", "titulo": "Importação de Dados", "descricao": "Primeiros passos e importação de dados." },
+          { "numero": "03", "titulo": "Trabalhando com Datas", "descricao": "Tratamento de datas no Power BI." },
+          { "numero": "04", "titulo": "Relacionamentos", "descricao": "Relacionamentos entre tabelas no Power BI." },
+          { "numero": "05", "titulo": "Primeiros Dashboards", "descricao": "Primeiros dashboards, medidas e temas.", "destaque": true },
+          { "numero": "06", "titulo": "Online e Celular", "descricao": "Conta, dashboard online e no celular." },
+          { "numero": "07", "titulo": "Fórmulas DAX", "descricao": "Fórmulas DAX na prática." },
+          { "numero": "08", "titulo": "Dashboard de Vendas", "descricao": "Dashboard de vendas e devoluções.", "destaque": true },
+          { "numero": "09", "titulo": "Dashboard de Metas", "descricao": "Dashboard de metas e resultados.", "destaque": true },
+          { "numero": "10", "titulo": "Base de Dados", "descricao": "Base de dados e templates prontos." }
+        ]
+      }
+    ]
+  },
+
+  "bonus": {
+    "headline": "Bônus e Super Aulas inclusos no treinamento.",
+    "itens": [
+      { "numero": "01", "titulo": "Aulas Bônus", "descricao": "Conteúdo extra do curso de Excel." },
+      { "numero": "02", "titulo": "Certificados", "descricao": "Certificado de conclusão digital e físico de cada curso.", "destaque": true },
+      { "numero": "03", "titulo": "Copilot (IA)", "descricao": "Inteligência artificial da Microsoft aplicada ao Excel." },
+      { "numero": "04", "titulo": "Teste de Entrevista", "descricao": "Super aula: teste de Excel para entrevista de emprego." },
+      { "numero": "05", "titulo": "Dashboards no Excel", "descricao": "Super aulas de dashboards direto no Excel.", "destaque": true },
+      { "numero": "06", "titulo": "Controle de Estoque", "descricao": "Super aula: planilha de controle de estoque." },
+      { "numero": "07", "titulo": "Cronograma Físico-Financeiro", "descricao": "Super aula de planejamento financeiro." },
+      { "numero": "08", "titulo": "Templates para Power BI", "descricao": "Criação de templates no PowerPoint para Power BI." },
+      { "numero": "09", "titulo": "Funções no Power BI", "descricao": "Super aula com funções avançadas do Power BI." }
+    ]
+  },
+
+  "midCta": {
+    "texto": "Você já viu os módulos de Excel e Power BI. Agora é decidir: continuar com dados soltos ou aprender as duas ferramentas que o mercado mais pede.",
+    "botao": "QUERO DOMINAR OS DOIS"
+  },
+
+  "oferta": {
+    "precoAtual": "197",
+    "parcelas": "R$ 20,37",
+    "garantiaDias": "7",
+    "garantiaTexto": "Você tem 7 dias para testar os dois cursos na prática. Se não for pra você, é só pedir o reembolso — 100% do valor de volta, sem burocracia e sem justificativa, direto pela Hotmart.",
+    "microcopy": "Comece a dominar Excel e Power BI ainda hoje.",
+    "ctaTexto": "QUERO COMEÇAR AGORA",
+    "socialProof": "Junte-se a mais de 33 mil alunos que já aprenderam Excel e Power BI com este método.",
+    "beneficios": [
+      "2 cursos completos (Excel + Power BI)",
+      "70 aulas e 60 horas de conteúdo original",
+      "Certificado de conclusão de cada curso",
+      "Acesso vitalício",
+      "Estude no seu ritmo, em qualquer dispositivo",
+      "Taxa única, sem mensalidades"
+    ]
+  },
+
+  "avaliacao": {
+    "media": "4.5",
+    "quantidade": "162",
+    "linkHotmart": "https://go.hotmart.com/Y107411837R?dp=1&redirectionUrl=https%3A%2F%2Fhotmart.com%2Fpt-br%2Fmarketplace%2Fprodutos%2Fcursos-de-excel-e-power-bi%2FK52721799P"
+  },
+
+  "checkout": {
+    "base": "https://go.hotmart.com/Y107411837R?ap=2867",
+    "redirect": "&redirectionUrl=https%3A%2F%2Fpay.hotmart.com%2FK52721799P%3Foff%3Dk5t4tjfm%26checkoutMode%3D10"
+  },
+
+  "tracking": {
+    "googleAdsId": "AW-18397407465",
+    "googleAdsConversionLabel": "TODO_CRIAR_LABEL_PROPRIO_NO_GOOGLE_ADS"
+  },
+
+  "depoimentos": [
+    { "nome": "CLEITON", "texto": "Estou estudando o curso e já percebi que é bem completo, direto, com explicações claras e sem enrolação. Em poucas aulas aprendi coisas simples que eu nem sabia que eram possíveis." },
+    { "nome": "PAULO", "texto": "Boa noite ... Só gratidão!!!" },
+    { "nome": "RODRIGO", "texto": "Muito bom, método de ensino simples e objetivo. Teoria e prática, vc não precisa ficar uma hora bitolado as aulas são curtas, tudo no seu tempo." },
+    { "nome": "JONIELI", "texto": "Curso muito bom, recomendo.", "estrelas": "★★★★" }
+  ],
+
+  "faq": [
+    { "pergunta": "Qual o formato do curso e como recebo o acesso?", "resposta": "Os cursos são 100% online em videoaulas gravadas. Após a confirmação do pagamento, os dados de acesso são enviados para o seu e-mail e também ficam disponíveis na sua conta Hotmart, em \"Minhas Compras\"." },
+    { "pergunta": "Preciso ter experiência prévia com Excel ou Power BI?", "resposta": "Não! Os dois cursos começam do zero e evoluem passo a passo até os recursos mais avançados, incluindo dashboards e automações." },
+    { "pergunta": "Por quanto tempo tenho acesso aos cursos?", "resposta": "O acesso é vitalício aos dois cursos. Você pode assistir às aulas quantas vezes quiser, no seu próprio ritmo, pelo computador, tablet ou celular." },
+    { "pergunta": "Os cursos oferecem certificado de conclusão?", "resposta": "Sim! Você recebe um certificado de conclusão para cada curso (Excel e Power BI), com opção de certificado físico." },
+    { "pergunta": "Quem é a empresa responsável pelo curso?", "resposta": "O treinamento é produzido pela <strong>Expert Cursos</strong>, produtora especializada em cursos online certificados na plataforma Hotmart." },
+    { "pergunta": "E se eu não gostar? Tenho garantia?", "resposta": "Sim, você tem 7 dias de garantia incondicional. Se por qualquer motivo os cursos não forem para você, basta solicitar o reembolso e 100% do seu dinheiro será devolvido, direto pela Hotmart." }
+  ]
+}
