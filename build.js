@@ -276,6 +276,7 @@ function gerarSitemap(produtos) {
   const hoje = new Date().toISOString().slice(0, 10);
   const urls = [
     `  <url><loc>${DOMINIO}/</loc><lastmod>${hoje}</lastmod><priority>1.0</priority></url>`,
+    `  <url><loc>${DOMINIO}/politica-privacidade/</loc><lastmod>${hoje}</lastmod><priority>0.3</priority></url>`,
     ...produtos.map(
       (p) => `  <url><loc>${p.urlCanonica}</loc><lastmod>${hoje}</lastmod><priority>0.8</priority></url>`
     )
