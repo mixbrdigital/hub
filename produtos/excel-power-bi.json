@@ -7,8 +7,8 @@
   "produtor": "Expert Cursos",
   "plataforma": "Hotmart",
   "marcaCurta": "EXCEL +<br>POWER BI",
-  "ctaTextoPadrao": "Garantir Vaga ↗",
-  "ctaTextoMobile": "Garantir Vaga",
+  "ctaTextoPadrao": "Acessar o Curso ↗",
+  "ctaTextoMobile": "Acessar Curso",
 
   "seo": {
     "title": "Cursos de Excel e Power BI | Do Básico ao Avançado",
@@ -34,7 +34,7 @@
 
   "hero": {
     "titulo": "Domine <em>Excel e Power BI</em>: curso completo com acesso vitalício e certificado!",
-    "lead": "Aprenda Excel e Power BI 100% online de forma clara e prática, e destaque-se como um profissional indispensável no mercado de trabalho.",
+    "lead": "Aprenda Excel e Power BI do zero ao avançado, com aulas práticas e acesso vitalício.",
     "ctaTexto": "QUERO APRENDER EXCEL E POWER BI",
     "verMaisTexto": "Ver módulos do curso ↓",
     "microcopy": "De <b>R$ 297,00</b> por <b>R$ 197,00</b> ou 12x de <b>R$ 20,37</b> · 7 dias de garantia · acesso imediato",
@@ -65,7 +65,7 @@
   },
 
   "prova": {
-    "headline": "Ganhe destaque no mercado com o poder do Excel e do Power BI.",
+    "headline": "Excel e Power BI, do básico ao avançado, num só treinamento.",
     "stats": [
       { "numero": "22", "legenda": "módulos completos" },
       { "numero": "75", "legenda": "aulas em vídeo" },
@@ -142,8 +142,8 @@
     "garantiaDias": "7",
     "garantiaTexto": "Você tem 7 dias para acessar o conteúdo. Se ainda achar que os cursos não são para você, basta enviar um e-mail solicitando o reembolso — devolvemos todo o seu dinheiro, sem perguntas, mesmo que a compra tenha sido feita via boleto, cartão de crédito ou Pix.",
     "microcopy": "Comece a dominar Excel e Power BI ainda hoje.",
-    "ctaTexto": "GARANTIR MINHA VAGA AGORA",
-    "socialProof": "Junte-se a mais de 33 mil alunos que já aprenderam Excel e Power BI com este método.",
+    "ctaTexto": "QUERO ACESSAR AGORA",
+    "socialProof": "Junte-se a mais de 33.900 alunos que já aprenderam Excel e Power BI com este método.",
     "beneficios": [
       "2 cursos completos (Excel + Power BI)",
       "22 módulos e 75 aulas em vídeo",
@@ -182,12 +182,12 @@
   "faq": [
     { "pergunta": "Quanto tempo terei de acesso ao curso?", "resposta": "Você recebe acesso vitalício aos dois cursos, pode estudar no seu tempo e no seu horário, assistir e reassistir as aulas quantas vezes quiser." },
     { "pergunta": "Como vou receber o curso?", "resposta": "Após a confirmação do pagamento, você recebe o acesso em seu e-mail. Basta clicar no botão de acesso, criar sua senha e começar." },
-    { "pergunta": "O certificado é válido em todo o Brasil?", "resposta": "Sim. Os certificados têm base legal no Decreto Nº 5.154/2004 e nas normas do MEC, válidos em todo o território nacional — podem ser usados no currículo e como horas extracurriculares na faculdade." },
+    { "pergunta": "O curso emite certificado de conclusão?", "resposta": "Sim, você recebe um certificado de conclusão ao final do curso. Para detalhes sobre validade e reconhecimento, consulte as informações oficiais do produtor na página do produto na Hotmart." },
     { "pergunta": "Quem pode fazer esse curso?", "resposta": "Qualquer pessoa em busca de capacitação profissional. Não é preciso ter conhecimento prévio: o curso vai desde os primeiros passos até a parte mais avançada." },
     { "pergunta": "Terei suporte durante o curso?", "resposta": "Sim, você tem acesso à área de membros e pode tirar todas as suas dúvidas em cada aula com o professor." },
     { "pergunta": "Quais são as formas de pagamento?", "resposta": "Cartão de crédito, boleto bancário, Pix ou PayPal." },
     { "pergunta": "Terei direito a carteirinha de estudante?", "resposta": "Sim, todos os alunos podem solicitar a carteira estudantil, nas versões digital e física." },
-    { "pergunta": "Quem é a empresa responsável pelo curso?", "resposta": "O treinamento é produzido pela <strong>Expert Cursos</strong>, referência em educação online com mais de 85.000 alunos formados e mais de 100.000 inscritos no YouTube." },
+    { "pergunta": "Quem é a empresa responsável pelo curso?", "resposta": "O treinamento é produzido pela <strong>Expert Cursos</strong>, produtora especializada em cursos online certificados na plataforma Hotmart." },
     { "pergunta": "E se eu não gostar? Tenho garantia?", "resposta": "Sim, você tem 7 dias de garantia incondicional. Basta enviar um e-mail solicitando o reembolso e devolvemos 100% do valor, mesmo em compras feitas via boleto, cartão ou Pix." }
   ]
 }
