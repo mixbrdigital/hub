@@ -239,6 +239,14 @@ function enriquecerProduto(p) {
     schemaCourseJson: `<script type="application/ld+json">\n${JSON.stringify(schemaCourse, null, 2)}\n</script>`,
     schemaFaqJson: `<script type="application/ld+json">\n${JSON.stringify(schemaFaq, null, 2)}\n</script>`,
     presell: p.presell && {
+      eyebrow: "Recomendação de Treinamento",
+      corTextoBotao: "#101827",
+      ctaTextoMobile: p.presell.ctaTextoMobile || p.presell.ctaTexto,
+      ctaTextoFinal: p.presell.ctaTextoFinal || p.presell.ctaTexto,
+      finalKicker: "Pronto para dar o próximo passo?",
+      finalTitulo: `Quer conhecer ${p.nomeCurto || p.nome}?`,
+      finalTexto: "Acesse a página oficial para conferir a estrutura completa, o valor promocional e garantir seu acesso com segurança.",
+      avisoRedirecionamento: `Você será direcionado com segurança para o site oficial de ${p.produtor}.`,
       ...p.presell,
       // de /public/p/<slug>/ (2 níveis) para /public/assets/
       caminhoAssets: "../../assets",
@@ -282,6 +290,11 @@ function gerarPaginasPresell(produtos) {
     .forEach((produto) => {
       const dirSaida = path.join(PUBLIC_DIR, "p", produto.slug);
       fs.mkdirSync(dirSaida, { recursive: true });
+
+      // Copia os assets locais do produto (ex: hero-mockup.webp) pra dentro
+      // da presell também — ela não reaproveita a pasta da LP completa.
+      copiarPasta(path.join(PRODUTOS_ASSETS_DIR, produto.slug), dirSaida);
+
       const html = render(template, produto);
       fs.writeFileSync(path.join(dirSaida, "index.html"), html, "utf8");
       console.log(`✔ /public/p/${produto.slug}/index.html (presell, noindex)`);

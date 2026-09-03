@@ -1,60 +1,183 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{presell.title}}</title>
-  <meta name="description" content="{{presell.description}}">
-  <meta name="robots" content="noindex,nofollow">
-  <link rel="canonical" href="{{presell.urlCanonica}}">
-  <meta name="theme-color" content="{{tema.corFundo}}">
-  <link rel="stylesheet" href="{{presell.caminhoAssets}}/presell.css">
-  <style>:root{--accent-color:{{tema.corDestaque}};}</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{presell.title}}</title>
+<meta name="description" content="{{presell.description}}">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="{{presell.urlCanonica}}">
+<meta name="theme-color" content="{{tema.corFundo}}">
+<link rel="stylesheet" href="{{presell.caminhoAssets}}/presell.css">
+<style>
+:root{
+  --accent-color:{{tema.corDestaque}};
+  --accent-hover:{{tema.corHover}};
+  --accent-ink:{{presell.corTextoBotao}};
+}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <span class="presell-tag">Página independente de divulgação</span>
 
-    <h1>{{{presell.h1}}}</h1>
-    <p class="lead">{{presell.paragrafo}}</p>
+<header class="p-header">
+  <div class="p-wrap p-header-in">
+    <div class="p-logo">MIX BR <span>DIGITAL</span></div>
+    <a class="p-header-link js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">Página oficial →</a>
+  </div>
+</header>
 
-    <ul class="pontos">
-      {{#each presell.pontos}}
-      <li>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-        <span>{{this}}</span>
-      </li>
-      {{/each}}
-    </ul>
+<main>
+<section class="p-hero">
+  <div class="p-wrap p-hero-grid">
+    <div>
+      <div class="p-eyebrow">{{presell.eyebrow}}</div>
 
-    <a class="cta js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">{{presell.ctaTexto}} →</a>
+      <h1>{{{presell.h1}}}</h1>
+      <p class="p-lead">{{presell.paragrafo}}</p>
 
-    {{#if avaliacao.media}}
-    <p class="avaliacao">★ {{avaliacao.media}}/5 · {{avaliacao.quantidade}} avaliações na Hotmart</p>
-    {{/if}}
+      {{#if presell.metrics}}
+      <div class="p-metrics">
+        {{#each presell.metrics}}
+        <div class="p-metric">{{this}}</div>
+        {{/each}}
+      </div>
+      {{/if}}
 
-    <div class="aviso">
-      Esta página é mantida por um afiliado independente e <strong>não é o site oficial</strong> de {{produtor}} nem da {{plataforma}}. Reunimos aqui apenas informações objetivas para te encaminhar à página oficial do produto. Não fazemos parte da equipe do produtor. Ao continuar, você será direcionado ao site oficial, onde a compra é processada com segurança pela {{plataforma}}. Podemos receber uma comissão, sem custo adicional para você.
+      {{#if presell.recomendacao}}
+      <div class="p-recommendation-box">
+        <strong>Por que estou indicando:</strong> {{presell.recomendacao}}
+      </div>
+      {{/if}}
+
+      <ul class="p-pontos">
+        {{#each presell.pontos}}
+        <li>
+          <span class="p-check">✓</span>
+          <span>{{this}}</span>
+        </li>
+        {{/each}}
+      </ul>
+
+      <a class="p-cta js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">{{presell.ctaTexto}} →</a>
+
+      {{#if presell.microTexto}}
+      <p class="p-micro">{{presell.microTexto}}</p>
+      {{/if}}
+
+      {{#if avaliacao.media}}
+      <p class="p-avaliacao">★ {{avaliacao.media}}/5 · {{avaliacao.quantidade}} avaliações na Hotmart</p>
+      {{/if}}
     </div>
 
-    <div class="rodape-presell">
-      <div>© <span data-current-year>2026</span> MixBR Digital</div>
-      <div class="links">
-        <a href="/politica-privacidade/">Política de Privacidade</a>
-        <span>·</span>
-        <a href="/termos/">Termos de Uso</a>
-        <span>·</span>
-        <a href="mailto:{{presell.emailContato}}">Contato</a>
-      </div>
+    {{#if presell.heroImagem}}
+    <div class="p-visual">
+      <img src="{{presell.heroImagem}}" alt="{{nome}}" width="900" height="900">
+    </div>
+    {{/if}}
+  </div>
+</section>
+
+{{#if presell.tags}}
+<section class="p-band">
+  <div class="p-wrap p-band-in">
+    {{#each presell.tags}}
+    <div class="p-band-item">{{this}}</div>
+    {{/each}}
+  </div>
+</section>
+{{/if}}
+
+{{#if presell.cards}}
+<section class="p-section">
+  <div class="p-wrap">
+    <div class="p-center">
+      {{#if presell.cardsKicker}}<div class="p-kicker">{{presell.cardsKicker}}</div>{{/if}}
+      {{#if presell.cardsTitulo}}<h2>{{presell.cardsTitulo}}</h2>{{/if}}
+      {{#if presell.cardsTexto}}<p class="p-sub">{{presell.cardsTexto}}</p>{{/if}}
+    </div>
+
+    <div class="p-cards">
+      {{#each presell.cards}}
+      <article class="p-card">
+        <h3>{{this.titulo}}</h3>
+        <p>{{this.texto}}</p>
+      </article>
+      {{/each}}
     </div>
   </div>
+</section>
+{{/if}}
 
-  <script>
-    window.__PRODUTO_TRACKING__ = {
-      googleAdsId: "{{tracking.googleAdsId}}",
-      produtoSlug: "{{slug}}"
-    };
-  </script>
-  <script src="{{presell.caminhoAssets}}/presell.js"></script>
+{{#if presell.estrutura}}
+<section class="p-section p-white">
+  <div class="p-wrap">
+    <div class="p-center">
+      {{#if presell.estruturaKicker}}<div class="p-kicker">{{presell.estruturaKicker}}</div>{{/if}}
+      {{#if presell.estruturaTitulo}}<h2>{{presell.estruturaTitulo}}</h2>{{/if}}
+      {{#if presell.estruturaTexto}}<p class="p-sub">{{presell.estruturaTexto}}</p>{{/if}}
+    </div>
+
+    <div class="p-content-grid">
+      {{#each presell.estrutura}}
+      <div class="p-content-item"><strong>{{this.titulo}}</strong><span>{{this.texto}}</span></div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+{{/if}}
+
+{{#if presell.bonus}}
+<section class="p-bonus">
+  <div class="p-wrap p-bonus-in">
+    <div class="p-bonus-copy">
+      {{#if presell.bonus.kicker}}<div class="p-kicker">{{presell.bonus.kicker}}</div>{{/if}}
+      <h2>{{presell.bonus.titulo}}</h2>
+      <p>{{presell.bonus.texto}}</p>
+    </div>
+  </div>
+</section>
+{{/if}}
+
+<section class="p-final">
+  <div class="p-wrap">
+    {{#if presell.finalKicker}}<div class="p-kicker">{{presell.finalKicker}}</div>{{/if}}
+    <h2>{{presell.finalTitulo}}</h2>
+    <p class="p-sub">{{presell.finalTexto}}</p>
+
+    <a class="p-cta js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">{{presell.ctaTextoFinal}} →</a>
+
+    <div class="p-note">{{presell.avisoRedirecionamento}}</div>
+  </div>
+</section>
+</main>
+
+<div class="p-aviso-legal">
+  <div class="p-wrap">
+    Esta página é mantida por um afiliado independente e <strong>não é o site oficial</strong> de {{produtor}} nem da {{plataforma}}. Reunimos aqui apenas informações objetivas para te encaminhar à página oficial do produto. Não fazemos parte da equipe do produtor. Ao continuar, você será direcionado ao site oficial, onde a compra é processada com segurança pela {{plataforma}}. Podemos receber uma comissão, sem custo adicional para você.
+  </div>
+</div>
+
+<footer class="p-footer">
+  <div class="p-wrap">
+    <div>© <span data-current-year>2026</span> MixBR Digital</div>
+    <div class="p-links">
+      <a href="/politica-privacidade/">Política de Privacidade</a>
+      <span>·</span>
+      <a href="/termos/">Termos de Uso</a>
+      <span>·</span>
+      <a href="mailto:{{presell.emailContato}}">Contato</a>
+    </div>
+  </div>
+</footer>
+
+<a class="p-mobile-cta js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">{{presell.ctaTextoMobile}} →</a>
+
+<script>
+  window.__PRODUTO_TRACKING__ = {
+    googleAdsId: "{{tracking.googleAdsId}}",
+    produtoSlug: "{{slug}}"
+  };
+</script>
+<script src="{{presell.caminhoAssets}}/presell.js"></script>
 </body>
 </html>
