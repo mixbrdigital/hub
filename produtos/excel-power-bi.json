@@ -34,7 +34,7 @@
 
   "hero": {
     "titulo": "Domine <em>Excel e Power BI</em>: curso completo com acesso vitalício e certificado!",
-    "lead": "Aprenda Excel e Power BI do zero ao avançado, com aulas práticas e acesso vitalício.",
+    "lead": "Do zero ao avançado, com aulas práticas e direto ao ponto — sem enrolação, no seu ritmo.",
     "ctaTexto": "QUERO APRENDER EXCEL E POWER BI",
     "verMaisTexto": "Ver módulos do curso ↓",
     "microcopy": "De <b>R$ 297,00</b> por <b>R$ 197,00</b> ou 12x de <b>R$ 20,37</b> · 7 dias de garantia · acesso imediato",
@@ -46,7 +46,7 @@
   "video": { "youtubeId": "oXBANG0VMUs" },
 
   "dor": {
-    "headline": "Perder tempo com planilhas manuais também é perder oportunidades no mercado de trabalho.",
+    "headline": "Você sabe o básico de Excel, mas trava no Power BI — e aprender os dois sozinho é lento.",
     "itens": [
       { "titulo": "Excel que trava no básico", "descricao": "Você sabe usar fórmulas simples, mas trava assim que precisa de algo mais avançado, como dashboards ou automação.", "icone": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 3\"/>" },
       { "titulo": "Power BI parece complicado demais", "descricao": "Você já tentou aprender sozinho, mas a curva de aprendizado assusta e você desiste antes de ver resultado.", "icone": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 9h18\"/>" },
@@ -58,9 +58,9 @@
   "publico": {
     "kicker": "É PRA VOCÊ?",
     "itens": [
-      { "titulo": "Quem quer se destacar no mercado", "descricao": "Já domina o básico de Excel, mas sabe que Excel + Power BI juntos abrem portas pra vagas melhores em análise de dados." },
+      { "titulo": "Quem já usa Excel no dia a dia", "descricao": "Sabe o básico, mas quer ir além: gráficos, funções avançadas e dashboards de verdade em Excel e Power BI." },
       { "titulo": "Profissionais de dados e financeiro", "descricao": "Precisa ir além de planilhas soltas e criar dashboards de verdade pra apresentar resultados." },
-      { "titulo": "Quem busca uma nova carreira", "descricao": "Quer migrar pra análise de dados e sabe que Excel + Power BI é a combinação mais pedida do mercado." }
+      { "titulo": "Quem busca uma nova carreira", "descricao": "Quer migrar pra análise de dados e precisa de uma base sólida em Excel e Power BI, as duas ferramentas mais usadas no dia a dia." }
     ]
   },
 
@@ -132,7 +132,7 @@
   },
 
   "midCta": {
-    "texto": "Você já viu os módulos de Excel e Power BI. Agora é decidir: continuar com dados soltos ou aprender as duas ferramentas que o mercado mais pede.",
+    "texto": "Você já viu os 22 módulos de Excel e Power BI. Agora é decidir: continuar com dados soltos ou aprender as duas ferramentas de uma vez.",
     "botao": "SIM, QUERO OS 22 MÓDULOS"
   },
 
