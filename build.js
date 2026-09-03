@@ -229,6 +229,7 @@ function enriquecerProduto(p) {
   return {
     ...p,
     urlCanonica,
+    linkPrincipal: p.paginaCompleta === false && p.presell ? `/p/${p.slug}/` : `/${p.slug}/`,
     caminhoAssets: "../assets", // de /public/<slug>/ para /public/assets/
     nomeCurto: p.nomeCurto || p.nome,
     ctaTextoMobile: p.ctaTextoMobile || p.ctaTextoPadrao,
@@ -251,18 +252,20 @@ function enriquecerProduto(p) {
 function gerarPaginasProdutos(produtos) {
   const template = fs.readFileSync(TEMPLATE_PATH, "utf8");
 
-  produtos.forEach((produto) => {
-    const dirSaida = path.join(PUBLIC_DIR, produto.slug);
-    fs.mkdirSync(dirSaida, { recursive: true });
+  produtos
+    .filter((p) => p.paginaCompleta !== false)
+    .forEach((produto) => {
+      const dirSaida = path.join(PUBLIC_DIR, produto.slug);
+      fs.mkdirSync(dirSaida, { recursive: true });
 
-    // Copia os assets locais do produto (ex: hero-mockup.webp) de
-    // /produtos-assets/<slug>/ para dentro da pasta gerada.
-    copiarPasta(path.join(PRODUTOS_ASSETS_DIR, produto.slug), dirSaida);
+      // Copia os assets locais do produto (ex: hero-mockup.webp) de
+      // /produtos-assets/<slug>/ para dentro da pasta gerada.
+      copiarPasta(path.join(PRODUTOS_ASSETS_DIR, produto.slug), dirSaida);
 
-    const html = render(template, produto);
-    fs.writeFileSync(path.join(dirSaida, "index.html"), html, "utf8");
-    console.log(`✔ /public/${produto.slug}/index.html`);
-  });
+      const html = render(template, produto);
+      fs.writeFileSync(path.join(dirSaida, "index.html"), html, "utf8");
+      console.log(`✔ /public/${produto.slug}/index.html`);
+    });
 }
 
 /* ---------- Gera as páginas de presell (/p/<slug>/) ---------- */
@@ -305,9 +308,10 @@ function gerarSitemap(produtos) {
   const urls = [
     `  <url><loc>${DOMINIO}/</loc><lastmod>${hoje}</lastmod><priority>1.0</priority></url>`,
     `  <url><loc>${DOMINIO}/politica-privacidade/</loc><lastmod>${hoje}</lastmod><priority>0.3</priority></url>`,
-    ...produtos.map(
-      (p) => `  <url><loc>${p.urlCanonica}</loc><lastmod>${hoje}</lastmod><priority>0.8</priority></url>`
-    )
+    `  <url><loc>${DOMINIO}/termos/</loc><lastmod>${hoje}</lastmod><priority>0.3</priority></url>`,
+    ...produtos
+      .filter((p) => p.paginaCompleta !== false)
+      .map((p) => `  <url><loc>${p.urlCanonica}</loc><lastmod>${hoje}</lastmod><priority>0.8</priority></url>`)
   ].join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;

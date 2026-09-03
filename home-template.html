@@ -91,7 +91,7 @@
 
     <section class="produtos-grid">
       {{#each produtos}}
-      <a class="produto-card" href="/{{this.slug}}/">
+      <a class="produto-card" href="{{this.linkPrincipal}}">
         <span class="kicker">{{this.tipoLabel}}</span>
         <h2>{{this.nome}}</h2>
         <p>{{this.hero.lead}}</p>
