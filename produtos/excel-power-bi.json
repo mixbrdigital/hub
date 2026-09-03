@@ -131,6 +131,14 @@
     ]
   },
 
+  "showcase": {
+    "headline": "Veja o que você vai construir.",
+    "itens": [
+      { "imagem": "dashboard-metas.webp", "legenda": "Dashboard de Metas e Resultados" },
+      { "imagem": "dashboard-comercial.webp", "legenda": "Dashboard Comercial" }
+    ]
+  },
+
   "midCta": {
     "texto": "Você já viu os 22 módulos de Excel e Power BI. Agora é decidir: continuar com dados soltos ou aprender as duas ferramentas de uma vez.",
     "botao": "SIM, QUERO OS 22 MÓDULOS"

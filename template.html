@@ -181,6 +181,24 @@
       </div>
     </section>
 
+    {{#if showcase}}
+    <!-- SHOWCASE / DEMONSTRAÇÃO -->
+    <section class="showcase section" id="demonstracao">
+      <div class="section-head center">
+        <span class="section-kicker">RESULTADO REAL</span>
+        <h2>{{showcase.headline}}</h2>
+      </div>
+      <div class="showcase-grid">
+        {{#each showcase.itens}}
+        <figure class="showcase-item">
+          <img src="{{this.imagem}}" alt="{{this.legenda}}" loading="lazy">
+          <figcaption>{{this.legenda}}</figcaption>
+        </figure>
+        {{/each}}
+      </div>
+    </section>
+    {{/if}}
+
     <!-- CTA INTERMEDIÁRIO -->
     <section class="mid-cta section">
       <div class="mid-cta-wrap">
