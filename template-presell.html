@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{presell.title}}</title>
+  <meta name="description" content="{{presell.description}}">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="canonical" href="{{presell.urlCanonica}}">
+  <meta name="theme-color" content="{{tema.corFundo}}">
+  <link rel="stylesheet" href="{{presell.caminhoAssets}}/presell.css">
+  <style>:root{--accent-color:{{tema.corDestaque}};}</style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="presell-tag">Página independente de divulgação</span>
+
+    <h1>{{{presell.h1}}}</h1>
+    <p class="lead">{{presell.paragrafo}}</p>
+
+    <ul class="pontos">
+      {{#each presell.pontos}}
+      <li>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        <span>{{this}}</span>
+      </li>
+      {{/each}}
+    </ul>
+
+    <a class="cta js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">{{presell.ctaTexto}} →</a>
+
+    {{#if avaliacao.media}}
+    <p class="avaliacao">★ {{avaliacao.media}}/5 · {{avaliacao.quantidade}} avaliações na Hotmart</p>
+    {{/if}}
+
+    <div class="aviso">
+      Esta página é mantida por um afiliado independente e <strong>não é o site oficial</strong> de {{produtor}} nem da {{plataforma}}. Reunimos aqui apenas informações objetivas para te encaminhar à página oficial do produto. Não fazemos parte da equipe do produtor. Ao continuar, você será direcionado ao site oficial, onde a compra é processada com segurança pela {{plataforma}}. Podemos receber uma comissão, sem custo adicional para você.
+    </div>
+
+    <div class="rodape-presell">
+      <div>© <span data-current-year>2026</span> MixBR Digital</div>
+      <div class="links">
+        <a href="/politica-privacidade/">Política de Privacidade</a>
+        <span>·</span>
+        <a href="/termos/">Termos de Uso</a>
+        <span>·</span>
+        <a href="mailto:{{presell.emailContato}}">Contato</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.__PRODUTO_TRACKING__ = {
+      googleAdsId: "{{tracking.googleAdsId}}",
+      produtoSlug: "{{slug}}"
+    };
+  </script>
+  <script src="{{presell.caminhoAssets}}/presell.js"></script>
+</body>
+</html>

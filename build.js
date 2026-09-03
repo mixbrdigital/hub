@@ -28,6 +28,7 @@ const PRODUTOS_ASSETS_DIR = path.join(ROOT, "produtos-assets");
 const ASSETS_DIR = path.join(ROOT, "assets");
 const STATIC_DIR = path.join(ROOT, "static");
 const TEMPLATE_PATH = path.join(ROOT, "template.html");
+const TEMPLATE_PRESELL_PATH = path.join(ROOT, "template-presell.html");
 const HOME_TEMPLATE_PATH = path.join(ROOT, "home-template.html");
 const PUBLIC_DIR = path.join(ROOT, "public");
 
@@ -235,7 +236,13 @@ function enriquecerProduto(p) {
     tema: { ...p.tema, corDestaqueHex: corHex, corFundo: p.tema?.corFundo || "#111111" },
     depoimentos: depoimentosComInicial,
     schemaCourseJson: `<script type="application/ld+json">\n${JSON.stringify(schemaCourse, null, 2)}\n</script>`,
-    schemaFaqJson: `<script type="application/ld+json">\n${JSON.stringify(schemaFaq, null, 2)}\n</script>`
+    schemaFaqJson: `<script type="application/ld+json">\n${JSON.stringify(schemaFaq, null, 2)}\n</script>`,
+    presell: p.presell && {
+      ...p.presell,
+      // de /public/p/<slug>/ (2 níveis) para /public/assets/
+      caminhoAssets: "../../assets",
+      urlCanonica: `${DOMINIO}/p/${p.slug}/`
+    }
   };
 }
 
@@ -256,6 +263,26 @@ function gerarPaginasProdutos(produtos) {
     fs.writeFileSync(path.join(dirSaida, "index.html"), html, "utf8");
     console.log(`✔ /public/${produto.slug}/index.html`);
   });
+}
+
+/* ---------- Gera as páginas de presell (/p/<slug>/) ---------- */
+/* Só gera para produtos que tiverem o bloco "presell" no JSON.
+   noindex de propósito — página feita pra clique de anúncio, não
+   pra competir no orgânico com a própria sales page do produto. */
+
+function gerarPaginasPresell(produtos) {
+  if (!fs.existsSync(TEMPLATE_PRESELL_PATH)) return;
+  const template = fs.readFileSync(TEMPLATE_PRESELL_PATH, "utf8");
+
+  produtos
+    .filter((p) => p.presell)
+    .forEach((produto) => {
+      const dirSaida = path.join(PUBLIC_DIR, "p", produto.slug);
+      fs.mkdirSync(dirSaida, { recursive: true });
+      const html = render(template, produto);
+      fs.writeFileSync(path.join(dirSaida, "index.html"), html, "utf8");
+      console.log(`✔ /public/p/${produto.slug}/index.html (presell, noindex)`);
+    });
 }
 
 /* ---------- Gera a homepage (vitrine) ---------- */
@@ -306,6 +333,7 @@ function main() {
     return;
   }
   gerarPaginasProdutos(produtos);
+  gerarPaginasPresell(produtos);
   gerarHomepage(produtos);
   gerarSitemap(produtos);
   console.log(`\nBuild concluído: ${produtos.length} produto(s).`);

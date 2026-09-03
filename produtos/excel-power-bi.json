@@ -168,6 +168,22 @@
     "linkHotmart": "https://go.hotmart.com/Y107411837R?dp=1&redirectionUrl=https%3A%2F%2Fhotmart.com%2Fpt-br%2Fmarketplace%2Fprodutos%2Fcursos-de-excel-e-powerbi%2FK52721799P"
   },
 
+  "presell": {
+    "title": "Curso de Excel e Power BI | Informações Oficiais",
+    "description": "Informações objetivas sobre o Curso de Excel e Power BI da Expert Cursos, com acesso direto ao site oficial do produtor.",
+    "h1": "Curso de <em>Excel e Power BI</em>, do zero ao avançado",
+    "paragrafo": "Você está a um passo do site oficial do produtor. Reunimos aqui as informações principais pra você confirmar se é isso que procura antes de continuar.",
+    "pontos": [
+      "22 módulos (10 de Excel + 12 de Power BI), 75 aulas em vídeo",
+      "Certificado de conclusão de cada curso, acesso vitalício",
+      "R$ 197,00 ou 12x de R$ 20,37, com 7 dias de garantia",
+      "Produzido pela Expert Cursos, vendido e processado pela Hotmart"
+    ],
+    "ctaTexto": "VER O TREINAMENTO NO SITE DO PRODUTOR",
+    "paginaOficial": "https://experttcursos.com/excelpowerbi?ref=Y107411837R",
+    "emailContato": "contato@mixbrdigital.com.br"
+  },
+
   "checkout": {
     "base": "https://go.hotmart.com/Y107411837R?ap=2867",
     "redirect": "&redirectionUrl=https%3A%2F%2Fpay.hotmart.com%2FK52721799P%3Foff%3Dk5t4tjfm%26checkoutMode%3D10"

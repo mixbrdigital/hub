@@ -49,6 +49,45 @@ direto ao repositório, detecta o push e roda o próprio build lá:
 - **Build command:** `node build.js`
 - **Build output directory:** `public`
 
+## Presell (/p/&lt;slug&gt;/) — modelo pra tráfego pago frio
+
+Além da sales page completa, o hub também gera uma **presell** enxuta pra
+cada produto que tiver o bloco `"presell"` no JSON. É uma página-ponte
+entre o anúncio e o site oficial do produtor — não tenta vender, só
+qualifica e encaminha.
+
+**Regras que o modelo segue:**
+- CTA único, direto pro site oficial do produtor (`presell.paginaOficial`
+  — o hotlink com seu `ref=`, não o link de checkout).
+- CSS/JS dedicados e minúsculos (`assets/presell.css`, `assets/presell.js`)
+  — não carrega o `styles.css`/`script.js` grandes da sales page.
+- `noindex,nofollow` sempre ativo — não deve competir no orgânico com a
+  própria sales page do produto, nem ser vista como conteúdo fino
+  duplicado. Por isso também **não entra no `sitemap.xml`**.
+- Sem menu, sem links pra outros produtos, sem redes sociais — só o
+  necessário pra informar e cumprir a Política/Termos/Contato.
+- O clique no CTA dispara um evento próprio (`click_visit_producer`),
+  **nunca** a tag de "conversion" do Google Ads — isso é métrica
+  intermediária, não venda. A conversão de verdade só deve ser contada
+  quando a compra acontecer (integração Hotmart ↔ Google Ads).
+
+**No Google Ads:** o anúncio deve apontar pra
+`mixbrdigital.com.br/p/<slug>/` (seu domínio, sempre — nunca o link de
+afiliado direto no destino do anúncio, isso é motivo comum de reprovação).
+
+**Pra adicionar presell a um produto**, inclua no JSON:
+```json
+"presell": {
+  "title": "...", "description": "...",
+  "h1": "...", "paragrafo": "...",
+  "pontos": ["...", "...", "..."],
+  "ctaTexto": "VER O TREINAMENTO NO SITE DO PRODUTOR",
+  "paginaOficial": "https://dominio-do-produtor.com/produto?ref=SEU_ID",
+  "emailContato": "contato@mixbrdigital.com.br"
+}
+```
+Produto sem esse bloco simplesmente não gera presell — só a sales page.
+
 ## Deploy manual (Cloudflare Pages)
 
 1. Workers & Pages → Create → Pages → Connect to Git.
@@ -61,6 +100,10 @@ direto ao repositório, detecta o push e roda o próprio build lá:
 
 ## Pendências / próximos passos
 
+- **E-mail de contato da presell é placeholder** (`contato@mixbrdigital.com.br`
+  em `produtos/excel-power-bi.json` → `presell.emailContato`). Confirme
+  se essa caixa existe e recebe e-mail antes de publicar — é exigência
+  de transparência (ponto 7), não pode ficar quebrado.
 - `seo.googleSiteVerification` já preenchido no Canva (código antigo do
   GitHub Pages); definir se cada LP nova vai ter o próprio código do
   Search Console ou se basta verificar o domínio raiz uma vez.
