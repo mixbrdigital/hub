@@ -191,13 +191,6 @@ a:hover {
   color: var(--text-main);
 }
 
-.affiliate-note {
-  margin-top: 14px;
-  font-size: 11px;
-  color: var(--text-muted);
-  opacity: 0.8;
-}
-
 .button,
 .button:visited,
 .button:active,
@@ -912,72 +905,6 @@ a:hover {
 .ssl-chip svg {
   color: var(--accent-color);
   stroke: var(--accent-color);
-}
-
-/* Selo de garantia em formato de carimbo circular */
-.guarantee-seal {
-  margin-top: 14px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background-color: rgba(255, 255, 255, 0.03);
-  padding: 14px;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  text-align: left;
-}
-
-.guarantee-stamp {
-  flex-shrink: 0;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  border: 2px dashed var(--accent-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.guarantee-stamp-inner {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  color: var(--bg-main);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-}
-
-.guarantee-stamp-inner b {
-  font-size: 16px;
-  font-weight: 800;
-}
-
-.guarantee-stamp-inner small {
-  font-size: 7px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-}
-
-.guarantee-seal > div {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.guarantee-seal > div span {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-main);
-}
-
-.guarantee-seal > div small {
-  font-size: 11px;
-  color: var(--text-muted);
 }
 
 /* ==========================================================================
