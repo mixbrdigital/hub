@@ -183,8 +183,8 @@ function enriquecerProduto(p) {
     estrelas: d.estrelas || "★★★★★"
   }));
 
-  if (!p.marcaCurta) {
-    throw new Error(`Produto "${p.slug}" não tem "marcaCurta" definida no JSON — campo obrigatório.`);
+  if (p.paginaCompleta !== false && !p.marcaCurta) {
+    throw new Error(`Produto "${p.slug}" não tem "marcaCurta" definida no JSON — campo obrigatório pra página completa.`);
   }
 
   // Schema.org gerado via JSON.stringify (escapa aspas/HTML corretamente,
