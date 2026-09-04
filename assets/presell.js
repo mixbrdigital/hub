@@ -1,11 +1,11 @@
 /* =========================================================
    MIXBR DIGITAL — Presell (script enxuto)
-   Importante: o clique aqui NÃO é uma venda — é só a saída
-   pro site do produtor. Por isso disparamos um evento próprio
-   ("click_visit_producer"), nunca a tag de "conversion" do
-   Google Ads. A conversão de verdade só deve ser contada
-   quando a compra acontecer de fato (integração Hotmart ↔
-   Google Ads, ou conversão de importação, fora desta página).
+   O clique no CTA aqui É a conversão medida no Google Ads
+   (decisão explícita: sem integração Hotmart ↔ Ads configurada
+   ainda, o clique pra página do produtor é o melhor proxy que
+   temos hoje). Também disparamos "click_visit_producer" como
+   evento informativo à parte, pra distinguir de uma conversão
+   de venda de verdade quando essa integração existir.
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -44,13 +44,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".js-goto-producer").forEach((link) => {
     link.href = appendTrackingParams(link.href);
-    link.addEventListener("click", () => {
+
+    link.addEventListener("click", (event) => {
       if (typeof window.gtag === "function") {
-        // Evento próprio — métrica intermediária, não a venda.
+        // Evento informativo — separado da conversão, pra podermos
+        // diferenciar volume de clique de venda real no futuro.
         window.gtag("event", "click_visit_producer", {
           produto: CONFIG.produtoSlug || "unknown"
         });
       }
+
+      if (typeof window.gtag !== "function" || !CONFIG.googleAdsId || !CONFIG.googleAdsConversionLabel) {
+        return; // sem tag configurada — navega normalmente
+      }
+
+      // Segura a navegação só o tempo mínimo pra garantir que a conversão
+      // seja registrada antes do usuário sair pro site do produtor.
+      const destinationUrl = link.href;
+      event.preventDefault();
+
+      let hasNavigated = false;
+      function goToDestination() {
+        if (hasNavigated) return;
+        hasNavigated = true;
+        window.location.href = destinationUrl;
+      }
+
+      window.gtag("event", "conversion", {
+        send_to: `${CONFIG.googleAdsId}/${CONFIG.googleAdsConversionLabel}`,
+        event_callback: goToDestination
+      });
+
+      // Timeout de segurança: se o gtag não carregar ou o callback não
+      // disparar (bloqueador de anúncios, rede lenta), navega assim mesmo.
+      setTimeout(goToDestination, 400);
     });
   });
 
@@ -58,3 +85,4 @@ document.addEventListener("DOMContentLoaded", () => {
     el.textContent = new Date().getFullYear();
   });
 });
+
