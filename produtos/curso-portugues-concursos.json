@@ -1,0 +1,67 @@
+{
+  "slug": "curso-portugues-concursos",
+  "paginaCompleta": false,
+  "ativo": true,
+  "tipo": "Curso",
+  "nome": "Curso de Português Completo para Concursos e Vestibulares",
+  "nomeCurto": "Curso de Português para Concursos",
+  "produtor": "Instituto do Saber",
+  "plataforma": "Hotmart",
+  "tema": {
+    "corDestaque": "#2f6fed",
+    "corHover": "#1e54c4",
+    "corFundo": "#101827"
+  },
+  "hero": {
+    "lead": "Do português básico ao avançado, direto ao ponto, pra gabaritar em concursos e vestibulares."
+  },
+  "oferta": {
+    "precoAtual": "89,90"
+  },
+  "presell": {
+    "title": "Curso de Português para Concursos | Instituto do Saber",
+    "description": "Curso completo de português para concursos públicos e vestibulares, do básico ao avançado, com material em PDF e dicas práticas.",
+    "heroImagem": "hero.webp",
+    "eyebrow": "Recomendação de Estudo",
+    "metrics": ["5 capítulos", "Material em PDF", "Gramática + Redação"],
+    "recomendacao": "Entre os materiais de português pra concurso, esse é direto ao ponto: sem enrolação, cobrindo exatamente os tópicos mais cobrados em provas.",
+    "pontos": [
+      "Do português básico ao avançado, sem pular etapas",
+      "Gramática, sintaxe e redação em um só lugar",
+      "Material objetivo, direto ao assunto, sem enrolação",
+      "Baixe em PDF e estude de onde e quando quiser"
+    ],
+    "ctaTexto": "VER O CURSO COMPLETO",
+    "microTexto": "Na página oficial você verá o conteúdo completo dos 5 capítulos e a condição de pagamento em até 9x.",
+    "tags": ["Gramática", "Sintaxe", "Redação", "Material em PDF"],
+    "cardsKicker": "O que você aprende",
+    "cardsTitulo": "Do português básico à aprovação.",
+    "cardsTexto": "Um curso pensado pra quem precisa de resultado rápido, sem perder tempo com teoria solta.",
+    "cards": [
+      {"titulo": "Gramática", "texto": "Estudo completo das regras gramaticais mais cobradas em provas."},
+      {"titulo": "Sintaxe", "texto": "Regras de concordância e dependência entre os termos da frase."},
+      {"titulo": "Redação", "texto": "Passo a passo pra elaborar uma redação nota mil em concursos e vestibulares."}
+    ],
+    "estruturaKicker": "Estrutura do Curso",
+    "estruturaTitulo": "5 capítulos até a aprovação.",
+    "estruturaTexto": "Conteúdo dividido em blocos, do básico ao avançado:",
+    "estrutura": [
+      {"titulo": "Capítulo 1", "texto": "Sílaba, encontros consonantais e acentuação gráfica"},
+      {"titulo": "Capítulo 2", "texto": "Classes gramaticais e voz verbal"},
+      {"titulo": "Capítulo 3", "texto": "Funções sintáticas, orações coordenadas e subordinadas"},
+      {"titulo": "Capítulo 4", "texto": "Pontuação, concordância, regência e crase"},
+      {"titulo": "Capítulo 5", "texto": "Coesão, coerência e texto dissertativo-argumentativo"}
+    ],
+    "finalTitulo": "Pronto pra garantir sua vaga?",
+    "finalTexto": "Acesse a página oficial pra conhecer o conteúdo completo, a condição de pagamento em até 9x e garantir seu acesso.",
+    "ctaTextoFinal": "ACESSAR O CURSO NA PÁGINA OFICIAL",
+    "ctaTextoMobile": "VER O CURSO COMPLETO",
+    "paginaOficial": "https://go.hotmart.com/G107425950V?redirectionUrl=https%3A%2F%2Finstitutodosaber.hotmart.host%2Fnova-pagina-04164a3f-4d4b-4fc8-bb23-b3278da0cfaa",
+    "emailContato": "contato@mixbrdigital.com.br"
+  },
+  "avaliacao": {},
+  "tracking": {
+    "googleAdsId": "AW-18397407465",
+    "googleAdsConversionLabel": "TODO_CRIAR_LABEL_PROPRIO_NO_GOOGLE_ADS"
+  }
+}
