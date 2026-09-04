@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       function goToDestination() {
         if (hasNavigated) return;
         hasNavigated = true;
-        window.location.href = destinationUrl;
+        window.open(destinationUrl, "_blank", "noopener");
       }
 
       window.gtag("event", "conversion", {
