@@ -21,36 +21,71 @@
   "presell": {
     "title": "Curso de Português para Concursos | Instituto do Saber",
     "description": "Curso completo de português para concursos públicos e vestibulares, do básico ao avançado, com material em PDF e dicas práticas.",
+    "h1": "Curso de <em>Português</em> para Concursos e Vestibulares",
+    "paragrafo": "Você está a um passo do site oficial do produtor. Reunimos aqui as informações principais pra você confirmar se é isso que procura antes de continuar.",
     "heroImagem": "hero.webp",
     "eyebrow": "Recomendação de Estudo",
-    "metrics": ["5 capítulos", "Material em PDF", "Gramática + Redação"],
-    "recomendacao": "Entre os materiais de português pra concurso, esse é direto ao ponto: sem enrolação, cobrindo exatamente os tópicos mais cobrados em provas.",
+    "metrics": [
+      "5 capítulos",
+      "Material em PDF",
+      "Gramática + Redação"
+    ],
+    "recomendacao": "O material é feito por uma equipe especializada de professores, direto ao assunto, sem enrolação — pensado pra levar você do português básico ao avançado no menor tempo possível.",
     "pontos": [
-      "Do português básico ao avançado, sem pular etapas",
-      "Gramática, sintaxe e redação em um só lugar",
-      "Material objetivo, direto ao assunto, sem enrolação",
-      "Baixe em PDF e estude de onde e quando quiser"
+      "Todos os tópicos mais cobrados em provas de concurso e vestibular",
+      "Material objetivo, sem enrolação, com dicas pra fixar o conteúdo",
+      "Baixe em PDF e acesse de qualquer dispositivo, quando quiser",
+      "Parcele em até 9x"
     ],
     "ctaTexto": "VER O CURSO COMPLETO",
-    "microTexto": "Na página oficial você verá o conteúdo completo dos 5 capítulos e a condição de pagamento em até 9x.",
-    "tags": ["Gramática", "Sintaxe", "Redação", "Material em PDF"],
+    "microTexto": "Na página oficial você verá o conteúdo completo dos 5 capítulos, depoimentos de alunos aprovados e a condição de pagamento em até 9x.",
+    "tags": [
+      "Gramática",
+      "Sintaxe",
+      "Redação",
+      "Material em PDF"
+    ],
     "cardsKicker": "O que você aprende",
     "cardsTitulo": "Do português básico à aprovação.",
     "cardsTexto": "Um curso pensado pra quem precisa de resultado rápido, sem perder tempo com teoria solta.",
     "cards": [
-      {"titulo": "Gramática", "texto": "Estudo completo das regras gramaticais mais cobradas em provas."},
-      {"titulo": "Sintaxe", "texto": "Regras de concordância e dependência entre os termos da frase."},
-      {"titulo": "Redação", "texto": "Passo a passo pra elaborar uma redação nota mil em concursos e vestibulares."}
+      {
+        "titulo": "Gramática",
+        "texto": "Estudo completo das regras gramaticais mais cobradas em provas."
+      },
+      {
+        "titulo": "Sintaxe",
+        "texto": "Regras de concordância e dependência entre os termos da frase."
+      },
+      {
+        "titulo": "Redação",
+        "texto": "Passo a passo pra elaborar uma redação nota mil em concursos e vestibulares."
+      }
     ],
     "estruturaKicker": "Estrutura do Curso",
     "estruturaTitulo": "5 capítulos até a aprovação.",
     "estruturaTexto": "Conteúdo dividido em blocos, do básico ao avançado:",
     "estrutura": [
-      {"titulo": "Capítulo 1", "texto": "Sílaba, encontros consonantais e acentuação gráfica"},
-      {"titulo": "Capítulo 2", "texto": "Classes gramaticais e voz verbal"},
-      {"titulo": "Capítulo 3", "texto": "Funções sintáticas, orações coordenadas e subordinadas"},
-      {"titulo": "Capítulo 4", "texto": "Pontuação, concordância, regência e crase"},
-      {"titulo": "Capítulo 5", "texto": "Coesão, coerência e texto dissertativo-argumentativo"}
+      {
+        "titulo": "Capítulo 1",
+        "texto": "Sílaba, encontros consonantais e acentuação gráfica"
+      },
+      {
+        "titulo": "Capítulo 2",
+        "texto": "Classes gramaticais e voz verbal"
+      },
+      {
+        "titulo": "Capítulo 3",
+        "texto": "Funções sintáticas, orações coordenadas e subordinadas"
+      },
+      {
+        "titulo": "Capítulo 4",
+        "texto": "Pontuação, concordância, regência e crase"
+      },
+      {
+        "titulo": "Capítulo 5",
+        "texto": "Coesão, coerência e texto dissertativo-argumentativo"
+      }
     ],
     "finalTitulo": "Pronto pra garantir sua vaga?",
     "finalTexto": "Acesse a página oficial pra conhecer o conteúdo completo, a condição de pagamento em até 9x e garantir seu acesso.",
