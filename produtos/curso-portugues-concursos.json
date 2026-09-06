@@ -21,10 +21,10 @@
   "presell": {
     "title": "Curso de Português para Concursos | Instituto do Saber",
     "description": "Curso completo de português para concursos públicos e vestibulares, do básico ao avançado, com material em PDF e dicas práticas.",
-    "h1": "Curso de <em>Português</em> para Concursos e Vestibulares",
-    "paragrafo": "Você está a um passo do site oficial do produtor. Reunimos aqui as informações principais pra você confirmar se é isso que procura antes de continuar.",
+    "h1": "Português é a matéria que <em>mais elimina</em> em concurso. Domine ela primeiro.",
+    "paragrafo": "Curso de <strong>Português para Concursos e Vestibulares</strong>: gramática, sintaxe e redação do básico ao avançado, direto ao ponto — o que realmente cai em prova, sem enrolação.",
     "heroImagem": "hero.webp",
-    "eyebrow": "Recomendação de Estudo",
+    "eyebrow": "Recomendação de estudo • Português",
     "metrics": [
       "5 capítulos",
       "Material em PDF",
@@ -33,12 +33,12 @@
     "recomendacao": "O material é feito por uma equipe especializada de professores, direto ao assunto, sem enrolação — pensado pra levar você do português básico ao avançado no menor tempo possível.",
     "pontos": [
       "Todos os tópicos mais cobrados em provas de concurso e vestibular",
-      "Material objetivo, sem enrolação, com dicas pra fixar o conteúdo",
-      "Baixe em PDF e acesse de qualquer dispositivo, quando quiser",
+      "Material objetivo, com dicas práticas pra fixar o conteúdo",
+      "Baixe em PDF e estude de qualquer dispositivo, quando quiser",
       "Parcele em até 9x",
-      "Produzido pelo Instituto do Saber, vendido e processado pela Hotmart"
+      "Produzido pelo Instituto do Saber, venda processada pela Hotmart"
     ],
-    "ctaTexto": "VER O CURSO COMPLETO",
+    "ctaTexto": "Quero dominar português",
     "microTexto": "Na página oficial você verá o conteúdo completo dos 5 capítulos, depoimentos de alunos aprovados e a condição de pagamento em até 9x.",
     "tags": [
       "Gramática",
@@ -47,53 +47,56 @@
       "Material em PDF"
     ],
     "cardsKicker": "O que você aprende",
-    "cardsTitulo": "Do português básico à aprovação.",
-    "cardsTexto": "Um curso pensado pra quem precisa de resultado rápido, sem perder tempo com teoria solta.",
+    "cardsTitulo": "Do português básico à prova.",
+    "cardsTexto": "Um curso pensado pra quem precisa de resultado, sem perder tempo com teoria solta que nunca cai.",
     "cards": [
       {
         "titulo": "Gramática",
-        "texto": "Estudo completo das regras gramaticais mais cobradas em provas."
+        "texto": "Estudo completo das regras gramaticais mais cobradas em provas de concurso e vestibular."
       },
       {
         "titulo": "Sintaxe",
-        "texto": "Regras de concordância e dependência entre os termos da frase."
+        "texto": "Regras de concordância e dependência entre os termos da frase — o pesadelo de muita gente, explicado de forma simples."
       },
       {
         "titulo": "Redação",
-        "texto": "Passo a passo pra elaborar uma redação nota mil em concursos e vestibulares."
+        "texto": "Passo a passo pra estruturar uma redação dissertativa forte em concursos e vestibulares."
       }
     ],
     "estruturaKicker": "Estrutura do Curso",
-    "estruturaTitulo": "5 capítulos até a aprovação.",
+    "estruturaTitulo": "5 capítulos, do zero ao texto dissertativo.",
     "estruturaTexto": "Conteúdo dividido em blocos, do básico ao avançado:",
     "estrutura": [
       {
-        "titulo": "Capítulo 1",
+        "titulo": "Sílaba e acentuação",
         "texto": "Sílaba, encontros consonantais e acentuação gráfica"
       },
       {
-        "titulo": "Capítulo 2",
+        "titulo": "Classes gramaticais",
         "texto": "Classes gramaticais e voz verbal"
       },
       {
-        "titulo": "Capítulo 3",
+        "titulo": "Sintaxe completa",
         "texto": "Funções sintáticas, orações coordenadas e subordinadas"
       },
       {
-        "titulo": "Capítulo 4",
+        "titulo": "Pontuação e crase",
         "texto": "Pontuação, concordância, regência e crase"
       },
       {
-        "titulo": "Capítulo 5",
+        "titulo": "Redação dissertativa",
         "texto": "Coesão, coerência e texto dissertativo-argumentativo"
       }
     ],
-    "finalTitulo": "Pronto pra garantir sua vaga?",
-    "finalTexto": "Acesse a página oficial pra conhecer o conteúdo completo, a condição de pagamento em até 9x e garantir seu acesso.",
-    "ctaTextoFinal": "ACESSAR O CURSO NA PÁGINA OFICIAL",
+    "finalTitulo": "Comece pela matéria que decide sua classificação.",
+    "finalTexto": "Acesse a página oficial pra conhecer o conteúdo completo, os depoimentos de alunos e a condição de pagamento em até 9x.",
+    "ctaTextoFinal": "Acessar o curso na página oficial",
     "ctaTextoMobile": "VER O CURSO COMPLETO",
     "paginaOficial": "https://go.hotmart.com/G107425950V?redirectionUrl=https%3A%2F%2Finstitutodosaber.hotmart.host%2Fnova-pagina-04164a3f-4d4b-4fc8-bb23-b3278da0cfaa",
-    "emailContato": "contato@mixbrdigital.com.br"
+    "emailContato": "contato@mixbrdigital.com.br",
+    "seloTexto": "Foco em prova",
+    "dorTexto": "Uma questão de concordância ou crase pode ser <em>a diferença entre ficar de fora e passar para a próxima fase.</em> Português está em praticamente todo edital — e é onde a maioria perde ponto.",
+    "finalKicker": "Próximo passo"
   },
   "avaliacao": {},
   "tracking": {

@@ -96,7 +96,12 @@ function processEachBlocks(str, data) {
     if (Array.isArray(arr)) {
       arr.forEach((item, idx) => {
         const itemBlock = innerBlock.replace(/\{\{comma\}\}/g, idx < arr.length - 1 ? "," : "");
-        result += render(itemBlock, item);
+        // Se o item for um objeto (não string/number), expõe {{numero}} = posição
+        // 1-based dentro do loop, útil pra listas numeradas (ex: "Bloco 01").
+        const itemComNumero = (item && typeof item === "object" && !Array.isArray(item))
+          ? { ...item, numero: idx + 1, numeroPad: String(idx + 1).padStart(2, "0") }
+          : item;
+        result += render(itemBlock, itemComNumero);
       });
     }
     rest = rest.slice(closeIdx + "{{/each}}".length);
@@ -234,7 +239,7 @@ function enriquecerProduto(p) {
     nomeCurto: p.nomeCurto || p.nome,
     ctaTextoMobile: p.ctaTextoMobile || p.ctaTextoPadrao,
     tipoLabel: TIPO_LABELS[p.tipo] || "PRODUTO ONLINE",
-    tema: { ...p.tema, corDestaqueHex: corHex, corFundo: p.tema?.corFundo || "#111111" },
+    tema: { corSecundaria: "#2563eb", ...p.tema, corDestaqueHex: corHex, corFundo: p.tema?.corFundo || "#111111" },
     depoimentos: depoimentosComInicial,
     schemaCourseJson: `<script type="application/ld+json">\n${JSON.stringify(schemaCourse, null, 2)}\n</script>`,
     schemaFaqJson: `<script type="application/ld+json">\n${JSON.stringify(schemaFaq, null, 2)}\n</script>`,

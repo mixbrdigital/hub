@@ -7,70 +7,73 @@
 <meta name="description" content="{{presell.description}}">
 <meta name="robots" content="noindex,nofollow">
 <link rel="canonical" href="{{presell.urlCanonica}}">
-<meta name="theme-color" content="{{tema.corFundo}}">
+<meta name="theme-color" content="#0b1220">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{presell.caminhoAssets}}/presell.css">
 <style>
 :root{
   --accent-color:{{tema.corDestaque}};
   --accent-hover:{{tema.corHover}};
   --accent-ink:{{presell.corTextoBotao}};
+  --secondary:{{tema.corSecundaria}};
 }
 </style>
 </head>
 <body>
 
-<header class="p-header">
-  <div class="p-wrap p-header-in">
-    <div class="p-logo">MIX BR <span>DIGITAL</span></div>
-    <a class="p-header-link js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">Página oficial →</a>
+<header class="hd">
+  <div class="wrap hd-in">
+    <div class="logo">MIX BR <span>DIGITAL</span></div>
+    <a class="hd-link js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">Página oficial →</a>
   </div>
 </header>
 
 <main>
-<section class="p-hero">
-  <div class="p-wrap p-hero-grid">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
     <div>
-      <div class="p-eyebrow">{{presell.eyebrow}}</div>
+      <div class="tag">{{presell.eyebrow}}</div>
 
       <h1>{{{presell.h1}}}</h1>
-      <p class="p-lead">{{presell.paragrafo}}</p>
+      <p class="lead">{{{presell.paragrafo}}}</p>
 
       {{#if presell.metrics}}
-      <div class="p-metrics">
+      <div class="metrics">
         {{#each presell.metrics}}
-        <div class="p-metric">{{this}}</div>
+        <div class="metric">{{this}}</div>
         {{/each}}
       </div>
       {{/if}}
 
       {{#if presell.recomendacao}}
-      <div class="p-recommendation-box">
+      <div class="reco">
         <strong>Por que estou indicando:</strong> {{presell.recomendacao}}
       </div>
       {{/if}}
 
-      <ul class="p-pontos">
+      <ul class="pontos">
         {{#each presell.pontos}}
-        <li>
-          <span class="p-check">✓</span>
-          <span>{{this}}</span>
-        </li>
+        <li><span class="check">✓</span><span>{{this}}</span></li>
         {{/each}}
       </ul>
 
-      <a class="p-cta js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">{{presell.ctaTexto}} →</a>
+      <a class="cta js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">{{presell.ctaTexto}} →</a>
 
       {{#if presell.microTexto}}
-      <p class="p-micro">{{presell.microTexto}}</p>
+      <p class="micro">{{presell.microTexto}}</p>
       {{/if}}
 
       {{#if avaliacao.media}}
-      <p class="p-avaliacao">★ {{avaliacao.media}}/5 · {{avaliacao.quantidade}} avaliações na Hotmart</p>
+      <p class="micro">★ {{avaliacao.media}}/5 · {{avaliacao.quantidade}} avaliações na Hotmart</p>
       {{/if}}
     </div>
 
     {{#if presell.heroImagem}}
-    <div class="p-visual">
+    <div class="visual rv">
+      {{#if presell.seloTexto}}<span class="seal">{{presell.seloTexto}}</span>{{/if}}
       <img src="{{presell.heroImagem}}" alt="{{nome}}" width="900" height="900">
     </div>
     {{/if}}
@@ -78,27 +81,36 @@
 </section>
 
 {{#if presell.tags}}
-<section class="p-band">
-  <div class="p-wrap p-band-in">
+<section class="tagband">
+  <div class="wrap tagband-in">
     {{#each presell.tags}}
-    <div class="p-band-item">{{this}}</div>
+    <div class="tagband-item">{{this}}</div>
     {{/each}}
   </div>
 </section>
 {{/if}}
 
+{{#if presell.dorTexto}}
+<section class="pain">
+  <div class="wrap rv">
+    <p>{{{presell.dorTexto}}}</p>
+  </div>
+</section>
+{{/if}}
+
 {{#if presell.cards}}
-<section class="p-section" id="o-que-aprende">
-  <div class="p-wrap">
-    <div class="p-center">
-      {{#if presell.cardsKicker}}<div class="p-kicker">{{presell.cardsKicker}}</div>{{/if}}
+<section class="sec" id="o-que-aprende">
+  <div class="wrap">
+    <div class="center rv">
+      {{#if presell.cardsKicker}}<div class="kicker">{{presell.cardsKicker}}</div>{{/if}}
       {{#if presell.cardsTitulo}}<h2>{{presell.cardsTitulo}}</h2>{{/if}}
-      {{#if presell.cardsTexto}}<p class="p-sub">{{presell.cardsTexto}}</p>{{/if}}
+      {{#if presell.cardsTexto}}<p class="sub">{{presell.cardsTexto}}</p>{{/if}}
     </div>
 
-    <div class="p-cards">
+    <div class="cards">
       {{#each presell.cards}}
-      <article class="p-card">
+      <article class="card rv">
+        <div class="n">Bloco {{this.numeroPad}}</div>
         <h3>{{this.titulo}}</h3>
         <p>{{this.texto}}</p>
       </article>
@@ -109,17 +121,20 @@
 {{/if}}
 
 {{#if presell.estrutura}}
-<section class="p-section p-white" id="estrutura">
-  <div class="p-wrap">
-    <div class="p-center">
-      {{#if presell.estruturaKicker}}<div class="p-kicker">{{presell.estruturaKicker}}</div>{{/if}}
+<section class="sec white" id="estrutura">
+  <div class="wrap">
+    <div class="center rv">
+      {{#if presell.estruturaKicker}}<div class="kicker">{{presell.estruturaKicker}}</div>{{/if}}
       {{#if presell.estruturaTitulo}}<h2>{{presell.estruturaTitulo}}</h2>{{/if}}
-      {{#if presell.estruturaTexto}}<p class="p-sub">{{presell.estruturaTexto}}</p>{{/if}}
+      {{#if presell.estruturaTexto}}<p class="sub">{{presell.estruturaTexto}}</p>{{/if}}
     </div>
 
-    <div class="p-content-grid">
+    <div class="chapters">
       {{#each presell.estrutura}}
-      <div class="p-content-item"><strong>{{this.titulo}}</strong><span>{{this.texto}}</span></div>
+      <div class="chapter rv">
+        <div class="num">{{this.numero}}</div>
+        <div><strong>{{this.titulo}}</strong><span>{{this.texto}}</span></div>
+      </div>
       {{/each}}
     </div>
   </div>
@@ -127,50 +142,48 @@
 {{/if}}
 
 {{#if presell.bonus}}
-<section class="p-bonus" id="bonus">
-  <div class="p-wrap p-bonus-in">
-    <div class="p-bonus-copy">
-      {{#if presell.bonus.kicker}}<div class="p-kicker">{{presell.bonus.kicker}}</div>{{/if}}
-      <h2>{{presell.bonus.titulo}}</h2>
-      <p>{{presell.bonus.texto}}</p>
-    </div>
+<section class="bonus" id="bonus">
+  <div class="wrap rv">
+    {{#if presell.bonus.kicker}}<div class="kicker">{{presell.bonus.kicker}}</div>{{/if}}
+    <h2>{{presell.bonus.titulo}}</h2>
+    <p>{{presell.bonus.texto}}</p>
   </div>
 </section>
 {{/if}}
 
-<section class="p-final" id="acessar">
-  <div class="p-wrap">
-    {{#if presell.finalKicker}}<div class="p-kicker">{{presell.finalKicker}}</div>{{/if}}
+<section class="final" id="acessar">
+  <div class="wrap rv">
+    {{#if presell.finalKicker}}<div class="kicker">{{presell.finalKicker}}</div>{{/if}}
     <h2>{{presell.finalTitulo}}</h2>
-    <p class="p-sub">{{presell.finalTexto}}</p>
+    <p class="sub">{{presell.finalTexto}}</p>
 
-    <a class="p-cta js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">{{presell.ctaTextoFinal}} →</a>
+    <a class="cta js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">{{presell.ctaTextoFinal}} →</a>
 
-    <div class="p-note">{{presell.avisoRedirecionamento}}</div>
+    <div class="note">{{presell.avisoRedirecionamento}}</div>
   </div>
 </section>
 </main>
 
-<div class="p-aviso-legal">
-  <div class="p-wrap">
+<div class="aviso">
+  <div class="wrap">
     Esta página é mantida por um afiliado independente e <strong>não é o site oficial</strong> de {{produtor}} nem da {{plataforma}}. Reunimos aqui apenas informações objetivas para te encaminhar à página oficial do produto. Não fazemos parte da equipe do produtor. Ao continuar, você será direcionado ao site oficial, onde a compra é processada com segurança pela {{plataforma}}. Podemos receber uma comissão, sem custo adicional para você.
   </div>
 </div>
 
-<footer class="p-footer">
-  <div class="p-wrap">
+<footer class="ft">
+  <div class="wrap ft-in">
     <div>© <span data-current-year>2026</span> MixBR Digital</div>
-    <div class="p-links">
-      <a href="/politica-privacidade/">Política de Privacidade</a>
-      <span>·</span>
-      <a href="/termos/">Termos de Uso</a>
-      <span>·</span>
+    <div>
+      <a href="/politica-privacidade/">Política de Privacidade</a> ·
+      <a href="/termos/">Termos de Uso</a> ·
       <a href="mailto:{{presell.emailContato}}">Contato</a>
     </div>
   </div>
 </footer>
 
-<a class="p-mobile-cta js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">{{presell.ctaTextoMobile}} →</a>
+<div class="mcta">
+  <a class="cta js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">{{presell.ctaTextoMobile}} →</a>
+</div>
 
 <script>
   window.__PRODUTO_TRACKING__ = {
@@ -180,5 +193,14 @@
   };
 </script>
 <script src="{{presell.caminhoAssets}}/presell.js"></script>
+<script>
+// Reveal on scroll
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('on');io.unobserve(en.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
 </body>
 </html>
