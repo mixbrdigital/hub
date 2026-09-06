@@ -25,7 +25,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-b);color:var(--ink);background:#f8fafc;line-height:1.6;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{text-decoration:none;color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
 
@@ -57,7 +57,7 @@ h1 em{font-style:normal;color:var(--accent-color)}
 .cta:hover{transform:translateY(-2px) scale(1.01)}
 .micro{font-size:12px;color:#94a3b8;margin-top:12px;max-width:480px}
 .visual{position:relative}
-.visual img{border-radius:22px;border:6px solid rgba(255,255,255,.08);box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
+.visual img{border-radius:22px;border:6px solid rgba(255,255,255,.08);box-shadow:0 40px 80px -30px rgba(0,0,0,.7);aspect-ratio:1/1;object-fit:cover}
 .seal{position:absolute;top:-14px;right:-8px;background:var(--green);color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;border-radius:999px;box-shadow:0 10px 24px -8px rgba(22,163,74,.7);transform:rotate(3deg);z-index:2}
 
 /* ===== Faixa de tags (opcional) ===== */
@@ -100,6 +100,7 @@ h2{font-family:var(--font-d);font-weight:900;font-size:clamp(1.5rem,3vw,2.1rem);
 
 /* ===== Final ===== */
 .final{background:radial-gradient(900px 400px at 50% -10%,#1d3a6e 0%,var(--bg) 60%);color:#fff;text-align:center;padding:68px 0}
+.final h2{color:#fff}
 .final .kicker{color:var(--accent-color)}
 .final .sub{color:#cbd5e1;margin-bottom:28px}
 .note{font-size:12px;color:#94a3b8;margin-top:14px}
