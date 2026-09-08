@@ -81,8 +81,7 @@ h2{font-family:var(--font-d);font-weight:900;font-size:clamp(1.5rem,3vw,2.1rem);
 .cards{display:grid;gap:16px}
 @media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;opacity:1}
-.card .n{font-family:var(--font-d);font-weight:900;font-size:12px;color:var(--secondary);letter-spacing:.1em;text-transform:uppercase}
-.card h3{font-family:var(--font-d);font-weight:800;font-size:18px;letter-spacing:-.01em;margin:7px 0 7px;color:var(--ink)}
+.card h3{font-family:var(--font-d);font-weight:800;font-size:18px;letter-spacing:-.01em;margin:0 0 7px;color:var(--ink)}
 .card p{font-size:13.5px;color:var(--ink-soft)}
 
 /* ===== Capítulos (estrutura numerada) ===== */
@@ -93,10 +92,10 @@ h2{font-family:var(--font-d);font-weight:900;font-size:clamp(1.5rem,3vw,2.1rem);
 .chapter span{font-size:13px;color:var(--ink-soft)}
 
 /* ===== Bônus (opcional) ===== */
-.bonus{background:radial-gradient(900px 350px at 50% -10%,#1d3a6e 0%,var(--bg) 60%);color:#fff;text-align:center;padding:52px 0}
-.bonus .kicker{color:var(--accent-color)}
-.bonus h2{color:#fff;margin-bottom:8px}
-.bonus p{margin:0 auto;color:#cbd5e1;font-size:13.5px;max-width:620px}
+.bonus{background:#fff;text-align:center;padding:52px 0;border-top:1px solid var(--line)}
+.bonus .kicker{color:var(--secondary)}
+.bonus h2{color:var(--ink);margin-bottom:8px}
+.bonus p{margin:0 auto;color:var(--ink-soft);font-size:13.5px;max-width:620px}
 
 /* ===== Final ===== */
 .final{background:radial-gradient(900px 400px at 50% -10%,#1d3a6e 0%,var(--bg) 60%);color:#fff;text-align:center;padding:68px 0}
