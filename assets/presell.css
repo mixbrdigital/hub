@@ -92,7 +92,7 @@ h2{font-family:var(--font-d);font-weight:900;font-size:clamp(1.5rem,3vw,2.1rem);
 .chapter span{font-size:13px;color:var(--ink-soft)}
 
 /* ===== Bônus (opcional) ===== */
-.bonus{background:#fff;text-align:center;padding:52px 0;border-top:1px solid var(--line)}
+.bonus{background:#f8fafc;text-align:center;padding:52px 0;border-top:1px solid var(--line)}
 .bonus .kicker{color:var(--secondary)}
 .bonus h2{color:var(--ink);margin-bottom:8px}
 .bonus p{margin:0 auto;color:var(--ink-soft);font-size:13.5px;max-width:620px}
