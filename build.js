@@ -1,16 +1,21 @@
 #!/usr/bin/env node
 /* =========================================================
    MIXBR DIGITAL - Build estático
-   Lê /produtos/*.json, aplica template.html e gera TUDO
-   dentro de /public/ (essa é a pasta que o Cloudflare Pages
-   deve apontar como "Build output directory"):
+   Lê /produtos/*.json e gera TUDO dentro de /public/ (essa é
+   a pasta que o Cloudflare Pages deve apontar como "Build
+   output directory"):
 
    /public/index.html            (homepage)
-   /public/<slug>/index.html     (uma LP por produto)
+   /public/p/<slug>/index.html   (presell — uma por produto)
    /public/sitemap.xml
    /public/robots.txt            (copiado de /static/)
    /public/politica-privacidade/ (copiado de /static/)
    /public/assets/               (copiado de /assets/, compartilhado)
+
+   template.html (sales page completa) só é lido se algum
+   produto tiver "paginaCompleta" diferente de false — hoje
+   nenhum produto usa isso, então o build funciona mesmo sem
+   esse arquivo existir.
 
    /public/ é sempre apagada e regenerada do zero a cada build,
    pra nunca sobrar lixo de produto removido/renomeado.
@@ -182,54 +187,10 @@ function carregarProdutos() {
 function enriquecerProduto(p) {
   const urlCanonica = `${DOMINIO}/${p.slug}/`;
   const corHex = (p.tema?.corDestaque || "#1fbf7a").replace("#", "");
-  const depoimentosComInicial = (p.depoimentos || []).map((d) => ({
-    ...d,
-    inicial: d.nome ? d.nome.trim().charAt(0).toUpperCase() : "?",
-    estrelas: d.estrelas || "★★★★★"
-  }));
 
   if (p.paginaCompleta !== false && !p.marcaCurta) {
     throw new Error(`Produto "${p.slug}" não tem "marcaCurta" definida no JSON — campo obrigatório pra página completa.`);
   }
-
-  // Schema.org gerado via JSON.stringify (escapa aspas/HTML corretamente,
-  // ao contrário de templating de texto puro).
-  const schemaCourse = {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    name: p.nome,
-    description: p.seo?.schemaDescription || p.seo?.description,
-    provider: { "@type": "Organization", name: p.produtor },
-    hasCourseInstance: {
-      "@type": "CourseInstance",
-      courseMode: "online",
-      ...(p.cargaHorariaISO ? { courseWorkload: p.cargaHorariaISO } : {})
-    },
-    offers: {
-      "@type": "Offer",
-      price: `${p.oferta.precoAtual}.00`,
-      priceCurrency: "BRL",
-      availability: "https://schema.org/InStock",
-      url: urlCanonica
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: p.avaliacao.media,
-      reviewCount: p.avaliacao.quantidade,
-      bestRating: "5",
-      worstRating: "1"
-    }
-  };
-
-  const schemaFaq = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: (p.faq || []).map((f) => ({
-      "@type": "Question",
-      name: f.pergunta,
-      acceptedAnswer: { "@type": "Answer", text: f.resposta.replace(/<\/?strong>/g, "") }
-    }))
-  };
 
   return {
     ...p,
@@ -237,12 +198,8 @@ function enriquecerProduto(p) {
     linkPrincipal: p.paginaCompleta === false && p.presell ? `/p/${p.slug}/` : `/${p.slug}/`,
     caminhoAssets: "../assets", // de /public/<slug>/ para /public/assets/
     nomeCurto: p.nomeCurto || p.nome,
-    ctaTextoMobile: p.ctaTextoMobile || p.ctaTextoPadrao,
     tipoLabel: TIPO_LABELS[p.tipo] || "PRODUTO ONLINE",
     tema: { corSecundaria: "#2563eb", ...p.tema, corDestaqueHex: corHex, corFundo: p.tema?.corFundo || "#111111" },
-    depoimentos: depoimentosComInicial,
-    schemaCourseJson: `<script type="application/ld+json">\n${JSON.stringify(schemaCourse, null, 2)}\n</script>`,
-    schemaFaqJson: `<script type="application/ld+json">\n${JSON.stringify(schemaFaq, null, 2)}\n</script>`,
     presell: p.presell && {
       eyebrow: "Recomendação de Treinamento",
       corTextoBotao: "#101827",
@@ -263,10 +220,19 @@ function enriquecerProduto(p) {
 /* ---------- Gera as páginas de produto ---------- */
 
 function gerarPaginasProdutos(produtos) {
+  const produtosComPaginaCompleta = produtos.filter((p) => p.paginaCompleta !== false);
+
+  // Só exige o template.html se existir pelo menos um produto que
+  // realmente vá usar a página completa — evita quebrar o build
+  // inteiro quando todos os produtos rodam só como presell.
+  if (produtosComPaginaCompleta.length === 0) {
+    console.log("— Nenhum produto usa página completa, pulando template.html");
+    return;
+  }
+
   const template = fs.readFileSync(TEMPLATE_PATH, "utf8");
 
-  produtos
-    .filter((p) => p.paginaCompleta !== false)
+  produtosComPaginaCompleta
     .forEach((produto) => {
       const dirSaida = path.join(PUBLIC_DIR, produto.slug);
       fs.mkdirSync(dirSaida, { recursive: true });
