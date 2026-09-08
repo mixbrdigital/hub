@@ -1,0 +1,83 @@
+{
+  "slug": "curso-sketchup-layout",
+  "paginaCompleta": false,
+  "ativo": true,
+  "tipo": "curso",
+  "nome": "Curso de Sketchup e Layout com IA",
+  "nomeCurto": "Sketchup e Layout",
+  "produtor": "Leandro Amaral",
+  "plataforma": "Hotmart",
+  "tema": {
+    "corDestaque": "#f5a623",
+    "corHover": "#e0961a",
+    "corFundo": "#151515"
+  },
+  "hero": {
+    "lead": "Do básico ao avançado, com IA, templates prontos e certificado — no seu ritmo, sem depender de ninguém."
+  },
+  "oferta": {
+    "precoAtual": "147,00"
+  },
+  "presell": {
+    "title": "Curso de Sketchup e Layout com IA | Informações Oficiais",
+    "description": "Informações objetivas sobre o Curso de Sketchup e Layout com IA de Leandro Amaral, com acesso direto ao site oficial do produtor.",
+    "h1": "Curso de <em>Sketchup e Layout</em> com IA, do básico ao avançado",
+    "paragrafo": "Você está a um passo do site oficial do produtor. Reunimos aqui as informações principais pra você confirmar se é isso que procura antes de continuar.",
+    "pontos": [
+      "Mais de 150 videoaulas e 12 horas de conteúdo prático",
+      "Certificado digital de 120 horas, acesso vitalício",
+      "R$ 147,00 à vista ou 10x de R$ 17,67, com 7 dias de garantia",
+      "Produzido por Leandro Amaral, vendido e processado pela Hotmart"
+    ],
+    "ctaTexto": "GARANTIR VAGA NO SITE OFICIAL",
+    "paginaOficial": "https://go.hotmart.com/I107527446G?redirectionUrl=https%3A%2F%2Farquitetoleandroamaral.com%2Fcurso-de-sketchup-e-layout%2F",
+    "emailContato": "contato@mixbrdigital.com.br",
+    "heroImagem": "hero-mockup.webp",
+    "metrics": [
+      "12 horas",
+      "150+ videoaulas",
+      "10 presentes bônus"
+    ],
+    "recomendacao": "Entre os treinamentos de modelagem 3D para arquitetura, este é o mais completo pra quem quer sair do zero e já detalhar projetos reais com apoio de IA, sem depender de cursos avulsos.",
+    "microTexto": "Na página oficial você verá a grade completa, os presentes inclusos e como funciona a garantia incondicional de 7 dias.",
+    "tags": [
+      "Sketchup",
+      "Layout 2D",
+      "Renderização com IA",
+      "Templates Prontos"
+    ],
+    "cardsKicker": "O que você aprende",
+    "cardsTitulo": "Do desenho básico ao projeto completo.",
+    "cardsTexto": "Em vez de aulas soltas, você segue um fluxo prático: modela no Sketchup, detalha no Layout e otimiza com Inteligência Artificial.",
+    "cards": [
+      { "titulo": "Sketchup Prático", "texto": "Modele projetos 2D e 3D do zero, com técnicas usadas no mercado de arquitetura e design de interiores." },
+      { "titulo": "Layout e Detalhamento", "texto": "Aprenda a detalhar pranchas técnicas completas, prontas pra apresentar a clientes ou entregar em trabalhos acadêmicos." },
+      { "titulo": "Renderização com IA", "texto": "Use o app gerador de prompts pra transformar seus projetos em renders fotorrealistas em segundos." }
+    ],
+    "estruturaKicker": "Estrutura do Treinamento",
+    "estruturaTitulo": "O que espera por você no programa.",
+    "estruturaTexto": "Confira um resumo dos principais pilares práticos abordados no método oficial:",
+    "estrutura": [
+      { "titulo": "Sketchup do Zero ao Avançado", "texto": "modelagem 2D e 3D de projetos completos" },
+      { "titulo": "Layout e Detalhamento Técnico", "texto": "pranchas, cotas e simbologia de projeto" },
+      { "titulo": "Templates e Scrapbooks", "texto": "materiais prontos pra economizar horas de trabalho" },
+      { "titulo": "Renderização com IA", "texto": "app gerador de prompts pra imagens fotorrealistas" },
+      { "titulo": "Minicursos Extras", "texto": "Vray, Lumion e Enscape inclusos" },
+      { "titulo": "Pacote de Bônus", "texto": "10 presentes com guias, plugins e materiais extras" }
+    ],
+    "bonus": {
+      "kicker": "Aceleração de Resultados",
+      "titulo": "10 presentes inclusos, com templates, plugins e guias prontos.",
+      "texto": "Além das aulas, a oferta oficial inclui materiais prontos pra você aplicar imediatamente nos seus projetos, sem começar do zero."
+    },
+    "finalTitulo": "Quer dominar a modelagem 3D na prática?",
+    "finalTexto": "Acesse a página oficial para conhecer a estrutura completa das aulas, os presentes inclusos e garantir seu acesso com total segurança.",
+    "seloTexto": "Foco na prática",
+    "ctaTextoFinal": "ACESSAR O CONTEÚDO COMPLETO NA PÁGINA OFICIAL",
+    "ctaTextoMobile": "VER MÓDULOS NA PÁGINA OFICIAL"
+  },
+  "tracking": {
+    "googleAdsId": "AW-SEU_ID_AQUI",
+    "googleAdsConversionLabel": "SEU_LABEL_AQUI"
+  }
+}
