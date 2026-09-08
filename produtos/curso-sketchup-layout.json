@@ -8,9 +8,9 @@
   "produtor": "Leandro Amaral",
   "plataforma": "Hotmart",
   "tema": {
-    "corDestaque": "#f5a623",
-    "corHover": "#e0961a",
-    "corFundo": "#151515"
+  "corDestaque": "#e8c16d",
+  "corHover": "#ccaa60",
+  "corFundo": "#022333"
   },
   "hero": {
     "lead": "Do básico ao avançado, com IA, templates prontos e certificado — no seu ritmo, sem depender de ninguém."
