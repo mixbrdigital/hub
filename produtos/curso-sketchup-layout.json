@@ -24,7 +24,7 @@
     "h1": "Curso de Sketchup e Layout com <em>Renderização por IA</em>, do básico ao avançado",
     "paragrafo": "Você está a um passo do site oficial do produtor. Reunimos aqui as informações principais pra você confirmar se é isso que procura antes de continuar.",
     "pontos": [
-      "Mais de 150 videoaulas e 12 horas de conteúdo prático",
+      "Mais de 150 videoaulas e 12 horas de conteúdo",
       "Certificado digital de 120 horas",
       "Acesso vitalício às aulas",
       "Oferta consultada: R$ 147,00 à vista ou 10x de R$ 17,67, com 7 dias de garantia"
@@ -38,8 +38,8 @@
       "150+ videoaulas",
       "9 presentes + 1 super presente"
     ],
-    "recomendacao": "A proposta do treinamento é reunir Sketchup, Layout, templates e recursos de Inteligência Artificial em uma única formação, do básico ao avançado.",
-    "microTexto": "Na página oficial você verá a grade completa, os presentes inclusos e como funciona a garantia incondicional de 7 dias.",
+    "recomendacao": "A proposta do treinamento é reunir Sketchup, Layout, templates e recursos de IA em uma única formação, do básico ao avançado.",
+    "microTexto": "Na página oficial você verá a grade completa, os presentes inclusos e como funciona a garantia de 7 dias.",
     "tags": [
       "Sketchup",
       "Layout 2D",
@@ -68,6 +68,11 @@
     "estruturaTexto": "Confira um resumo dos principais pilares práticos abordados no método oficial:",
     "estrutura": [
       {
+        "titulo": "Renderização com IA",
+        "texto": "app gerador de prompts para renders e animações com IA"
+      },
+
+      {
         "titulo": "Sketchup do Zero ao Avançado",
         "texto": "modelagem 2D e 3D de projetos completos"
       },
@@ -78,10 +83,6 @@
       {
         "titulo": "Templates e Scrapbooks",
         "texto": "materiais prontos pra economizar horas de trabalho"
-      },
-      {
-        "titulo": "Renderização com IA",
-        "texto": "app gerador de prompts para renders e animações com IA"
       },
       {
         "titulo": "Minicursos Extras",
