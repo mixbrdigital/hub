@@ -61,7 +61,7 @@ h1 em{font-style:normal;color:var(--accent-color)}
 .seal{position:absolute;top:-14px;right:-8px;background:var(--green);color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;border-radius:999px;box-shadow:0 10px 24px -8px rgba(22,163,74,.7);transform:rotate(3deg);z-index:2}
 
 /* ===== Faixa de tags (opcional) ===== */
-.tagband{background:var(--bg);border-top:1px solid rgba(255,255,255,.06)}
+.tagband{background:radial-gradient(900px 300px at 50% -10%,#1d3a6e 0%,var(--bg) 60%);border-top:1px solid rgba(255,255,255,.06)}
 .tagband-in{display:flex;justify-content:center;align-items:center;gap:0;flex-wrap:wrap;padding:14px 0}
 .tagband-item{padding:4px 22px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#cbd5e1}
 .tagband-item+.tagband-item{border-left:1px solid rgba(255,255,255,.14)}
