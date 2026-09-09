@@ -120,29 +120,8 @@
 </section>
 {{/if}}
 
-{{#if presell.estrutura}}
-<section class="sec white" id="estrutura">
-  <div class="wrap">
-    <div class="center rv">
-      {{#if presell.estruturaKicker}}<div class="kicker">{{presell.estruturaKicker}}</div>{{/if}}
-      {{#if presell.estruturaTitulo}}<h2>{{presell.estruturaTitulo}}</h2>{{/if}}
-      {{#if presell.estruturaTexto}}<p class="sub">{{presell.estruturaTexto}}</p>{{/if}}
-    </div>
-
-    <div class="chapters">
-      {{#each presell.estrutura}}
-      <div class="chapter rv">
-        <div class="num">{{this.numero}}</div>
-        <div><strong>{{this.titulo}}</strong><span>{{this.texto}}</span></div>
-      </div>
-      {{/each}}
-    </div>
-  </div>
-</section>
-{{/if}}
-
 {{#if presell.paraQuem}}
-<section class="sec" id="para-quem">
+<section class="sec white" id="para-quem">
   <div class="wrap">
     <div class="center rv">
       {{#if presell.paraQuemKicker}}<div class="kicker">{{presell.paraQuemKicker}}</div>{{/if}}
@@ -168,6 +147,27 @@
         </ul>
       </div>
       {{/if}}
+    </div>
+  </div>
+</section>
+{{/if}}
+
+{{#if presell.estrutura}}
+<section class="sec" id="estrutura">
+  <div class="wrap">
+    <div class="center rv">
+      {{#if presell.estruturaKicker}}<div class="kicker">{{presell.estruturaKicker}}</div>{{/if}}
+      {{#if presell.estruturaTitulo}}<h2>{{presell.estruturaTitulo}}</h2>{{/if}}
+      {{#if presell.estruturaTexto}}<p class="sub">{{presell.estruturaTexto}}</p>{{/if}}
+    </div>
+
+    <div class="chapters">
+      {{#each presell.estrutura}}
+      <div class="chapter rv">
+        <div class="num">{{this.numero}}</div>
+        <div><strong>{{this.titulo}}</strong><span>{{this.texto}}</span></div>
+      </div>
+      {{/each}}
     </div>
   </div>
 </section>
