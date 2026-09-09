@@ -27,6 +27,7 @@
 <header class="hd">
   <div class="wrap hd-in">
     <div class="logo">MIX BR <span>DIGITAL</span></div>
+    <a class="hd-link js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">Página oficial →</a>
   </div>
 </header>
 
@@ -135,6 +136,50 @@
         <div><strong>{{this.titulo}}</strong><span>{{this.texto}}</span></div>
       </div>
       {{/each}}
+    </div>
+  </div>
+</section>
+{{/if}}
+
+{{#if presell.paraQuem}}
+<section class="sec" id="para-quem">
+  <div class="wrap">
+    <div class="center rv">
+      {{#if presell.paraQuemKicker}}<div class="kicker">{{presell.paraQuemKicker}}</div>{{/if}}
+      {{#if presell.paraQuemTitulo}}<h2>{{presell.paraQuemTitulo}}</h2>{{/if}}
+    </div>
+
+    <div class="fit-grid rv">
+      <div class="fit-col fit-yes">
+        <h3>Faz sentido se você:</h3>
+        <ul>
+          {{#each presell.paraQuem}}
+          <li><span class="fit-icon">✓</span><span>{{this}}</span></li>
+          {{/each}}
+        </ul>
+      </div>
+      {{#if presell.paraQuemNao}}
+      <div class="fit-col fit-no">
+        <h3>Talvez não seja ideal se:</h3>
+        <ul>
+          {{#each presell.paraQuemNao}}
+          <li><span class="fit-icon">–</span><span>{{this}}</span></li>
+          {{/each}}
+        </ul>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</section>
+{{/if}}
+
+{{#if presell.analiseTexto}}
+<section class="sec white" id="analise">
+  <div class="wrap">
+    <div class="analise-box rv">
+      {{#if presell.analiseKicker}}<div class="kicker">{{presell.analiseKicker}}</div>{{/if}}
+      {{#if presell.analiseTitulo}}<h2>{{presell.analiseTitulo}}</h2>{{/if}}
+      <p class="sub">{{presell.analiseTexto}}</p>
     </div>
   </div>
 </section>

@@ -24,7 +24,7 @@
     "h1": "Curso de Sketchup e Layout com <em>Renderização por IA</em>, do básico ao avançado",
     "paragrafo": "Você está a um passo do site oficial do produtor. Reunimos aqui as informações principais pra você confirmar se é isso que procura antes de continuar.",
     "pontos": [
-      "Mais de 150 videoaulas e 12 horas de conteúdo",
+      "Mais de 150 videoaulas e 12 horas de conteúdo prático",
       "Certificado digital de 120 horas",
       "Acesso vitalício às aulas",
       "Oferta consultada: R$ 147,00 à vista ou 10x de R$ 17,67, com 7 dias de garantia"
@@ -38,8 +38,8 @@
       "150+ videoaulas",
       "9 presentes + 1 super presente"
     ],
-    "recomendacao": "A proposta do treinamento é reunir Sketchup, Layout, templates e recursos de IA em uma única formação, do básico ao avançado.",
-    "microTexto": "Na página oficial você verá a grade completa, os presentes inclusos e como funciona a garantia de 7 dias.",
+    "recomendacao": "A proposta do treinamento é reunir Sketchup, Layout, templates e recursos de Inteligência Artificial em uma única formação, do básico ao avançado.",
+    "microTexto": "Na página oficial você verá a grade completa, os presentes inclusos e como funciona a garantia incondicional de 7 dias.",
     "tags": [
       "Sketchup",
       "Layout 2D",
@@ -68,11 +68,6 @@
     "estruturaTexto": "Confira um resumo dos principais pilares práticos abordados no método oficial:",
     "estrutura": [
       {
-        "titulo": "Renderização com IA",
-        "texto": "app gerador de prompts para renders e animações com IA"
-      },
-
-      {
         "titulo": "Sketchup do Zero ao Avançado",
         "texto": "modelagem 2D e 3D de projetos completos"
       },
@@ -85,6 +80,10 @@
         "texto": "materiais prontos pra economizar horas de trabalho"
       },
       {
+        "titulo": "Renderização com IA",
+        "texto": "app gerador de prompts para renders e animações com IA"
+      },
+      {
         "titulo": "Minicursos Extras",
         "texto": "Vray, Lumion e Enscape inclusos"
       },
@@ -93,6 +92,23 @@
         "texto": "9 presentes especiais + 1 super presente, com guias, plugins e materiais extras"
       }
     ],
+    "paraQuemKicker": "Para Quem É",
+    "paraQuemTitulo": "Esse treinamento faz sentido pra você?",
+    "paraQuem": [
+      "Você nunca usou Sketchup e Layout e quer aprender do zero",
+      "É estudante de arquitetura ou áreas relacionadas",
+      "É arquiteto, designer ou engenheiro e quer aprimorar seus projetos",
+      "Quer atuar como desenhista de projetos",
+      "Quer aprender modelagem, detalhamento e recursos de IA em uma mesma formação"
+    ],
+    "paraQuemNao": [
+      "Você já domina completamente Sketchup e Layout",
+      "Procura exclusivamente um curso de renderização",
+      "Seu objetivo não envolve modelagem, detalhamento ou apresentação de projetos"
+    ],
+    "analiseKicker": "Nossa Análise",
+    "analiseTitulo": "O que achamos da oferta",
+    "analiseTexto": "A proposta do treinamento é reunir Sketchup, Layout, templates e recursos de Inteligência Artificial em uma única formação. Para quem busca uma formação mais ampla, isso é interessante porque reúne diferentes etapas do desenvolvimento e apresentação de projetos em um único lugar, sem precisar procurar conteúdos separados para cada parte do processo.",
     "bonus": {
       "kicker": "Aceleração de Resultados",
       "titulo": "9 presentes especiais + 1 super presente, com templates, plugins e guias prontos.",

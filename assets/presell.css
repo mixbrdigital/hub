@@ -84,6 +84,23 @@ h2{font-family:var(--font-d);font-weight:900;font-size:clamp(1.5rem,3vw,2.1rem);
 .card h3{font-family:var(--font-d);font-weight:800;font-size:18px;letter-spacing:-.01em;margin:0 0 7px;color:var(--ink)}
 .card p{font-size:13.5px;color:var(--ink-soft)}
 
+/* ===== Para quem é / não é ===== */
+.fit-grid{display:grid;gap:16px;margin-top:8px}
+@media(min-width:760px){.fit-grid{grid-template-columns:1fr 1fr}}
+.fit-col{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.fit-col h3{font-family:var(--font-d);font-weight:800;font-size:16px;margin:0 0 12px;color:var(--ink)}
+.fit-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.fit-col li{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);line-height:1.5}
+.fit-icon{flex:0 0 auto;font-weight:900}
+.fit-yes .fit-icon{color:#16a34a}
+.fit-no .fit-icon{color:#94a3b8}
+
+/* ===== Nossa análise ===== */
+.analise-box{max-width:720px;margin:0 auto;border-left:3px solid var(--accent-color);padding:2px 0 2px 22px}
+.analise-box h2{margin:6px 0 10px;text-align:left}
+.analise-box .kicker{display:block}
+.analise-box .sub{font-size:14.5px;line-height:1.7;color:var(--ink-soft);text-align:left;max-width:none;margin:0}
+
 /* ===== Capítulos (estrutura numerada) ===== */
 .chapters{display:grid;gap:11px;max-width:800px;margin:0 auto}
 .chapter{display:flex;gap:15px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px}
