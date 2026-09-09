@@ -12,16 +12,15 @@
   "corHover": "#ccaa60",
   "corFundo": "#022333"
   },
-  "hero": {
-    "lead": "Do básico ao avançado, com IA, templates prontos e certificado — no seu ritmo, sem depender de ninguém."
-  },
-  "oferta": {
+ "hero": {
+  "lead": "Renderize e otimize seus projetos com IA � do b�sico ao avan�ado, com templates prontos e certificado."
+},  "oferta": {
     "precoAtual": "147,00"
   },
   "presell": {
     "title": "Curso de Sketchup e Layout com IA | Informações Oficiais",
     "description": "Informações objetivas sobre o Curso de Sketchup e Layout com IA de Leandro Amaral, com acesso direto ao site oficial do produtor.",
-    "h1": "Curso de <em>Sketchup e Layout</em> com IA, do básico ao avançado",
+    "h1": "Curso de Sketchup e Layout com <em>Renderiza��o por IA</em>, do b�sico ao avan�ado",
     "paragrafo": "Você está a um passo do site oficial do produtor. Reunimos aqui as informações principais pra você confirmar se é isso que procura antes de continuar.",
     "pontos": [
       "Mais de 150 videoaulas e 12 horas de conteúdo prático",
@@ -77,7 +76,7 @@
     "ctaTextoMobile": "VER MÓDULOS NA PÁGINA OFICIAL"
   },
   "tracking": {
-    "googleAdsId": "AW-SEU_ID_AQUI",
-    "googleAdsConversionLabel": "SEU_LABEL_AQUI"
-  }
+  "googleAdsId": "AW-18397407465",
+  "googleAdsConversionLabel": "uHXfCMPP2_EcEOnRyMRE"
+}
 }
