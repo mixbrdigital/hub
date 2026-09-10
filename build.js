@@ -255,6 +255,10 @@ function gerarPaginasProdutos(produtos) {
 function gerarPaginasPresell(produtos) {
   if (!fs.existsSync(TEMPLATE_PRESELL_PATH)) return;
   const template = fs.readFileSync(TEMPLATE_PRESELL_PATH, "utf8");
+  // CSS inlinado no <head> pra eliminar a requisição bloqueante de
+  // renderização (o arquivo é pequeno, ~9KB — inline é mais rápido
+  // que um <link rel="stylesheet"> nesse tamanho).
+  const inlineCss = fs.readFileSync(path.join(ASSETS_DIR, "presell.css"), "utf8");
 
   produtos
     .filter((p) => p.presell)
@@ -266,7 +270,7 @@ function gerarPaginasPresell(produtos) {
       // da presell também — ela não reaproveita a pasta da LP completa.
       copiarPasta(path.join(PRODUTOS_ASSETS_DIR, produto.slug), dirSaida);
 
-      const html = render(template, produto);
+      const html = render(template, { ...produto, _inlineCss: inlineCss });
       fs.writeFileSync(path.join(dirSaida, "index.html"), html, "utf8");
       console.log(`✔ /public/p/${produto.slug}/index.html (presell, noindex)`);
     });
