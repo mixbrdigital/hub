@@ -48,7 +48,7 @@
     ],
     "cardsKicker": "O que você aprende",
     "cardsTitulo": "Do desenho básico ao projeto completo.",
-    "cardsTexto": "Em vez de aulas soltas, você segue um fluxo prático: modela no SketchUp, detalha no Layout e otimiza com IA.",
+    "cardsTexto": "O treinamento apresenta um fluxo que passa pela modelagem no SketchUp, detalhamento no Layout e otimização com IA.",
     "cards": [
       {
         "titulo": "SketchUp Prático",
@@ -56,11 +56,11 @@
       },
       {
         "titulo": "Layout e Detalhamento",
-        "texto": "Aprenda a detalhar pranchas técnicas completas, prontas para apresentar a clientes ou entregar em trabalhos acadêmicos."
+        "texto": "Aprenda a detalhar pranchas técnicas com cotas e simbologia de projeto."
       },
       {
         "titulo": "Renderização com IA",
-        "texto": "Use o app gerador de prompts para transformar seus projetos em renders fotorrealistas e até animações em segundos."
+        "texto": "Use o app gerador de prompts para criar renders fotorrealistas e animações com IA a partir dos seus projetos."
       }
     ],
     "estruturaKicker": "Estrutura do Treinamento",
@@ -112,9 +112,9 @@
     "bonus": {
       "kicker": "Materiais Inclusos",
       "titulo": "9 presentes especiais + 1 super presente, com templates, plugins e guias prontos.",
-      "texto": "Além das aulas, a oferta oficial inclui materiais prontos para você aplicar imediatamente nos seus projetos, sem começar do zero."
+      "texto": "Além das aulas, a oferta oficial inclui materiais complementares que podem facilitar a execução dos seus projetos."
     },
-    "finalTitulo": "Quer dominar a modelagem 3D na prática?",
+    "finalTitulo": "Quer conhecer melhor o treinamento?",
     "finalTexto": "Acesse a página oficial para conhecer a estrutura completa das aulas e os presentes inclusos.",
     "seloTexto": "Renderização com IA",
     "ctaTextoFinal": "VER OFERTA OFICIAL COMPLETA",
