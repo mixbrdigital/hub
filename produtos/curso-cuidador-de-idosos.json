@@ -1,0 +1,130 @@
+{
+  "slug": "curso-cuidador-de-idosos",
+  "paginaCompleta": false,
+  "ativo": true,
+  "tipo": "curso",
+  "nome": "Curso Cuidador de Idosos Profissional, Qualificado e Certificado",
+  "nomeCurto": "Cuidador de Idosos",
+  "produtor": "WebHoje Cursos Online",
+  "plataforma": "Hotmart",
+  "tema": {
+    "corDestaque": "#008BE5",
+    "corHover": "#0071bd",
+    "corFundo": "#031a2b"
+  },
+  "hero": {
+    "lead": "Aprenda cuidados com idosos do zero — do envelhecimento e Estatuto do Idoso aos primeiros socorros — com certificado de 45 horas."
+  },
+  "oferta": {
+    "precoAtual": "197,00"
+  },
+  "presell": {
+    "title": "Curso Cuidador de Idosos Profissional | Informações Oficiais",
+    "description": "Informações objetivas sobre o Curso Cuidador de Idosos Profissional, da WebHoje Cursos Online, com acesso direto ao site oficial do produtor.",
+    "h1": "Curso Cuidador de Idosos Profissional, <em>Qualificado e Certificado</em>",
+    "paragrafo": "Você está a um passo do site oficial do produtor. Reunimos aqui as informações principais para você confirmar se é isso que procura antes de continuar.",
+    "pontos": [
+      "7 módulos + módulo bônus, do envelhecimento aos primeiros socorros",
+      "Certificado digital de 45 horas, com CNPJ e validade em todo o território nacional",
+      "Acesso vitalício e ilimitado às aulas",
+      "Oferta consultada: R$ 197,00 à vista ou 12x de R$ 20,37, com 7 dias de garantia"
+    ],
+    "ctaTexto": "QUERO COMEÇAR AGORA!",
+    "paginaOficial": "https://go.hotmart.com/E107606808M?redirectionUrl=https%3A%2F%2Fcursocuidandodeidosos.com%2F",
+    "emailContato": "contato@mixbrdigital.com.br",
+    "heroImagem": "hero-mockup.webp",
+    "metrics": [
+      "45 horas de certificado",
+      "7 módulos + bônus",
+      "7 dias de garantia"
+    ],
+    "recomendacao": "Reúne teoria e prática do cuidado com idosos — do envelhecimento e Estatuto do Idoso até primeiros socorros — em uma única formação com certificado.",
+    "microTexto": "Na página oficial você verá a grade completa dos 7 módulos, o módulo bônus e como funciona a garantia de 7 dias.",
+    "tags": [
+      "Cuidador de Idosos",
+      "Certificado 45h",
+      "Primeiros Socorros",
+      "Curso Online"
+    ],
+    "cardsKicker": "Vantagens do Método",
+    "cardsTitulo": "Vantagens do Método Cuidador de Idosos Profissional",
+    "cardsTexto": "O treinamento foi pensado tanto para quem está começando quanto para quem já atua na área e quer evoluir.",
+    "cards": [
+      {
+        "titulo": "Aprenda tudo que precisa mesmo que seja iniciante",
+        "texto": "Passo a passo simples e didático, não importa se você já possui ou não conhecimento sobre a área."
+      },
+      {
+        "titulo": "Aprimore seus conhecimentos e técnicas",
+        "texto": "Para você que já atua na área e deseja evoluir e desenvolver novas técnicas profissionais como cuidador."
+      },
+      {
+        "titulo": "Destaque-se na profissão com autoridade",
+        "texto": "Torne-se um cuidador completo e comece a se destacar na sua região."
+      }
+    ],
+    "estruturaKicker": "O Que Você Vai Aprender",
+    "estruturaTitulo": "7 módulos, do início ao atendimento em situações delicadas",
+    "estruturaTexto": "Confira um resumo dos módulos do método oficial:",
+    "estrutura": [
+      {
+        "titulo": "Módulo 1 – Início",
+        "texto": "boas-vindas, apostilas, comunidade e materiais recomendados"
+      },
+      {
+        "titulo": "Módulo 2 – Envelhecimento",
+        "texto": "conceitos de envelhecimento, senescência e senilidade"
+      },
+      {
+        "titulo": "Módulo 3 – Estatuto do Idoso",
+        "texto": "diretrizes de cuidado, síndromes geriátricas e rede de apoio ao idoso"
+      },
+      {
+        "titulo": "Módulo 4 – Cuidados com Idosos I",
+        "texto": "bem-estar emocional, higiene, alimentação, sono e prevenção de quedas"
+      },
+      {
+        "titulo": "Módulo 5 – Cuidados com Idosos II",
+        "texto": "rotina diária, manuseio, cuidados à noite, no frio e tratamento médico"
+      },
+      {
+        "titulo": "Módulo 6 – Cuidados com Idosos III",
+        "texto": "comportamento agitado, sinais vitais, patologias e higienização do ambiente"
+      },
+      {
+        "titulo": "Módulo 7 – Primeiros Socorros",
+        "texto": "cuidados respiratórios, engasgos e kits de primeiros socorros"
+      }
+    ],
+    "paraQuemKicker": "Para Quem É",
+    "paraQuemTitulo": "Esse treinamento faz sentido para você?",
+    "paraQuem": [
+      "Nunca cuidou de idosos e quer aprender do zero",
+      "Já atua como cuidador e quer aprimorar técnicas",
+      "Quer um certificado de 45 horas para fortalecer o currículo",
+      "Busca mais segurança para lidar com situações delicadas do dia a dia"
+    ],
+    "paraQuemNao": [
+      "Você já domina completamente o cuidado profissional de idosos",
+      "Procura exclusivamente um curso isolado de primeiros socorros",
+      "Seu objetivo não envolve atuar direta ou indiretamente no cuidado de idosos"
+    ],
+    "analiseKicker": "Nossa Análise",
+    "analiseTitulo": "O que achamos da oferta",
+    "analiseTexto": "A proposta do treinamento é reunir teoria e prática do cuidado com idosos em 7 módulos, do envelhecimento e Estatuto do Idoso até primeiros socorros. Para quem busca uma formação estruturada, isso é interessante porque cobre desde os fundamentos até situações do dia a dia, com certificado de 45 horas ao final.",
+    "bonus": {
+      "kicker": "Módulo Bônus",
+      "titulo": "Para acelerar ainda mais seus resultados",
+      "texto": "Além das aulas, a oferta oficial inclui um módulo bônus com passos práticos, dicas do que evitar e cuidados com o coração do idoso."
+    },
+    "finalTitulo": "Quer conhecer melhor o treinamento?",
+    "finalTexto": "Acesse a página oficial para conhecer a estrutura completa dos 7 módulos, o módulo bônus e a garantia de 7 dias.",
+    "seloTexto": "Certificado 45h",
+    "ctaTextoFinal": "QUERO COMEÇAR AGORA!",
+    "ctaTextoMobile": "QUERO COMEÇAR AGORA!"
+  },
+  "tracking": {
+    "googleAdsId": "AW-PREENCHER",
+    "googleAdsConversionLabel": "PREENCHER"
+  }
+}
