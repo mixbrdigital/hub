@@ -8,8 +8,8 @@
   "produtor": "WebHoje Cursos Online",
   "plataforma": "Hotmart",
   "tema": {
-    "corDestaque": "#367879",
-    "corHover": "#2b6061",
+    "corDestaque": "#4CC4C5",
+    "corHover": "#40a6a7",
     "corFundo": "#0d2626"
   },
   "hero": {
@@ -30,6 +30,7 @@
       "Oferta consultada: R$ 197,00 à vista ou 12x de R$ 20,37, com 7 dias de garantia"
     ],
     "ctaTexto": "GARANTIR ACESSO IMEDIATO",
+    "corTextoBotao": "#103232",
     "paginaOficial": "https://go.hotmart.com/K107617187T?redirectionUrl=https%3A%2F%2Fcursopetpro.com%2Fpetsitter%2F",
     "emailContato": "contato@mixbrdigital.com.br",
     "heroImagem": "hero-mockup.webp",
