@@ -228,6 +228,13 @@
   <a class="cta js-goto-producer" href="{{presell.paginaOficial}}" target="_blank" rel="sponsored noopener">{{presell.ctaTextoMobile}} →</a>
 </div>
 
+<script>
+  window.__PRODUTO_TRACKING__ = {
+    googleAdsId: "{{tracking.googleAdsId}}",
+    googleAdsConversionLabel: "{{tracking.googleAdsConversionLabel}}",
+    produtoSlug: "{{slug}}"
+  };
+</script>
 <script src="{{presell.caminhoAssets}}/presell.js"></script>
 <script>
 // Reveal on scroll
