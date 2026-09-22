@@ -21,20 +21,31 @@
   "presell": {
     "title": "Cultive na Água — Curso de Hidroponia | Informações Oficiais",
     "description": "Informações objetivas sobre o curso Cultive na Água, de Bruno Palma, com acesso direto ao site oficial do produtor.",
-    "h1": "Cultive na Água, Curso de Hidroponia <em>do Zero à Colheita</em>",
-    "paragrafo": "Você está a um passo do site oficial do produtor. Reunimos aqui as informações principais para você confirmar se é isso que procura antes de continuar.",
+    "h1": "Cultive na Água: <em>vale a pena?</em>",
+    "paragrafo": "Veja conteúdo, bônus, certificado, modelos de horta e para quem o curso é indicado, antes de acessar a oferta oficial. Página informativa — o acesso à inscrição ocorre no site oficial do produtor.",
+    "resumo": {
+      "itens": [
+        { "label": "Indicado para", "valor": "Quem nunca plantou nada e quer produzir alimentos em casa" },
+        { "label": "Formato", "valor": "100% online, no seu ritmo" },
+        { "label": "Certificado", "valor": "De conclusão, não regulamentado" },
+        { "label": "Acesso", "valor": "Vitalício ao curso e ao grupo de alunos" },
+        { "label": "Preço", "valor": "R$ 247,00 à vista ou 12x de R$ 25,55" }
+      ],
+      "nota": "Nossa avaliação rápida: interessante pra quem tem pouco espaço em casa e quer aprender do zero, com linguagem simples."
+    },
     "pontos": [
       "Aprenda a montar bancadas em PVC, telha, parede, torre, floating e hidroponia na areia",
       "Certificado de conclusão, com carga horária e assinatura do professor",
       "Acesso vitalício ao curso e ao grupo de alunos",
       "Oferta consultada: R$ 247,00 à vista ou 12x de R$ 25,55, com 30 dias de garantia"
     ],
-    "ctaTexto": "QUERO GARANTIR MINHA VAGA",
+    "ctaTexto": "VER CURSO E OFERTA OFICIAL",
     "corTextoBotao": "#0b1220",
     "paginaOficial": "https://go.hotmart.com/J107706513P?ap=7a79&redirectionUrl=https%3A%2F%2Fbrunopalmaensina.com.br%2Fhidroponia%2F",
     "emailContato": "contato@mixbrdigital.com.br",
     "heroImagem": "hero-mockup.webp",
     "metrics": [
+      "R$ 247,00 à vista",
       "5 modelos de horta",
       "3 bônus inclusos",
       "30 dias de garantia"
@@ -96,7 +107,8 @@
     "paraQuemNao": [
       "Você já domina hidroponia e busca só nível avançado",
       "Não tem nenhuma hora de sol disponível no espaço onde mora",
-      "Procura um curso voltado só a produção comercial em larga escala"
+      "Procura um curso voltado só a produção comercial em larga escala",
+      "Procura uma certificação técnica ou acadêmica reconhecida"
     ],
     "analiseKicker": "Nossa Análise",
     "analiseTitulo": "O que achamos da oferta",
@@ -109,8 +121,8 @@
     "finalTitulo": "Quer conhecer melhor o curso?",
     "finalTexto": "Acesse a página oficial para ver a lista completa de bônus e como funciona a garantia de 30 dias.",
     "seloTexto": "Garantia de 30 dias",
-    "ctaTextoFinal": "QUERO GARANTIR MINHA VAGA",
-    "ctaTextoMobile": "GARANTIR VAGA"
+    "ctaTextoFinal": "CONFERIR CONTEÚDO E PREÇO",
+    "ctaTextoMobile": "ACESSAR A OFERTA OFICIAL"
   },
   "tracking": {
     "googleAdsId": "AW-18397407465",
