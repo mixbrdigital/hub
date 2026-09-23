@@ -29,7 +29,7 @@
         { "label": "Formato", "valor": "100% online, no seu ritmo" },
         { "label": "Certificado", "valor": "De conclusão, não regulamentado" },
         { "label": "Acesso", "valor": "6 meses (Básico) ou 3 anos (Completo)" },
-        { "label": "Preço", "valor": "A partir de R$ 67,00" }
+        { "label": "Preço", "valor": "A partir de 8x de R$ 9,74 (Plano Básico)" }
       ],
       "nota": "Nossa avaliação rápida: interessante pra quem quer um treinamento específico pra topografia, não um curso genérico de AutoCAD."
     },
@@ -40,7 +40,7 @@
         {
           "nome": "Plano Básico",
           "preco": "R$ 67,00",
-          "detalhe": "Pagamento único",
+          "detalhe": "8x de R$ 9,74",
           "acesso": "6 meses de acesso",
           "inclui": [
             "Curso principal (AutoCAD aplicado à Topografia)",
@@ -51,7 +51,7 @@
           "nome": "Plano Completo",
           "destaque": true,
           "preco": "R$ 97,00",
-          "detalhe": "Pagamento único",
+          "detalhe": "10x de R$ 9,70",
           "acesso": "3 anos de acesso",
           "inclui": [
             "Curso principal (AutoCAD aplicado à Topografia)",
@@ -64,7 +64,7 @@
       "10 módulos + 7 bônus, do básico ao avançado em AutoCAD",
       "3 certificados de conclusão inclusos (AutoCAD para Topografia, QGIS e Google Earth Pro)",
       "Suporte via WhatsApp direto com o instrutor",
-      "Oferta consultada: Plano Completo por R$ 97,00 (pagamento único, acesso de 3 anos) ou Plano Básico por R$ 67,00 (6 meses), com 7 dias de garantia"
+      "Oferta consultada: Plano Completo por R$ 97,00 à vista ou 10x de R$ 9,70, acesso de 3 anos — ou Plano Básico por R$ 67,00 à vista ou 8x de R$ 9,74, acesso de 6 meses, com 7 dias de garantia"
     ],
     "ctaTexto": "VER CURSO E OFERTA OFICIAL",
     "corTextoBotao": "#ffffff",
@@ -72,7 +72,7 @@
     "emailContato": "contato@mixbrdigital.com.br",
     "heroImagem": "hero-mockup.webp",
     "metrics": [
-      "A partir de R$ 67,00",
+      "10x de R$ 9,70",
       "10 módulos",
       "7 bônus inclusos",
       "7 dias de garantia"
