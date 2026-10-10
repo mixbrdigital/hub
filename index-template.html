@@ -35,8 +35,9 @@
     .wrap{max-width:1160px;margin:0 auto;padding:0 18px}
     h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;color:var(--plum);letter-spacing:-.01em}
 
-    .site-header{padding:16px 24px;border-bottom:1px solid var(--line);background:var(--bg)}
+    .site-header{padding:16px 24px;background:var(--bg)}
     .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.08em;line-height:1.15;color:var(--plum)}
+    .brand,.brand:hover,.brand:focus,.brand:active,.brand *{text-decoration:none;border:0;box-shadow:none;outline:0}
     .brand-mark{font-size:20px;color:var(--sage)}
 
     .hero{text-align:center;padding:44px 0 10px}
@@ -45,8 +46,6 @@
     .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin:22px 0 0;padding:0;list-style:none;font-size:13.5px;color:var(--plum)}
     .trust li::before{content:"✓";color:var(--sage);font-weight:700;margin-right:6px}
     .trust .trust-av::before{content:"★";color:var(--star)}
-    .mini-aviso{margin:14px auto 0;max-width:620px;font-size:12.5px;color:var(--muted);text-align:center}
-    .mini-aviso a{color:var(--plum)}
 
     .nav{position:sticky;top:0;z-index:5;background:rgba(250,246,240,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);margin-top:30px}
     .nav-in{display:flex;gap:8px;overflow-x:auto;padding:12px 18px;max-width:1160px;margin:0 auto;scrollbar-width:none}
@@ -122,7 +121,6 @@
         <li>Veja certificado e garantia no produtor</li>
         {{AVALIACAO}}
       </ul>
-      <p class="mini-aviso">Somos afiliados independentes e podemos receber comissão, sem custo extra para você. <a href="#aviso">Saiba mais</a></p>
     </section>
 
     <nav class="nav" aria-label="Categorias">
