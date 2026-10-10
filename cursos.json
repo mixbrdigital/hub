@@ -8,8 +8,8 @@
     { "id": "energeticas", "nav": "Práticas energéticas", "titulo": "Práticas energéticas e esotéricas", "sub": "Cursos de práticas energéticas e espirituais, de caráter complementar." }
   ],
   "cursos": [
-    { "grupo": "psicologia", "nome": "Psicoterapia e Psicanálise: formação completa", "capa": "psicoterapia-psicanalise.webp", "nota": 5.0, "avaliacoes": 8, "parcelas": 12, "valorParcela": 59.00, "precoOriginal": null, "selo": "Certificado profissional de 1.028 horas", "hotlink": null },
-    { "grupo": "psicologia", "nome": "Neurociência Comportamental", "capa": "neurociencia-comportamental.webp", "nota": 4.3, "avaliacoes": 10, "parcelas": 12, "valorParcela": 41.06, "precoOriginal": null, "selo": "Certificado profissional de 500 horas", "hotlink": null },
+    { "grupo": "psicologia", "nome": "Psicoterapia e Psicanálise: formação completa", "capa": "psicoterapia-psicanalise.webp", "nota": 5.0, "avaliacoes": 8, "parcelas": 12, "valorParcela": 59.00, "precoOriginal": null, "selo": "Certificado profissional de 1.028 horas", "hotlink": "https://go.hotmart.com/W107846222E" },
+    { "grupo": "psicologia", "nome": "Neurociência Comportamental", "capa": "neurociencia-comportamental.webp", "nota": 4.3, "avaliacoes": 10, "parcelas": 12, "valorParcela": 41.06, "precoOriginal": null, "selo": "Certificado profissional de 500 horas", "hotlink": "https://go.hotmart.com/C107867971G" },
     { "grupo": "psicologia", "nome": "Psicanálise Clínica e Saúde Mental", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
     { "grupo": "psicologia", "nome": "Terapeuta Comportamental", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
     { "grupo": "psicologia", "nome": "Terapeuta ABA", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
@@ -21,12 +21,12 @@
     { "grupo": "holisticas", "nome": "Psicoterapeuta Holístico", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
     { "grupo": "holisticas", "nome": "Terapeuta Integrativo", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
     { "grupo": "holisticas", "nome": "Terapeuta Naturopata", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
-    { "grupo": "holisticas", "nome": "Terapeuta Ortomolecular", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
+    { "grupo": "holisticas", "nome": "Terapia Ortomolecular", "capa": "terapia-ortomolecular.webp", "nota": 4.6, "avaliacoes": 21, "parcelas": 12, "valorParcela": 41.06, "precoOriginal": null, "selo": "Certificado profissional de 360 horas", "hotlink": "https://go.hotmart.com/P107969046D" },
     { "grupo": "holisticas", "nome": "Terapeuta Floral e Aromaterapeuta", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
 
     { "grupo": "energeticas", "nome": "Terapeuta Quântico", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
     { "grupo": "energeticas", "nome": "Biorressonância Quântica", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
-    { "grupo": "energeticas", "nome": "Terapeuta Holístico Esotérico", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
+    { "grupo": "energeticas", "nome": "Terapeuta Esotérico", "capa": "terapeuta-esoterico.webp", "nota": 4.9, "avaliacoes": 23, "parcelas": 12, "valorParcela": 41.06, "precoOriginal": null, "selo": "Certificado profissional de 1.740 horas", "hotlink": "https://go.hotmart.com/M107931873W" },
     { "grupo": "energeticas", "nome": "Reiki, Chakras e Cristais", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null }
   ]
 }
