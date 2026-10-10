@@ -322,7 +322,6 @@ function main() {
   const produtos = carregarProdutos();
   if (produtos.length === 0) {
     console.warn("⚠ Nenhum produto ativo encontrado em /produtos.");
-    return;
   }
   gerarPaginasProdutos(produtos);
   gerarPaginasPresell(produtos);
