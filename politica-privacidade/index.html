@@ -6,49 +6,47 @@
   <title>Política de Privacidade | MixBR Digital</title>
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://mixbrdigital.com.br/politica-privacidade/">
-  <link rel="stylesheet" href="../assets/styles.css">
+  <meta name="theme-color" content="#faf6f0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
   <style>
-    /* Seleção de texto em azul nesta página */
-    ::selection {
-      background-color: #60a5fa;
-      color: #111111;
+    :root{
+      --bg:#faf6f0;
+      --card:#ffffff;
+      --text:#2e2a33;
+      --muted:#6f6a73;
+      --line:#e9e1d6;
+      --plum:#5b3a5e;
+      --plum-dark:#452b48;
+      --sage:#7d9a86;
+      --sage-light:#e8efe9;
     }
+    *{box-sizing:border-box}
+    ::selection{background:var(--sage-light);color:var(--plum-dark)}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    h1,h2{font-family:"Fraunces",Georgia,serif;font-weight:600;color:var(--plum);letter-spacing:-.01em}
 
-    .policy{max-width:760px;margin:0 auto;padding:80px 24px;line-height:1.7}
-    .policy h1{margin-bottom:24px}
-    .policy h2{margin-top:32px;font-size:20px}
-    .policy p, .policy li{opacity:.85}
+    .site-header{padding:16px 24px;background:var(--bg)}
+    .brand{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:13px;letter-spacing:.08em;line-height:1.15;color:var(--plum)}
+    .brand,.brand:hover,.brand:focus,.brand:active,.brand *{text-decoration:none;border:0;box-shadow:none;outline:0}
+    .brand-mark{font-size:20px;color:var(--sage)}
 
-    /* Logo Header: Texto branco no estado normal, símbolo azul */
-    .site-header .brand {
-      color: #f3f3f3 !important;
-      transition: color 0.2s ease;
-    }
+    .policy{max-width:760px;margin:0 auto;padding:48px 24px 64px;line-height:1.75}
+    .policy h1{font-size:clamp(1.9rem,5vw,2.6rem);line-height:1.15;margin:0 0 24px}
+    .policy h2{margin:36px 0 8px;font-size:1.3rem}
+    .policy p{margin:0 0 14px;color:#4a4550}
+    .policy strong{color:var(--text)}
+    .back-link{display:inline-block;margin-top:24px;color:var(--plum);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+    .back-link:hover{color:var(--plum-dark)}
+    .back-link:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
 
-    .site-header .brand .brand-mark {
-      color: #60a5fa !important;
-      transition: color 0.2s ease;
-    }
-
-    /* Logo Header Hover: Tudo fica azul ao passar o mouse */
-    .site-header .brand:hover,
-    .site-header .brand:hover .brand-mark {
-      color: #60a5fa !important;
-    }
-
-    /* Link de retorno com espaçamento para dar respiro */
-    .back-link {
-      display: inline-block;
-      margin-top: 32px;
-      color: #60a5fa !important;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      transition: color 0.2s ease;
-    }
-
-    .back-link:hover {
-      color: #93c5fd !important;
-    }	
+    .footer{margin-top:40px;padding:34px 20px 44px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:13.5px}
+    .footer .brand{margin-bottom:14px}
+    .footer p{max-width:760px;margin:0 auto 12px}
+    .footer p a{text-decoration:underline;color:var(--plum)}
   </style>
 </head>
 <body>
@@ -87,8 +85,14 @@
   </main>
 
   <footer class="footer">
-    <div>© <span data-current-year>2026</span> MixBR Digital • Todos os direitos reservados.</div>
+    <a class="brand" href="/" aria-label="MixBR Digital">
+      <span class="brand-mark">✦</span>
+      <span>MIXBR DIGITAL</span>
+    </a>
+    <p>A MixBR Digital atua como afiliada dos produtos divulgados neste site. Ao comprar através dos nossos links, podemos receber uma comissão, sem custo adicional para você.</p>
+    <p>© <span data-current-year>2026</span> MixBR Digital · <a href="/politica-privacidade/">Política de Privacidade</a> · <a href="/termos/">Termos de Uso</a> · <a href="mailto:contato@mixbrdigital.com.br">Contato</a></p>
   </footer>
-  <script>document.querySelectorAll("[data-current-year]").forEach(el=>el.textContent=new Date().getFullYear());</script>
+
+  <script>document.querySelectorAll("[data-current-year]").forEach(function(el){el.textContent=new Date().getFullYear()});</script>
 </body>
 </html>
