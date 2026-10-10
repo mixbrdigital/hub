@@ -94,8 +94,16 @@ const conferido = dados.conferidoEm
   ? `Valores e avaliações conferidos em ${esc(dados.conferidoEm)}.`
   : `Atualizado em ${meses[hoje.getMonth()]} de ${hoje.getFullYear()}.`;
 
+// avaliacao da INSTITUICAO (ex.: perfil no Google), mostrada uma vez no topo, nunca como nota de um curso
+const av = dados.avaliacaoInstituicao;
+const avaliacaoHtml =
+  av && av.nota
+    ? `<li class="trust-av">${av.nome ? esc(av.nome) : "Instituição avaliada"}: ${fmt(av.nota, 1)} no ${esc(av.fonte || "Google")}${av.avaliacoes ? ` (${fmtInt(av.avaliacoes)} avaliações)` : ""}</li>`
+    : "";
+
 const html = template
   .replace("{{ROBOTS}}", robots)
+  .replace("{{AVALIACAO}}", avaliacaoHtml)
   .replace("{{NAV}}", nav)
   .replace("{{GRUPOS}}", grupos)
   .replace("{{CONFERIDO}}", conferido);

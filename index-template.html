@@ -44,6 +44,7 @@
     .hero p{color:var(--muted);font-size:16.5px;max-width:620px;margin:0 auto}
     .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin:22px 0 0;padding:0;list-style:none;font-size:13.5px;color:var(--plum)}
     .trust li::before{content:"✓";color:var(--sage);font-weight:700;margin-right:6px}
+    .trust .trust-av::before{content:"★";color:var(--star)}
     .mini-aviso{margin:14px auto 0;max-width:620px;font-size:12.5px;color:var(--muted);text-align:center}
     .mini-aviso a{color:var(--plum)}
 
@@ -119,6 +120,7 @@
         <li>Compra segura pela Hotmart</li>
         <li>Cursos 100% online</li>
         <li>Veja certificado e garantia no produtor</li>
+        {{AVALIACAO}}
       </ul>
       <p class="mini-aviso">Somos afiliados independentes e podemos receber comissão, sem custo extra para você. <a href="#aviso">Saiba mais</a></p>
     </section>

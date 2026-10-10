@@ -1,5 +1,7 @@
 {
   "_ajuda": "Preencha so o que for REAL e conferido na Hotmart. Campo vazio (null) some do card. A ordem dos cursos dentro de cada grupo e a ordem do ranking. nota: 4.8 | avaliacoes: 1230 | parcelas: 12 | valorParcela: 19.70 | precoOriginal: 497 (so se houver desconto de verdade) | selo: texto curto, ex 'Certificado reconhecido' ou 'Garantia de 7 dias' | capa: nome do arquivo em /img | hotlink: seu link de afiliado.",
+  "conferidoEm": "10/2026",
+  "avaliacaoInstituicao": { "nota": 4.9, "avaliacoes": 1442, "fonte": "Google", "nome": null },
   "grupos": [
     { "id": "psicologia", "nav": "Psicologia e comportamento", "titulo": "Psicologia, psicanálise e comportamento", "sub": "Formações voltadas ao estudo da mente, do comportamento e da saúde emocional." },
     { "id": "familia", "nav": "Família e relacionamentos", "titulo": "Família e relacionamentos", "sub": "Cursos sobre dinâmicas familiares, casais e constelações." },
@@ -7,9 +9,9 @@
     { "id": "energeticas", "nav": "Práticas energéticas", "titulo": "Práticas energéticas e esotéricas", "sub": "Cursos de práticas energéticas e espirituais, de caráter complementar." }
   ],
   "cursos": [
-    { "grupo": "psicologia", "nome": "Psicoterapia e Psicanálise: formação completa", "capa": "psicoterapia-psicanalise.webp", "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
-    { "grupo": "psicologia", "nome": "Neurociência Comportamental", "capa": "neurociencia-comportamental.webp", "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
-    { "grupo": "psicologia", "nome": "Terapeuta Humanista: saúde emocional e NR-1", "capa": "terapeuta-humanista.webp", "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
+    { "grupo": "psicologia", "nome": "Psicoterapia e Psicanálise: formação completa", "capa": "psicoterapia-psicanalise.webp", "nota": null, "avaliacoes": null, "parcelas": 12, "valorParcela": 59.00, "precoOriginal": null, "selo": "Certificado profissional de 1.028 horas", "hotlink": null },
+    { "grupo": "psicologia", "nome": "Neurociência Comportamental", "capa": "neurociencia-comportamental.webp", "nota": null, "avaliacoes": null, "parcelas": 12, "valorParcela": 41.06, "precoOriginal": null, "selo": "Certificado profissional de 500 horas", "hotlink": null },
+    { "grupo": "psicologia", "nome": "Terapeuta Humanista: saúde emocional e NR-1", "capa": "terapeuta-humanista.webp", "nota": null, "avaliacoes": null, "parcelas": 12, "valorParcela": 61.74, "precoOriginal": null, "selo": "Certificado profissional de 1.213 horas", "hotlink": null },
     { "grupo": "psicologia", "nome": "Psicanálise Clínica e Saúde Mental", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
     { "grupo": "psicologia", "nome": "Terapeuta Comportamental", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
     { "grupo": "psicologia", "nome": "Terapeuta ABA", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
@@ -17,7 +19,7 @@
     { "grupo": "familia", "nome": "Terapeuta Familiar e de Casal", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
     { "grupo": "familia", "nome": "Constelação Familiar Avançada", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
 
-    { "grupo": "holisticas", "nome": "Terapeuta Holístico Master", "capa": "terapeuta-holistico.webp", "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
+    { "grupo": "holisticas", "nome": "Terapeuta Holístico Master", "capa": "terapeuta-holistico.webp", "nota": null, "avaliacoes": null, "parcelas": 12, "valorParcela": 61.74, "precoOriginal": null, "selo": "Certificado profissional de 2.754 horas", "hotlink": null },
     { "grupo": "holisticas", "nome": "Terapeuta Holístico Completo", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
     { "grupo": "holisticas", "nome": "Psicoterapeuta Holístico", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
     { "grupo": "holisticas", "nome": "Terapeuta Integrativo", "capa": null, "nota": null, "avaliacoes": null, "parcelas": null, "valorParcela": null, "precoOriginal": null, "selo": null, "hotlink": null },
