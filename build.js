@@ -68,9 +68,19 @@ const nav = dados.grupos
   .map((g) => `        <a class="chip" href="#${esc(g.id)}">${esc(g.nav)}</a>`)
   .join("\n");
 
+// limite de cursos por secao (campo "maxPorGrupo" no cursos.json; sem o campo, mostra todos).
+// Vale a ordem do JSON: os primeiros da lista entram, o resto fica de fora.
+const MAX = Number(dados.maxPorGrupo) > 0 ? Number(dados.maxPorGrupo) : Infinity;
+const exibidos = [];
+
 const grupos = dados.grupos
   .map((g) => {
-    const lista = dados.cursos.filter((c) => c.grupo === g.id);
+    const todos = dados.cursos.filter((c) => c.grupo === g.id);
+    const lista = todos.slice(0, MAX);
+    if (todos.length > lista.length) {
+      console.log(`> ${g.id}: ${todos.length} cursos, mostrando ${lista.length}. Fora da pagina: ${todos.slice(MAX).map((c) => c.nome).join(", ")}`);
+    }
+    exibidos.push(...lista);
     if (!lista.length) return "";
     const cards = lista.map((c) => card(c, indice++)).join("\n");
     return `      <section class="grupo" id="${esc(g.id)}">
@@ -85,7 +95,7 @@ ${cards}
   .join("\n");
 
 // noindex automatico enquanto faltar hotlink em algum curso
-const faltaHotlink = dados.cursos.some((c) => !c.hotlink);
+const faltaHotlink = exibidos.some((c) => !c.hotlink);
 const robots = faltaHotlink || DEMO ? '<meta name="robots" content="noindex,nofollow">' : "";
 
 const meses = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
@@ -117,7 +127,7 @@ if (DEMO) {
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT);
 fs.writeFileSync(path.join(OUT, "index.html"), html);
-console.log("gerado: public/index.html (" + dados.cursos.length + " cursos)" + (faltaHotlink ? " [noindex: faltam hotlinks]" : ""));
+console.log("gerado: public/index.html (" + exibidos.length + " cursos na pagina)" + (faltaHotlink ? " [noindex: faltam hotlinks]" : ""));
 
 for (const item of ["robots.txt", "img", "politica-privacidade", "termos", "assets"]) {
   if (fs.existsSync(item)) {

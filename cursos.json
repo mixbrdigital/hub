@@ -1,6 +1,7 @@
 {
   "_ajuda": "Preencha so o que for REAL e conferido na Hotmart. Campo vazio (null) some do card. A ordem dos cursos dentro de cada grupo e a ordem de exibicao. nota: 4.8 | avaliacoes: 1230 | parcelas: 12 | valorParcela: 19.70 | precoOriginal: 497 (so se houver desconto de verdade) | selo: texto curto, ex 'Certificado profissional' ou 'Garantia de 7 dias' | capa: nome do arquivo em /img | hotlink: seu link de afiliado.",
   "conferidoEm": "10/2026",
+  "maxPorGrupo": 8,
   "grupos": [
     { "id": "psicologia", "nav": "Psicologia e comportamento", "titulo": "Psicologia, psicanálise e comportamento", "sub": "Formações voltadas ao estudo da mente, do comportamento e da saúde emocional." },
     { "id": "familia", "nav": "Família e relacionamentos", "titulo": "Família e relacionamentos", "sub": "Cursos sobre dinâmicas familiares, casais e constelações." },
