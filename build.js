@@ -26,6 +26,8 @@ const EXEMPLO = [
 ];
 
 let contador = 0;
+const slug = (s) => String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const ids = [];
 
 function card(c, i) {
   if (DEMO) c = { ...c, ...EXEMPLO[i % EXEMPLO.length] };
@@ -50,6 +52,7 @@ function card(c, i) {
   const ICO_CARTAO = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>';
 
   const info = [];
+  info.push(`<h3 class="titulo">${esc(c.nome)}</h3>`);
   if (c.nota) {
     const aval = c.avaliacoes ? ` <span class="aval">(${fmtInt(c.avaliacoes)})</span>` : "";
     info.push(`<div class="linha nota"><span class="ico estrela">★</span><span>${fmt(c.nota, 1)}${aval}</span></div>`);
@@ -60,7 +63,18 @@ function card(c, i) {
   }
   if (c.selo) info.push(`<div class="linha selo"><span class="ico">✓</span><span>${esc(c.selo)}</span></div>`);
 
-  return `        <a class="card" href="${href}"${attrs} aria-label="Ver curso ${esc(c.nome)}">${capa}<div class="info">${info.join("")}</div><span class="btn">Ver curso →</span></a>`;
+  const id = c.id || slug(c.nome);
+  ids.push(id);
+  // etiqueta so aparece quando o visitante chega pelo link com #id (anuncio). Preencha "promo" so se a oferta for REAL.
+  const promo = c.promo ? `<span class="promo">${esc(c.promo)}</span>` : "";
+  // bloco extra: so aparece no card destacado pelo anuncio (#id). Campos opcionais: para, avista, garantia, ctaDestaque
+  const mais = [];
+  if (c.para) mais.push(`<p class="para">${esc(c.para)}</p>`);
+  if (c.avista) mais.push(`<div class="linha avista"><span class="ico">${ICO_CARTAO}</span><span>ou R$ ${fmt(c.avista, 2)} à vista</span></div>`);
+  if (c.garantia) mais.push(`<div class="linha selo"><span class="ico">✓</span><span>${esc(c.garantia)}</span></div>`);
+  const maisHtml = mais.length ? `<div class="mais">${mais.join("")}</div>` : "";
+  const cta = `<span class="btn"><span class="t-normal">Ver curso →</span><span class="t-alvo">${esc(c.ctaDestaque || "Quero este curso →")}</span></span>`;
+  return `        <a class="card" id="${esc(id)}" href="${href}"${attrs} aria-label="Ver curso ${esc(c.nome)}">${promo}${capa}<div class="info">${info.join("")}${maisHtml}</div>${cta}</a>`;
 }
 
 let indice = 0;
@@ -128,6 +142,9 @@ fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT);
 fs.writeFileSync(path.join(OUT, "index.html"), html);
 console.log("gerado: public/index.html (" + exibidos.length + " cursos na pagina)" + (faltaHotlink ? " [noindex: faltam hotlinks]" : ""));
+
+console.log("links para anuncios (final URL):");
+for (const id of ids) console.log("  https://mixbrdigital.com.br/#" + id);
 
 for (const item of ["robots.txt", "img", "politica-privacidade", "termos", "assets"]) {
   if (fs.existsSync(item)) {
