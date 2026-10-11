@@ -1,7 +1,7 @@
 {
   "_ajuda": "Preencha so o que for REAL e conferido na Hotmart. Campo vazio (null) some do card. A ordem dos cursos dentro de cada grupo e a ordem de exibicao. nota: 4.8 | avaliacoes: 1230 | parcelas: 12 | valorParcela: 19.70 | precoOriginal: 497 (so se houver desconto de verdade) | selo: texto curto, ex 'Certificado profissional' ou 'Garantia de 7 dias' | capa: nome do arquivo em /img | hotlink: seu link de afiliado.",
   "conferidoEm": "10/2026",
-  "maxPorGrupo": 8,
+  "maxPorGrupo": 4,
   "grupos": [
     { "id": "psicologia", "nav": "Psicologia e comportamento", "titulo": "Psicologia, psicanálise e comportamento", "sub": "Formações voltadas ao estudo da mente, do comportamento e da saúde emocional." },
     { "id": "familia", "nav": "Família e relacionamentos", "titulo": "Família e relacionamentos", "sub": "Cursos sobre dinâmicas familiares, casais e constelações." },
@@ -14,13 +14,10 @@
         
     { "grupo": "familia", "nome": "Constelação Familiar", "capa": "constelacao-familiar.webp", "nota": 4.7, "avaliacoes": 71, "parcelas": 12, "valorParcela": 10.03, "precoOriginal": null, "selo": "Certificado profissional", "hotlink": "https://go.hotmart.com/Q107763257M" },
     
-    { "grupo": "holisticas", "nome": "Protocolo Auricular", "capa": "protocolo-auricular.webp", "nota": 4.6, "avaliacoes": 138, "parcelas": 12, "valorParcela": 20.37, "precoOriginal": null, "selo": "Certificado profissional", "hotlink": "https://go.hotmart.com/W107969207W" },
-    { "grupo": "holisticas", "nome": "Massoterapia", "capa": "massoterapia.webp", "nota": 4.8, "avaliacoes": 117, "parcelas": 12, "valorParcela": 10.03, "precoOriginal": null, "selo": "Certificado profissional", "hotlink": "https://go.hotmart.com/L107969212L" },
-    { "grupo": "holisticas", "nome": "Ventosaterapia", "capa": "ventosaterapia.webp", "nota": 4.7, "avaliacoes": 70, "parcelas": 12, "valorParcela": 15.20, "precoOriginal": null, "selo": "Certificado profissional", "hotlink": "https://go.hotmart.com/E107636829A" },
-    { "grupo": "holisticas", "nome": "Iridologia", "capa": "iridologia.webp", "nota": 4.6, "avaliacoes": 29, "parcelas": 12, "valorParcela": 10.03, "precoOriginal": null, "selo": "Certificado profissional", "hotlink": "https://go.hotmart.com/D107734519M" },
-    { "grupo": "holisticas", "nome": "Terapia Ortomolecular", "capa": "terapia-ortomolecular.webp", "nota": 4.6, "avaliacoes": 21, "parcelas": 12, "valorParcela": 41.06, "precoOriginal": null, "selo": "Certificado profissional de 360 horas", "hotlink": "https://go.hotmart.com/P107969046D" },
-    { "grupo": "holisticas", "nome": "Mapa do Equilíbrio", "capa": "reflexologia.webp", "nota": 5.0, "avaliacoes": 14, "parcelas": 12, "valorParcela": 10.03, "precoOriginal": null, "selo": "Certificado profissional", "hotlink": "https://go.hotmart.com/W107969198E" },
-    { "grupo": "holisticas", "nome": "Ayurveda", "capa": "ayurveda.webp", "nota": 4.2, "avaliacoes": 10, "parcelas": 12, "valorParcela": 10.03, "precoOriginal": null, "selo": "Certificado profissional", "hotlink": "https://go.hotmart.com/Q107969195J" },
+    { "grupo": "holisticas", "nome": "Protocolo Auricular de Equilíbrio", "capa": "protocolo-auricular.webp", "nota": 4.6, "avaliacoes": 138, "parcelas": 12, "valorParcela": 20.37, "precoOriginal": null, "selo": "Certificado profissional", "hotlink": "https://go.hotmart.com/W107969207W" },
+    { "grupo": "holisticas", "nome": "Formação em Massoterapia", "capa": "massoterapia.webp", "nota": 4.8, "avaliacoes": 117, "parcelas": 12, "valorParcela": 10.03, "precoOriginal": null, "selo": "Certificado profissional", "hotlink": "https://go.hotmart.com/L107969212L" },
+    { "grupo": "holisticas", "nome": "Formação Terapeuta Ortomolecular", "capa": "terapia-ortomolecular.webp", "nota": 4.6, "avaliacoes": 21, "parcelas": 12, "valorParcela": 41.06, "precoOriginal": null, "selo": "Certificado profissional de 360 horas", "hotlink": "https://go.hotmart.com/P107969046D" },
+    { "grupo": "holisticas", "nome": "Formação de Instrutores de Yoga", "capa": "instrutor-yoga.webp", "nota": 4.2, "avaliacoes": 5, "parcelas": 12, "valorParcela": 30.72, "precoOriginal": null, "selo": "Certificado profissional", "hotlink": null },
     
     { "grupo": "energeticas", "nome": "Reiki", "capa": "reiki.webp", "nota": 4.8, "avaliacoes": 222, "parcelas": 12, "valorParcela": 10.03, "precoOriginal": null, "selo": "Certificado profissional", "hotlink": "https://go.hotmart.com/G107763175U" },
     { "grupo": "energeticas", "nome": "Terapeuta Esotérico", "capa": "terapeuta-esoterico.webp", "nota": 4.9, "avaliacoes": 23, "parcelas": 12, "valorParcela": 41.06, "precoOriginal": null, "selo": "Certificado profissional de 1.740 horas", "hotlink": "https://go.hotmart.com/M107931873W" },
