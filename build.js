@@ -84,8 +84,8 @@ const nav = dados.grupos
   .map((g) => `        <a class="chip" href="#${esc(g.id)}">${esc(g.nav)}</a>`)
   .join("\n");
 
-// limite de cursos por secao (campo "maxPorGrupo" no cursos.json; sem o campo, mostra todos).
-// Vale a ordem do JSON: os primeiros da lista entram, o resto fica de fora.
+// Cada secao e um carrossel: todos os cursos entram (setas mostram os que nao cabem na tela).
+// Opcional: "maxPorGrupo" no cursos.json limita quantos entram por secao (sem o campo, entram todos).
 const MAX = Number(dados.maxPorGrupo) > 0 ? Number(dados.maxPorGrupo) : Infinity;
 const exibidos = [];
 
@@ -102,8 +102,12 @@ const grupos = dados.grupos
     return `      <section class="grupo" id="${esc(g.id)}">
         <h2 class="grupo-titulo">${esc(g.titulo)}</h2>
         <p class="grupo-sub">${esc(g.sub)}</p>
-        <div class="grid">
+        <div class="carrossel">
+          <button class="seta ant" type="button" aria-label="Ver cursos anteriores" hidden>&#8249;</button>
+          <div class="grid trilho">
 ${cards}
+          </div>
+          <button class="seta prox" type="button" aria-label="Ver mais cursos" hidden>&#8250;</button>
         </div>
       </section>
 `;
