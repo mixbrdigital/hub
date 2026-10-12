@@ -58,8 +58,7 @@ function card(c, i) {
     info.push(`<div class="linha nota"><span class="ico estrela">★</span><span>${fmt(c.nota, 1)}${aval}</span></div>`);
   }
   if (c.parcelas && c.valorParcela) {
-    const de = c.precoOriginal ? ` <s>R$ ${fmt(c.precoOriginal, 2)}</s>` : "";
-    info.push(`<div class="linha preco"><span class="ico">${ICO_CARTAO}</span><span><strong>${c.parcelas}x de R$ ${fmt(c.valorParcela, 2)}</strong>${de}</span></div>`);
+    info.push(`<div class="linha preco"><span class="ico">${ICO_CARTAO}</span><span><strong>${c.parcelas}x de R$ ${fmt(c.valorParcela, 2)}</strong></span></div>`);
   }
   if (c.selo) info.push(`<div class="linha selo"><span class="ico">✓</span><span>${esc(c.selo)}</span></div>`);
 
@@ -70,7 +69,10 @@ function card(c, i) {
   // bloco extra: so aparece no card destacado pelo anuncio (#id). Campos opcionais: para, avista, garantia, ctaDestaque
   const mais = [];
   if (c.para) mais.push(`<p class="para">${esc(c.para)}</p>`);
-  if (c.avista) mais.push(`<div class="linha avista"><span class="ico">${ICO_CARTAO}</span><span>ou R$ ${fmt(c.avista, 2)} à vista</span></div>`);
+  if (c.avista) {
+    const de = c.precoOriginal ? `de <s>R$ ${fmt(c.precoOriginal, 2)}</s> por ` : "ou ";
+    mais.push(`<div class="linha avista"><span class="ico">${ICO_CARTAO}</span><span>${de}<strong>R$ ${fmt(c.avista, 2)}</strong> à vista</span></div>`);
+  }
   if (c.garantia) mais.push(`<div class="linha selo"><span class="ico">✓</span><span>${esc(c.garantia)}</span></div>`);
   const maisHtml = mais.length ? `<div class="mais">${mais.join("")}</div>` : "";
   const cta = `<span class="btn"><span class="t-normal">Ver curso →</span><span class="t-alvo">${esc(c.ctaDestaque || "Quero este curso →")}</span></span>`;
