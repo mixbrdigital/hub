@@ -37,7 +37,7 @@
     .site-header{padding:16px 24px;background:var(--bg)}
     .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.08em;line-height:1.15;color:var(--plum)}
     .brand,.brand:hover,.brand:focus,.brand:active,.brand *{text-decoration:none;border:0;box-shadow:none;outline:0}
-    .brand-logo{display:block;height:44px;width:auto}
+    .brand-logo{display:block;height:52px;width:auto}
 
     .hero{text-align:center;padding:44px 0 10px}
     .hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;margin:0 auto 14px;max-width:780px}
@@ -150,7 +150,8 @@
     .conferido{max-width:820px;margin:10px auto 0;font-size:12.5px;color:var(--muted);text-align:center}
 
     .footer{margin-top:40px;padding:34px 20px 44px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:13.5px}
-    .footer .brand{margin-bottom:14px}
+    .footer .brand{margin-bottom:14px;display:inline-block}
+    .footer .brand-logo{height:60px;width:auto}
     .footer p{max-width:760px;margin:0 auto 12px}
     .footer p a{text-decoration:underline;color:var(--plum)}
     .footer a.brand,.footer a.brand *{text-decoration:none}
@@ -168,14 +169,20 @@
       .capa-vazia{padding:14px}
       .capa-vazia h3{font-size:1rem}
       .hero{padding-top:32px}
-      .brand-logo{height:36px}
+      .brand-logo{height:44px}
+      .footer .brand-logo{height:52px}
     }
   </style>
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="/" aria-label="MixBR Digital">
-      <img class="brand-logo" src="/img/coruja.webp" alt="MixBR Digital" height="44" loading="eager">
+      <img class="brand-logo"
+           src="/img/coruja.webp"
+           srcset="/img/coruja.webp 1x, /img/coruja@2x.webp 2x"
+           alt="MixBR Digital"
+           height="52"
+           loading="eager">
     </a>
   </header>
 
@@ -214,7 +221,12 @@
 
   <footer class="footer">
     <a class="brand" href="/" aria-label="MixBR Digital">
-      <img class="brand-logo" src="/img/coruja.webp" alt="MixBR Digital" height="40" loading="lazy">
+      <img class="brand-logo"
+           src="/img/coruja.webp"
+           srcset="/img/coruja.webp 1x, /img/coruja@2x.webp 2x"
+           alt="MixBR Digital"
+           height="60"
+           loading="lazy">
     </a>
     <p>&copy; <span data-current-year>2026</span> MixBR Digital &middot; <a href="/politica-privacidade/">Pol&iacute;tica de Privacidade</a> &middot; <a href="/termos/">Termos de Uso</a> &middot; <a href="mailto:contato@mixbrdigital.com.br">Contato</a></p>
   </footer>
