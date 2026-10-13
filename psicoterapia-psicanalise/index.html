@@ -50,9 +50,16 @@
     .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.08em;line-height:1.15;color:var(--plum)}
     .brand-mark{font-size:20px;color:var(--sage)}
 
-    .hero{padding:36px 0 10px;text-align:left}
+    /* HERO em duas colunas */
+    .hero{padding:36px 0 10px}
+    .hero-split{display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:center}
     .hero .meta{color:var(--muted);font-size:13.5px;margin-bottom:8px}
-    .hero .lead{font-size:17px;color:var(--text);max-width:720px}
+    .hero .lead{font-size:16.5px;color:var(--text);max-width:720px;margin-bottom:0}
+    .hero-imagem img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:var(--shadow)}
+    @media (max-width:760px){
+      .hero-split{grid-template-columns:1fr;gap:20px}
+      .hero-imagem{order:-1}
+    }
 
     .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:24px 0;box-shadow:var(--shadow)}
     .card h2{margin-top:0}
@@ -69,12 +76,12 @@
     .credenciais{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
     .tag{display:inline-block;padding:6px 12px;background:var(--sage-light);color:var(--plum);border-radius:999px;font-size:13px;font-weight:500}
 
-    .cta-box{background:var(--plum);color:#fff;border-radius:16px;padding:26px 24px;margin:34px 0;text-align:center}
+    .cta-box{background:var(--plum);color:#fff;border-radius:16px;padding:30px 24px;margin:34px 0;text-align:center}
     .cta-box h2{color:#fff;margin-top:0}
     .cta-box p{color:#e8dfe8}
-    .btn{display:inline-block;padding:14px 28px;background:#fff;color:var(--plum);border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;transition:background .2s,transform .1s;margin-top:8px}
-    .btn:hover{background:var(--sage-light);transform:translateY(-2px)}
-    .btn small{display:block;font-weight:400;font-size:12.5px;color:var(--muted);margin-top:4px}
+    .btn{display:inline-block;padding:16px 32px;background:#fff;color:var(--plum);border-radius:10px;text-decoration:none;font-weight:700;font-size:16.5px;transition:background .2s,transform .1s,box-shadow .2s;margin-top:12px;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+    .btn:hover{background:#f2eaf2;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.2)}
+    .btn small{display:block;font-weight:400;font-size:12.5px;color:var(--muted);margin-top:6px}
 
     .preco{font-size:14.5px;color:var(--text);margin:10px 0}
     .preco strong{font-size:20px;color:var(--plum)}
@@ -99,10 +106,16 @@
 
   <main class="wrap">
 
-    <section class="hero">
-      <p class="meta">Análise independente · Atualizado em outubro de 2026</p>
-      <h1>Curso de Psicoterapia e Psicanálise: vale a pena?</h1>
-      <p class="lead">Uma análise honesta do curso <strong>Psicoterapia e Psicanálise – Formação completa</strong>: o que ele oferece, para quem é indicado, para quem não é, prós, contras, certificação, preço e garantia.</p>
+    <!-- HERO: texto + imagem -->
+    <section class="hero hero-split">
+      <div class="hero-texto">
+        <p class="meta">Análise independente · Atualizado em outubro de 2026</p>
+        <h1>Curso de Psicoterapia e Psicanálise: vale a pena?</h1>
+        <p class="lead">Uma análise honesta do curso <strong>Psicoterapia e Psicanálise – Formação completa</strong>: o que ele oferece, para quem é indicado, para quem não é, prós, contras, certificação, preço e garantia.</p>
+      </div>
+      <div class="hero-imagem">
+        <img src="/img/psicoterapia-psicanalise.webp" alt="Capa do curso Psicoterapia e Psicanálise – Formação completa" loading="eager" decoding="async" width="600" height="600">
+      </div>
     </section>
 
     <div class="card">
