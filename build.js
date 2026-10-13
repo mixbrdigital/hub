@@ -75,7 +75,7 @@ function card(c, i) {
   }
   if (c.garantia) mais.push(`<div class="linha selo"><span class="ico">✓</span><span>${esc(c.garantia)}</span></div>`);
   const maisHtml = mais.length ? `<div class="mais">${mais.join("")}</div>` : "";
-  const cta = `<span class="btn"><span class="t-normal">Ver curso →</span><span class="t-alvo">${esc(c.ctaDestaque || "Quero este curso →")}</span></span>`;
+  const cta = `<span class="btn"><span class="t-normal">Ver an�lise completa ?</span><span class="t-alvo">${esc(c.ctaDestaque || "Quero garantir minha vaga ?")}</span></span>`;
   return `        <a class="card" id="${esc(id)}" href="${href}"${attrs} aria-label="Ver curso ${esc(c.nome)}">${promo}${capa}<div class="info">${info.join("")}${maisHtml}</div>${cta}</a>`;
 }
 

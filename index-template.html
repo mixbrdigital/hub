@@ -54,6 +54,12 @@
     .hero{text-align:center;padding:44px 0 10px}
     .hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;margin:0 auto 14px;max-width:780px}
     .hero p{color:var(--muted);font-size:16.5px;max-width:620px;margin:0 auto}
+ .hero-inner{display:flex;align-items:center;gap:22px;text-align:left;max-width:820px;margin:0 auto}
+    .hero-avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:0 0 72px;border:2px solid var(--sage-light)}
+    .hero-inner h1{margin:0 0 8px}
+    @media (max-width:640px){
+      .hero-inner{flex-direction:column;text-align:center;gap:14px}
+    }
     .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin:22px 0 0;padding:0;list-style:none;font-size:13.5px;color:var(--plum)}
     .trust li::before{content:"âœ“";color:var(--sage);font-weight:700;margin-right:6px}
     .trust .trust-av::before{content:"â˜…";color:var(--star)}
@@ -159,17 +165,16 @@
   </header>
 
   <main>
-    <section class="hero wrap">
-      <h1>FormaÃ§Ãµes online em psicanÃ¡lise, terapias e comportamento</h1>
-      <p>Uma seleÃ§Ã£o de cursos para quem quer aprender, se desenvolver ou atuar na Ã¡rea. Toque na capa para ver os detalhes na pÃ¡gina do produtor.</p>
+<section class="hero wrap">
+      <h1>Cursos de psicanálise e terapia que eu recomendo — e por quê</h1>
+      <p>Analiso cada formação antes de indicar: carga horária, certificação, suporte e reputação do produtor. Você economiza tempo e escolhe com mais segurança.</p>
       <ul class="trust">
         <li>Compra segura pela Hotmart</li>
         <li>Cursos 100% online</li>
-        <li>Veja certificado e garantia no produtor</li>
+        <li>Curadoria independente</li>
         {{AVALIACAO}}
       </ul>
     </section>
-
     <nav class="nav" aria-label="Categorias">
       <div class="nav-in">
 {{NAV}}
