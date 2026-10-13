@@ -37,17 +37,11 @@
     .site-header{padding:16px 24px;background:var(--bg)}
     .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.08em;line-height:1.15;color:var(--plum)}
     .brand,.brand:hover,.brand:focus,.brand:active,.brand *{text-decoration:none;border:0;box-shadow:none;outline:0}
-    .brand-mark{font-size:20px;color:var(--sage)}
+    .brand-logo{display:block;height:44px;width:auto}
 
     .hero{text-align:center;padding:44px 0 10px}
     .hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;margin:0 auto 14px;max-width:780px}
     .hero p{color:var(--muted);font-size:16.5px;max-width:620px;margin:0 auto}
-    .hero-inner{display:flex;align-items:center;gap:22px;text-align:left;max-width:820px;margin:0 auto}
-    .hero-avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:0 0 72px;border:2px solid var(--sage-light)}
-    .hero-inner h1{margin:0 0 8px}
-    @media (max-width:640px){
-      .hero-inner{flex-direction:column;text-align:center;gap:14px}
-    }
     .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin:22px 0 0;padding:0;list-style:none;font-size:13.5px;color:var(--plum)}
     .trust li::before{content:"\2713";color:var(--sage);font-weight:700;margin-right:6px}
     .trust .trust-av::before{content:"\2605";color:var(--star)}
@@ -174,14 +168,14 @@
       .capa-vazia{padding:14px}
       .capa-vazia h3{font-size:1rem}
       .hero{padding-top:32px}
+      .brand-logo{height:36px}
     }
   </style>
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="/" aria-label="MixBR Digital">
-      <span class="brand-mark">&#10022;</span>
-      <span>MIXBR<br>DIGITAL</span>
+      <img class="brand-logo" src="/img/coruja.webp" alt="MixBR Digital" height="44" loading="eager">
     </a>
   </header>
 
@@ -220,10 +214,9 @@
 
   <footer class="footer">
     <a class="brand" href="/" aria-label="MixBR Digital">
-      <span class="brand-mark">&#10022;</span>
-      <span>MIXBR DIGITAL</span>
+      <img class="brand-logo" src="/img/coruja.webp" alt="MixBR Digital" height="40" loading="lazy">
     </a>
-        <p>&copy; <span data-current-year>2026</span> MixBR Digital &middot; <a href="/politica-privacidade/">Pol&iacute;tica de Privacidade</a> &middot; <a href="/termos/">Termos de Uso</a> &middot; <a href="mailto:contato@mixbrdigital.com.br">Contato</a></p>
+    <p>&copy; <span data-current-year>2026</span> MixBR Digital &middot; <a href="/politica-privacidade/">Pol&iacute;tica de Privacidade</a> &middot; <a href="/termos/">Termos de Uso</a> &middot; <a href="mailto:contato@mixbrdigital.com.br">Contato</a></p>
   </footer>
 
   <script>
