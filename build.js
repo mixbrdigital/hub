@@ -46,7 +46,7 @@ function card(c, i) {
   const eager = contador++ < 3 ? "eager" : "lazy";
   const capa = capaOk
     ? `<img src="/img/${esc(c.capa)}" alt="Curso ${esc(c.nome)}" loading="${eager}" decoding="async">`
-    : `<div class="capa-vazia"><div class="mark">✦</div><h3>${esc(c.nome)}</h3></div>`;
+    : `<div class="capa-vazia"><div class="mark">\u2726</div><h3>${esc(c.nome)}</h3></div>`;
 
   // icone de cartao (usa a cor do texto do .ico)
   const ICO_CARTAO = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>';
@@ -55,12 +55,12 @@ function card(c, i) {
   info.push(`<h3 class="titulo">${esc(c.nome)}</h3>`);
   if (c.nota) {
     const aval = c.avaliacoes ? ` <span class="aval">(${fmtInt(c.avaliacoes)})</span>` : "";
-    info.push(`<div class="linha nota"><span class="ico estrela">★</span><span>${fmt(c.nota, 1)}${aval}</span></div>`);
+    info.push(`<div class="linha nota"><span class="ico estrela">\u2605</span><span>${fmt(c.nota, 1)}${aval}</span></div>`);
   }
   if (c.parcelas && c.valorParcela) {
     info.push(`<div class="linha preco"><span class="ico">${ICO_CARTAO}</span><span><strong>${c.parcelas}x de R$ ${fmt(c.valorParcela, 2)}</strong></span></div>`);
   }
-  if (c.selo) info.push(`<div class="linha selo"><span class="ico">✓</span><span>${esc(c.selo)}</span></div>`);
+  if (c.selo) info.push(`<div class="linha selo"><span class="ico">\u2713</span><span>${esc(c.selo)}</span></div>`);
 
   const id = c.id || slug(c.nome);
   ids.push(id);
@@ -71,11 +71,11 @@ function card(c, i) {
   if (c.para) mais.push(`<p class="para">${esc(c.para)}</p>`);
   if (c.avista) {
     const de = c.precoOriginal ? `de <s>R$ ${fmt(c.precoOriginal, 2)}</s> por ` : "ou ";
-    mais.push(`<div class="linha avista"><span class="ico">${ICO_CARTAO}</span><span>${de}<strong>R$ ${fmt(c.avista, 2)}</strong> à vista</span></div>`);
+    mais.push(`<div class="linha avista"><span class="ico">${ICO_CARTAO}</span><span>${de}<strong>R$ ${fmt(c.avista, 2)}</strong> \u00e0 vista</span></div>`);
   }
-  if (c.garantia) mais.push(`<div class="linha selo"><span class="ico">✓</span><span>${esc(c.garantia)}</span></div>`);
+  if (c.garantia) mais.push(`<div class="linha selo"><span class="ico">\u2713</span><span>${esc(c.garantia)}</span></div>`);
   const maisHtml = mais.length ? `<div class="mais">${mais.join("")}</div>` : "";
-  const cta = `<span class="btn"><span class="t-normal">Ver an�lise completa ?</span><span class="t-alvo">${esc(c.ctaDestaque || "Quero garantir minha vaga ?")}</span></span>`;
+  const cta = `<span class="btn"><span class="t-normal">Ver an\u00e1lise completa \u2192</span><span class="t-alvo">${esc(c.ctaDestaque || "Quero garantir minha vaga \u2192")}</span></span>`;
   return `        <a class="card" id="${esc(id)}" href="${href}"${attrs} aria-label="Ver curso ${esc(c.nome)}">${promo}${capa}<div class="info">${info.join("")}${maisHtml}</div>${cta}</a>`;
 }
 
@@ -118,17 +118,17 @@ ${cards}
 const faltaHotlink = exibidos.some((c) => !c.hotlink);
 const robots = faltaHotlink || DEMO ? '<meta name="robots" content="noindex,nofollow">' : "";
 
-const meses = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+const meses = ["janeiro","fevereiro","mar\u00e7o","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
 const hoje = new Date();
 const conferido = dados.conferidoEm
-  ? `Valores e avaliações conferidos em ${esc(dados.conferidoEm)}.`
+  ? `Valores e avalia\u00e7\u00f5es conferidos em ${esc(dados.conferidoEm)}.`
   : `Atualizado em ${meses[hoje.getMonth()]} de ${hoje.getFullYear()}.`;
 
 // avaliacao da INSTITUICAO (ex.: perfil no Google), mostrada uma vez no topo, nunca como nota de um curso
 const av = dados.avaliacaoInstituicao;
 const avaliacaoHtml =
   av && av.nota
-    ? `<li class="trust-av">${av.nome ? esc(av.nome) : "Instituição avaliada"}: ${fmt(av.nota, 1)} no ${esc(av.fonte || "Google")}${av.avaliacoes ? ` (${fmtInt(av.avaliacoes)} avaliações)` : ""}</li>`
+    ? `<li class="trust-av">${av.nome ? esc(av.nome) : "Institui\u00e7\u00e3o avaliada"}: ${fmt(av.nota, 1)} no ${esc(av.fonte || "Google")}${av.avaliacoes ? ` (${fmtInt(av.avaliacoes)} avalia\u00e7\u00f5es)` : ""}</li>`
     : "";
 
 const html = template
@@ -146,7 +146,7 @@ if (DEMO) {
 
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT);
-fs.writeFileSync(path.join(OUT, "index.html"), html);
+fs.writeFileSync(path.join(OUT, "index.html"), html, "utf8");
 console.log("gerado: public/index.html (" + exibidos.length + " cursos na pagina)" + (faltaHotlink ? " [noindex: faltam hotlinks]" : ""));
 
 console.log("links para anuncios (final URL):");
