@@ -64,9 +64,7 @@ function card(c, i) {
 
   const id = c.id || slug(c.nome);
   ids.push(id);
-  // etiqueta so aparece quando o visitante chega pelo link com #id (anuncio). Preencha "promo" so se a oferta for REAL.
   const promo = c.promo ? `<span class="promo">${esc(c.promo)}</span>` : "";
-  // bloco extra: so aparece no card destacado pelo anuncio (#id). Campos opcionais: para, avista, garantia, ctaDestaque
   const mais = [];
   if (c.para) mais.push(`<p class="para">${esc(c.para)}</p>`);
   if (c.avista) {
@@ -76,7 +74,17 @@ function card(c, i) {
   if (c.garantia) mais.push(`<div class="linha selo"><span class="ico">\u2713</span><span>${esc(c.garantia)}</span></div>`);
   const maisHtml = mais.length ? `<div class="mais">${mais.join("")}</div>` : "";
   const cta = `<span class="btn"><span class="t-normal">Ver an\u00e1lise completa \u2192</span><span class="t-alvo">${esc(c.ctaDestaque || "Quero garantir minha vaga \u2192")}</span></span>`;
-  return `        <a class="card" id="${esc(id)}" href="${href}"${attrs} aria-label="Ver curso ${esc(c.nome)}">${promo}${capa}<div class="info">${info.join("")}${maisHtml}</div>${cta}</a>`;
+
+  // Dados estruturados (Schema.org Course) para rich snippets no Google
+  const ratingSchema = c.nota && c.avaliacoes
+    ? `,"aggregateRating":{"@type":"AggregateRating","ratingValue":"${c.nota}","reviewCount":"${c.avaliacoes}"}`
+    : "";
+  const priceSchema = c.valorParcela
+    ? `,"offers":{"@type":"Offer","price":"${c.valorParcela}","priceCurrency":"BRL","availability":"https://schema.org/InStock"}`
+    : "";
+  const schema = `<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"${esc(c.nome)}","description":"${esc(c.selo || c.nome)}","provider":{"@type":"Organization","name":"MixBR Digital"}${ratingSchema}${priceSchema}}</script>`;
+
+  return `        <a class="card" id="${esc(id)}" href="${href}"${attrs} aria-label="Ver curso ${esc(c.nome)}">${promo}${capa}<div class="info">${info.join("")}${maisHtml}</div>${cta}</a>${schema}`;
 }
 
 let indice = 0;
@@ -84,8 +92,6 @@ const nav = dados.grupos
   .map((g) => `        <a class="chip" href="#${esc(g.id)}">${esc(g.nav)}</a>`)
   .join("\n");
 
-// Cada secao e um carrossel: todos os cursos entram (setas mostram os que nao cabem na tela).
-// Opcional: "maxPorGrupo" no cursos.json limita quantos entram por secao (sem o campo, entram todos).
 const MAX = Number(dados.maxPorGrupo) > 0 ? Number(dados.maxPorGrupo) : Infinity;
 const exibidos = [];
 
@@ -114,7 +120,6 @@ ${cards}
   })
   .join("\n");
 
-// noindex automatico enquanto faltar hotlink em algum curso
 const faltaHotlink = exibidos.some((c) => !c.hotlink);
 const robots = faltaHotlink || DEMO ? '<meta name="robots" content="noindex,nofollow">' : "";
 
@@ -124,7 +129,6 @@ const conferido = dados.conferidoEm
   ? `Valores e avalia\u00e7\u00f5es conferidos em ${esc(dados.conferidoEm)}.`
   : `Atualizado em ${meses[hoje.getMonth()]} de ${hoje.getFullYear()}.`;
 
-// avaliacao da INSTITUICAO (ex.: perfil no Google), mostrada uma vez no topo, nunca como nota de um curso
 const av = dados.avaliacaoInstituicao;
 const avaliacaoHtml =
   av && av.nota
@@ -152,7 +156,7 @@ console.log("gerado: public/index.html (" + exibidos.length + " cursos na pagina
 console.log("links para anuncios (final URL):");
 for (const id of ids) console.log("  https://mixbrdigital.com.br/#" + id);
 
-for (const item of ["robots.txt", "img", "politica-privacidade", "termos", "assets", "psicoterapia-psicanalise", "terapeuta-holistico-master"]) {
+for (const item of ["robots.txt", "img", "politica-privacidade", "termos", "assets", "psicoterapia-psicanalise", "terapeuta-holistico-master", "sitemap.xml"]) {
   if (fs.existsSync(item)) {
     fs.cpSync(item, path.join(OUT, item), { recursive: true });
     console.log("copiado:", item);
