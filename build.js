@@ -156,7 +156,7 @@ console.log("gerado: public/index.html (" + exibidos.length + " cursos na pagina
 console.log("links para anuncios (final URL):");
 for (const id of ids) console.log("  https://mixbrdigital.com.br/#" + id);
 
-for (const item of ["robots.txt", "img", "politica-privacidade", "termos", "assets", "psicoterapia-psicanalise", "terapeuta-holistico-master", "instrutor-yoga", "sitemap.xml"]) {
+for (const item of ["robots.txt", "img", "politica-privacidade", "termos", "assets", "psicoterapia-psicanalise", "terapeuta-holistico-master", "instrutor-yoga", "reiki", "sitemap.xml"]) {
   if (fs.existsSync(item)) {
     fs.cpSync(item, path.join(OUT, item), { recursive: true });
     console.log("copiado:", item);
